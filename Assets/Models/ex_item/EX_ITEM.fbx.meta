@@ -1,0 +1,1327 @@
+fileFormatVersion: 2
+guid: 89054cbe88eae3040883331cad5a8d7f
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -709805084652026021
+    second: Cylinder002|Circle|Circle|Bone.001_end|Take 001|BaseLayer|Circle|Bone.001_e
+  - first:
+      74: -2306458291050783317
+    second: Cylinder002|Circle|Circle|Cylinder001|Take 001|BaseLayer|Circle|Cylinder001
+  - first:
+      74: -1431132466786898964
+    second: Cylinder002|Circle|Circle|Cylinder002|Take 001|BaseLayer|Circle|Cylinder002
+  - first:
+      74: -8031415231583160526
+    second: Cylinder002|Circle|Circle|Cylinder003|Take 001|BaseLayer|Circle|Cylinder003
+  - first:
+      74: -6797936146832392055
+    second: Cylinder002|Circle|Circle|Fire_extinguisher_body|Take 001|BaseLayer|Circle|
+  - first:
+      74: 1779063281967988002
+    second: Cylinder002|Circle|Circle|Fire_extinguisher_down|Take 001|BaseLayer|Circle|
+  - first:
+      74: -4840564610064487562
+    second: Cylinder002|Circle|Circle|Fire_extinguisher_up|Take 001|BaseLayer|Circle|Fi
+  - first:
+      74: -7414952598102892129
+    second: Cylinder002|Circle|Circle|flashlight|Take 001|BaseLayer|Circle|flashlight|T
+  - first:
+      74: 7348760573408937839
+    second: 'Cylinder002|Circle|Circle|hand.001|Take 001|BaseLayer|Circle|hand.001|Take '
+  - first:
+      74: -2981997764267588536
+    second: Cylinder002|Circle|Circle|Object002|Take 001|BaseLayer|Circle|Object002|Tak
+  - first:
+      74: -5182655093342490475
+    second: 'Cylinder002|Circle|Circle|Torus002|Take 001|BaseLayer|Circle|Torus002|Take '
+  - first:
+      74: 5736038945169682727
+    second: Cylinder002|Circle|Circle|Tube001|Take 001|BaseLayer|Circle|Tube001|Take
+      00
+  - first:
+      74: -1719890363902617739
+    second: Cylinder002|Circle|Circle|whistle|Take 001|BaseLayer|Circle|whistle|Take
+      00
+  - first:
+      74: -4143113757008689265
+    second: Cylinder002|Cylinder002|Cylinder002|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: 7146539572167087125
+    second: Cylinder002|Cylinder002|Cylinder002|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -3890780656222473117
+    second: Cylinder002|Cylinder002|Cylinder002|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -4755732093055966920
+    second: Cylinder002|Cylinder002|Cylinder002|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -8384712003656183909
+    second: Cylinder002|Cylinder002|Cylinder002|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: -1558723737837504849
+    second: Cylinder002|Cylinder002|Cylinder002|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: 8418784559987663719
+    second: Cylinder002|Cylinder002|Cylinder002|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: -283518414038535090
+    second: Cylinder002|Cylinder002|Cylinder002|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: 6657989064969322874
+    second: Cylinder002|Cylinder002|Cylinder002|hand.001|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: -184780480067981663
+    second: Cylinder002|Cylinder002|Cylinder002|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: -354907540574834993
+    second: Cylinder002|Cylinder002|Cylinder002|Torus002|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: 6612449598768657230
+    second: Cylinder002|Cylinder002|Cylinder002|Tube001|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: 9118102052327613045
+    second: Cylinder002|Cylinder002|Cylinder002|whistle|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: -4109491545428252279
+    second: Cylinder002|Cylinder003|Cylinder003|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: 1131032412191506051
+    second: Cylinder002|Cylinder003|Cylinder003|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -2048270442195344916
+    second: Cylinder002|Cylinder003|Cylinder003|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -4914584625704397992
+    second: Cylinder002|Cylinder003|Cylinder003|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -7510047528277288406
+    second: Cylinder002|Cylinder003|Cylinder003|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: 215945857700048661
+    second: Cylinder002|Cylinder003|Cylinder003|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: -8542958333258433581
+    second: Cylinder002|Cylinder003|Cylinder003|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 6598393362870513928
+    second: Cylinder002|Cylinder003|Cylinder003|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: -8058832877054238282
+    second: Cylinder002|Cylinder003|Cylinder003|hand.001|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: 278475003969857316
+    second: Cylinder002|Cylinder003|Cylinder003|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: -4829042970287717243
+    second: Cylinder002|Cylinder003|Cylinder003|Torus002|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: 1141715169759907385
+    second: Cylinder002|Cylinder003|Cylinder003|Tube001|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: -8585401838364025971
+    second: Cylinder002|Cylinder003|Cylinder003|whistle|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: -4290449461900534965
+    second: Cylinder002|flashlight|flashlight|Bone.001_end|Take 001|BaseLayer|flashligh
+  - first:
+      74: 3170709083667081480
+    second: Cylinder002|flashlight|flashlight|Cylinder001|Take 001|BaseLayer|flashlight
+  - first:
+      74: -4369224292645460184
+    second: Cylinder002|flashlight|flashlight|Cylinder002|Take 001|BaseLayer|flashlight
+  - first:
+      74: -7426575948715046464
+    second: Cylinder002|flashlight|flashlight|Cylinder003|Take 001|BaseLayer|flashlight
+  - first:
+      74: -771993467342616559
+    second: Cylinder002|flashlight|flashlight|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: 8597176162570694606
+    second: Cylinder002|flashlight|flashlight|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: 473570908300362857
+    second: Cylinder002|flashlight|flashlight|Fire_extinguisher_up|Take 001|BaseLayer|f
+  - first:
+      74: 43227055973478422
+    second: Cylinder002|flashlight|flashlight|flashlight|Take 001|BaseLayer|flashlight|
+  - first:
+      74: 4864929744006394506
+    second: Cylinder002|flashlight|flashlight|hand.001|Take 001|BaseLayer|flashlight|ha
+  - first:
+      74: 1132270732554847426
+    second: Cylinder002|flashlight|flashlight|Object002|Take 001|BaseLayer|flashlight|O
+  - first:
+      74: -4194724722057208381
+    second: Cylinder002|flashlight|flashlight|Torus002|Take 001|BaseLayer|flashlight|To
+  - first:
+      74: -4242856183261565222
+    second: Cylinder002|flashlight|flashlight|Tube001|Take 001|BaseLayer|flashlight|Tub
+  - first:
+      74: -4892302877702302234
+    second: Cylinder002|flashlight|flashlight|whistle|Take 001|BaseLayer|flashlight|whi
+  - first:
+      74: -337246513616795533
+    second: Cylinder002|Tube001|Tube001|Bone.001_end|Take 001|BaseLayer|Tube001|Bone.00
+  - first:
+      74: -7945316747069495548
+    second: Cylinder002|Tube001|Tube001|Cylinder001|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 6393905559071054372
+    second: Cylinder002|Tube001|Tube001|Cylinder002|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: -1593902692076326261
+    second: Cylinder002|Tube001|Tube001|Cylinder003|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: -3859415997627833678
+    second: Cylinder002|Tube001|Tube001|Fire_extinguisher_body|Take 001|BaseLayer|Tube0
+  - first:
+      74: 4283163253142981438
+    second: Cylinder002|Tube001|Tube001|Fire_extinguisher_down|Take 001|BaseLayer|Tube0
+  - first:
+      74: 5230469223716327847
+    second: Cylinder002|Tube001|Tube001|Fire_extinguisher_up|Take 001|BaseLayer|Tube001
+  - first:
+      74: 3945411208062274455
+    second: Cylinder002|Tube001|Tube001|flashlight|Take 001|BaseLayer|Tube001|flashligh
+  - first:
+      74: -6917838378714627964
+    second: Cylinder002|Tube001|Tube001|hand.001|Take 001|BaseLayer|Tube001|hand.001|Ta
+  - first:
+      74: 8848994955644085725
+    second: Cylinder002|Tube001|Tube001|Object002|Take 001|BaseLayer|Tube001|Object002|
+  - first:
+      74: -1295900508669447648
+    second: Cylinder002|Tube001|Tube001|Torus002|Take 001|BaseLayer|Tube001|Torus002|Ta
+  - first:
+      74: 3852204657252712183
+    second: Cylinder002|Tube001|Tube001|Tube001|Take 001|BaseLayer|Tube001|Tube001|Take
+  - first:
+      74: -2998006713700871717
+    second: Cylinder002|Tube001|Tube001|whistle|Take 001|BaseLayer|Tube001|whistle|Take
+  - first:
+      74: 8607826743379719145
+    second: Cylinder002|whisper|whisper|Bone.001_end|Take 001|BaseLayer|whisper|Bone.00
+  - first:
+      74: 6746487693812809683
+    second: Cylinder002|whisper|whisper|Cylinder001|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -7805973053620453977
+    second: Cylinder002|whisper|whisper|Cylinder002|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: 1089626280610578018
+    second: Cylinder002|whisper|whisper|Cylinder003|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -2530412873311511735
+    second: Cylinder002|whisper|whisper|Fire_extinguisher_body|Take 001|BaseLayer|whisp
+  - first:
+      74: -2188039015440711382
+    second: Cylinder002|whisper|whisper|Fire_extinguisher_down|Take 001|BaseLayer|whisp
+  - first:
+      74: -2803028734804922086
+    second: Cylinder002|whisper|whisper|Fire_extinguisher_up|Take 001|BaseLayer|whisper
+  - first:
+      74: -2560871353927464980
+    second: Cylinder002|whisper|whisper|flashlight|Take 001|BaseLayer|whisper|flashligh
+  - first:
+      74: -1561032845057123885
+    second: Cylinder002|whisper|whisper|hand.001|Take 001|BaseLayer|whisper|hand.001|Ta
+  - first:
+      74: -5146133346423318091
+    second: Cylinder002|whisper|whisper|Object002|Take 001|BaseLayer|whisper|Object002|
+  - first:
+      74: -7238769268871711367
+    second: Cylinder002|whisper|whisper|Torus002|Take 001|BaseLayer|whisper|Torus002|Ta
+  - first:
+      74: -5154500490454275343
+    second: Cylinder002|whisper|whisper|Tube001|Take 001|BaseLayer|whisper|Tube001|Take
+  - first:
+      74: 3282309227681382131
+    second: Cylinder002|whisper|whisper|whistle|Take 001|BaseLayer|whisper|whistle|Take
+  - first:
+      74: 8083627129923348869
+    second: Cylinder003|Circle|Circle|Bone.001_end|Take 001|BaseLayer|Circle|Bone.001_e
+  - first:
+      74: -2644177114352070885
+    second: Cylinder003|Circle|Circle|Cylinder001|Take 001|BaseLayer|Circle|Cylinder001
+  - first:
+      74: -6181547629389659219
+    second: Cylinder003|Circle|Circle|Cylinder002|Take 001|BaseLayer|Circle|Cylinder002
+  - first:
+      74: -8466424579016877561
+    second: Cylinder003|Circle|Circle|Cylinder003|Take 001|BaseLayer|Circle|Cylinder003
+  - first:
+      74: -1996297518154967711
+    second: Cylinder003|Circle|Circle|Fire_extinguisher_body|Take 001|BaseLayer|Circle|
+  - first:
+      74: 3255375366579635922
+    second: Cylinder003|Circle|Circle|Fire_extinguisher_down|Take 001|BaseLayer|Circle|
+  - first:
+      74: -6129687144827189353
+    second: Cylinder003|Circle|Circle|Fire_extinguisher_up|Take 001|BaseLayer|Circle|Fi
+  - first:
+      74: -7475073114709592366
+    second: Cylinder003|Circle|Circle|flashlight|Take 001|BaseLayer|Circle|flashlight|T
+  - first:
+      74: 5761096403331649336
+    second: 'Cylinder003|Circle|Circle|hand.001|Take 001|BaseLayer|Circle|hand.001|Take '
+  - first:
+      74: -6760249079584240573
+    second: Cylinder003|Circle|Circle|Object002|Take 001|BaseLayer|Circle|Object002|Tak
+  - first:
+      74: 8463113970423243614
+    second: 'Cylinder003|Circle|Circle|Torus002|Take 001|BaseLayer|Circle|Torus002|Take '
+  - first:
+      74: 6543041349897465966
+    second: Cylinder003|Circle|Circle|Tube001|Take 001|BaseLayer|Circle|Tube001|Take
+      00
+  - first:
+      74: 7654380405413831608
+    second: Cylinder003|Circle|Circle|whistle|Take 001|BaseLayer|Circle|whistle|Take
+      00
+  - first:
+      74: -9036221551043500717
+    second: Cylinder003|Cylinder002|Cylinder002|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: 8335776634116134652
+    second: Cylinder003|Cylinder002|Cylinder002|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: 3296804822402893471
+    second: Cylinder003|Cylinder002|Cylinder002|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -7874204277602587529
+    second: Cylinder003|Cylinder002|Cylinder002|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -6060786023670219388
+    second: Cylinder003|Cylinder002|Cylinder002|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: -858981823736848397
+    second: Cylinder003|Cylinder002|Cylinder002|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: 277191078175861938
+    second: Cylinder003|Cylinder002|Cylinder002|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 3793774736153607037
+    second: Cylinder003|Cylinder002|Cylinder002|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: 4884619887041846540
+    second: Cylinder003|Cylinder002|Cylinder002|hand.001|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: 6284112806991317565
+    second: Cylinder003|Cylinder002|Cylinder002|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: 645452395798837380
+    second: Cylinder003|Cylinder002|Cylinder002|Torus002|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: -9009353571765924144
+    second: Cylinder003|Cylinder002|Cylinder002|Tube001|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: 7122614421194394489
+    second: Cylinder003|Cylinder002|Cylinder002|whistle|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: 5471825150119022175
+    second: Cylinder003|Cylinder003|Cylinder003|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: -7614638351086783387
+    second: Cylinder003|Cylinder003|Cylinder003|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: 6656063837779485705
+    second: Cylinder003|Cylinder003|Cylinder003|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: 8745426210305468122
+    second: Cylinder003|Cylinder003|Cylinder003|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -5586028945445428949
+    second: Cylinder003|Cylinder003|Cylinder003|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: 6623768185779062874
+    second: Cylinder003|Cylinder003|Cylinder003|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: 2039690641035318819
+    second: Cylinder003|Cylinder003|Cylinder003|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 5557989094118560368
+    second: Cylinder003|Cylinder003|Cylinder003|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: 8281361464005301547
+    second: Cylinder003|Cylinder003|Cylinder003|hand.001|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: 6797081737105204420
+    second: Cylinder003|Cylinder003|Cylinder003|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: -7286170887696993584
+    second: Cylinder003|Cylinder003|Cylinder003|Torus002|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: -5537383656561608772
+    second: Cylinder003|Cylinder003|Cylinder003|Tube001|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: -7521399924194576341
+    second: Cylinder003|Cylinder003|Cylinder003|whistle|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: -339035141622635562
+    second: Cylinder003|flashlight|flashlight|Bone.001_end|Take 001|BaseLayer|flashligh
+  - first:
+      74: -5747508802577843979
+    second: Cylinder003|flashlight|flashlight|Cylinder001|Take 001|BaseLayer|flashlight
+  - first:
+      74: -616991927769849611
+    second: Cylinder003|flashlight|flashlight|Cylinder002|Take 001|BaseLayer|flashlight
+  - first:
+      74: -4287375462520850478
+    second: Cylinder003|flashlight|flashlight|Cylinder003|Take 001|BaseLayer|flashlight
+  - first:
+      74: -6752626416201185050
+    second: Cylinder003|flashlight|flashlight|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: -2059879716583439761
+    second: Cylinder003|flashlight|flashlight|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: 551282244153669168
+    second: Cylinder003|flashlight|flashlight|Fire_extinguisher_up|Take 001|BaseLayer|f
+  - first:
+      74: -7585023207889141764
+    second: Cylinder003|flashlight|flashlight|flashlight|Take 001|BaseLayer|flashlight|
+  - first:
+      74: -590413404255993346
+    second: Cylinder003|flashlight|flashlight|hand.001|Take 001|BaseLayer|flashlight|ha
+  - first:
+      74: 6746403393420983834
+    second: Cylinder003|flashlight|flashlight|Object002|Take 001|BaseLayer|flashlight|O
+  - first:
+      74: -6378501921306391047
+    second: Cylinder003|flashlight|flashlight|Torus002|Take 001|BaseLayer|flashlight|To
+  - first:
+      74: 4587665481178835984
+    second: Cylinder003|flashlight|flashlight|Tube001|Take 001|BaseLayer|flashlight|Tub
+  - first:
+      74: -1215714047763350653
+    second: Cylinder003|flashlight|flashlight|whistle|Take 001|BaseLayer|flashlight|whi
+  - first:
+      74: -6871813536765460496
+    second: Cylinder003|Tube001|Tube001|Bone.001_end|Take 001|BaseLayer|Tube001|Bone.00
+  - first:
+      74: -7486418690969737485
+    second: Cylinder003|Tube001|Tube001|Cylinder001|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 5332049670035227920
+    second: Cylinder003|Tube001|Tube001|Cylinder002|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 9095272234483556558
+    second: Cylinder003|Tube001|Tube001|Cylinder003|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 8933650394252267120
+    second: Cylinder003|Tube001|Tube001|Fire_extinguisher_body|Take 001|BaseLayer|Tube0
+  - first:
+      74: 764296159334534707
+    second: Cylinder003|Tube001|Tube001|Fire_extinguisher_down|Take 001|BaseLayer|Tube0
+  - first:
+      74: -6944050990124951324
+    second: Cylinder003|Tube001|Tube001|Fire_extinguisher_up|Take 001|BaseLayer|Tube001
+  - first:
+      74: 8001589074969692168
+    second: Cylinder003|Tube001|Tube001|flashlight|Take 001|BaseLayer|Tube001|flashligh
+  - first:
+      74: 5672484049104134282
+    second: Cylinder003|Tube001|Tube001|hand.001|Take 001|BaseLayer|Tube001|hand.001|Ta
+  - first:
+      74: -1524905438527967865
+    second: Cylinder003|Tube001|Tube001|Object002|Take 001|BaseLayer|Tube001|Object002|
+  - first:
+      74: 3757568604705803631
+    second: Cylinder003|Tube001|Tube001|Torus002|Take 001|BaseLayer|Tube001|Torus002|Ta
+  - first:
+      74: 9014841749040908152
+    second: Cylinder003|Tube001|Tube001|Tube001|Take 001|BaseLayer|Tube001|Tube001|Take
+  - first:
+      74: -7561862625436799143
+    second: Cylinder003|Tube001|Tube001|whistle|Take 001|BaseLayer|Tube001|whistle|Take
+  - first:
+      74: -2769766280785798177
+    second: Cylinder003|whisper|whisper|Bone.001_end|Take 001|BaseLayer|whisper|Bone.00
+  - first:
+      74: -2849663534555099203
+    second: Cylinder003|whisper|whisper|Cylinder001|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -4719187510592948236
+    second: Cylinder003|whisper|whisper|Cylinder002|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: 47522918096254414
+    second: Cylinder003|whisper|whisper|Cylinder003|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -2670156969167830885
+    second: Cylinder003|whisper|whisper|Fire_extinguisher_body|Take 001|BaseLayer|whisp
+  - first:
+      74: 8513031569198639369
+    second: Cylinder003|whisper|whisper|Fire_extinguisher_down|Take 001|BaseLayer|whisp
+  - first:
+      74: 8268183105040247562
+    second: Cylinder003|whisper|whisper|Fire_extinguisher_up|Take 001|BaseLayer|whisper
+  - first:
+      74: -5065049252204502634
+    second: Cylinder003|whisper|whisper|flashlight|Take 001|BaseLayer|whisper|flashligh
+  - first:
+      74: 1529879146736185021
+    second: Cylinder003|whisper|whisper|hand.001|Take 001|BaseLayer|whisper|hand.001|Ta
+  - first:
+      74: -1942705964029569036
+    second: Cylinder003|whisper|whisper|Object002|Take 001|BaseLayer|whisper|Object002|
+  - first:
+      74: 7979053023575844379
+    second: Cylinder003|whisper|whisper|Torus002|Take 001|BaseLayer|whisper|Torus002|Ta
+  - first:
+      74: 3426743904632469673
+    second: Cylinder003|whisper|whisper|Tube001|Take 001|BaseLayer|whisper|Tube001|Take
+  - first:
+      74: 1380393742917542812
+    second: Cylinder003|whisper|whisper|whistle|Take 001|BaseLayer|whisper|whistle|Take
+  - first:
+      74: 7890974710666211731
+    second: Tube001|Circle|Circle|Bone.001_end|Take 001|BaseLayer|Circle|Bone.001_e
+  - first:
+      74: -955065017397432074
+    second: Tube001|Circle|Circle|Cylinder001|Take 001|BaseLayer|Circle|Cylinder001
+  - first:
+      74: -1489156900723832566
+    second: Tube001|Circle|Circle|Cylinder002|Take 001|BaseLayer|Circle|Cylinder002
+  - first:
+      74: -6782538097632924069
+    second: Tube001|Circle|Circle|Cylinder003|Take 001|BaseLayer|Circle|Cylinder003
+  - first:
+      74: -969158224694295343
+    second: Tube001|Circle|Circle|Fire_extinguisher_body|Take 001|BaseLayer|Circle|
+  - first:
+      74: 764273928980508864
+    second: Tube001|Circle|Circle|Fire_extinguisher_down|Take 001|BaseLayer|Circle|
+  - first:
+      74: 3633787855293531051
+    second: Tube001|Circle|Circle|Fire_extinguisher_up|Take 001|BaseLayer|Circle|Fi
+  - first:
+      74: 1172238084456939387
+    second: Tube001|Circle|Circle|flashlight|Take 001|BaseLayer|Circle|flashlight|T
+  - first:
+      74: 4537916494570221350
+    second: 'Tube001|Circle|Circle|hand.001|Take 001|BaseLayer|Circle|hand.001|Take '
+  - first:
+      74: -3954593480083100591
+    second: Tube001|Circle|Circle|Object002|Take 001|BaseLayer|Circle|Object002|Tak
+  - first:
+      74: -6325937577986885833
+    second: 'Tube001|Circle|Circle|Torus002|Take 001|BaseLayer|Circle|Torus002|Take '
+  - first:
+      74: 9220857744644889812
+    second: Tube001|Circle|Circle|Tube001|Take 001|BaseLayer|Circle|Tube001|Take
+      00
+  - first:
+      74: 9192789859114207999
+    second: Tube001|Circle|Circle|whistle|Take 001|BaseLayer|Circle|whistle|Take
+      00
+  - first:
+      74: -1585685679555620273
+    second: Tube001|Cylinder002|Cylinder002|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: 1244459891777922628
+    second: Tube001|Cylinder002|Cylinder002|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: 3667346180997032758
+    second: Tube001|Cylinder002|Cylinder002|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -15845939257963571
+    second: Tube001|Cylinder002|Cylinder002|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: 4019548710793818208
+    second: Tube001|Cylinder002|Cylinder002|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: -5935665004652081961
+    second: Tube001|Cylinder002|Cylinder002|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: 7759221320237844100
+    second: Tube001|Cylinder002|Cylinder002|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: -6810446793874409157
+    second: Tube001|Cylinder002|Cylinder002|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: -1360602617461831267
+    second: Tube001|Cylinder002|Cylinder002|hand.001|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: 4393408321728412869
+    second: Tube001|Cylinder002|Cylinder002|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: 3041146527872870495
+    second: Tube001|Cylinder002|Cylinder002|Torus002|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: 6265344559172056776
+    second: Tube001|Cylinder002|Cylinder002|Tube001|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: -5894158454101975024
+    second: Tube001|Cylinder002|Cylinder002|whistle|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: 7103872213415134404
+    second: Tube001|Cylinder003|Cylinder003|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: -2813037226615132790
+    second: Tube001|Cylinder003|Cylinder003|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -7331436844580641369
+    second: Tube001|Cylinder003|Cylinder003|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -150225836985210199
+    second: Tube001|Cylinder003|Cylinder003|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -5373272837064829074
+    second: Tube001|Cylinder003|Cylinder003|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: 1329129429046372107
+    second: Tube001|Cylinder003|Cylinder003|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: 6941692031145894471
+    second: Tube001|Cylinder003|Cylinder003|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: -8654490451913118993
+    second: Tube001|Cylinder003|Cylinder003|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: -609668181890652336
+    second: Tube001|Cylinder003|Cylinder003|hand.001|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: -4585908057530509888
+    second: Tube001|Cylinder003|Cylinder003|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: 688127472667138665
+    second: Tube001|Cylinder003|Cylinder003|Torus002|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: -8277251920662464222
+    second: Tube001|Cylinder003|Cylinder003|Tube001|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: -1365393345556633944
+    second: Tube001|Cylinder003|Cylinder003|whistle|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: 5583914857979173303
+    second: Tube001|flashlight|flashlight|Bone.001_end|Take 001|BaseLayer|flashligh
+  - first:
+      74: -3419349136497910608
+    second: Tube001|flashlight|flashlight|Cylinder001|Take 001|BaseLayer|flashlight
+  - first:
+      74: -7217952075897902969
+    second: Tube001|flashlight|flashlight|Cylinder002|Take 001|BaseLayer|flashlight
+  - first:
+      74: 7366973092362593551
+    second: Tube001|flashlight|flashlight|Cylinder003|Take 001|BaseLayer|flashlight
+  - first:
+      74: 8526411908296884033
+    second: Tube001|flashlight|flashlight|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: -1716652102593944263
+    second: Tube001|flashlight|flashlight|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: -5533749655808373608
+    second: Tube001|flashlight|flashlight|Fire_extinguisher_up|Take 001|BaseLayer|f
+  - first:
+      74: 8841689940653383953
+    second: Tube001|flashlight|flashlight|flashlight|Take 001|BaseLayer|flashlight|
+  - first:
+      74: -3909039450250734548
+    second: Tube001|flashlight|flashlight|hand.001|Take 001|BaseLayer|flashlight|ha
+  - first:
+      74: -8970409804587687510
+    second: Tube001|flashlight|flashlight|Object002|Take 001|BaseLayer|flashlight|O
+  - first:
+      74: 3847565865518481001
+    second: Tube001|flashlight|flashlight|Torus002|Take 001|BaseLayer|flashlight|To
+  - first:
+      74: -8580034556571552848
+    second: Tube001|flashlight|flashlight|Tube001|Take 001|BaseLayer|flashlight|Tub
+  - first:
+      74: 1696694433383660331
+    second: Tube001|flashlight|flashlight|whistle|Take 001|BaseLayer|flashlight|whi
+  - first:
+      74: 2341437485568024291
+    second: Tube001|Tube001|Tube001|Bone.001_end|Take 001|BaseLayer|Tube001|Bone.00
+  - first:
+      74: 8951989624592292117
+    second: Tube001|Tube001|Tube001|Cylinder001|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 7318070702600649706
+    second: Tube001|Tube001|Tube001|Cylinder002|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 1709989815171308528
+    second: Tube001|Tube001|Tube001|Cylinder003|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: -6574087486367819603
+    second: Tube001|Tube001|Tube001|Fire_extinguisher_body|Take 001|BaseLayer|Tube0
+  - first:
+      74: -7845802002150139299
+    second: Tube001|Tube001|Tube001|Fire_extinguisher_down|Take 001|BaseLayer|Tube0
+  - first:
+      74: 412716841934607095
+    second: Tube001|Tube001|Tube001|Fire_extinguisher_up|Take 001|BaseLayer|Tube001
+  - first:
+      74: -7908305566338309491
+    second: Tube001|Tube001|Tube001|flashlight|Take 001|BaseLayer|Tube001|flashligh
+  - first:
+      74: 4247366417482756803
+    second: Tube001|Tube001|Tube001|hand.001|Take 001|BaseLayer|Tube001|hand.001|Ta
+  - first:
+      74: -144936491105634037
+    second: Tube001|Tube001|Tube001|Object002|Take 001|BaseLayer|Tube001|Object002|
+  - first:
+      74: -2289557861731479550
+    second: Tube001|Tube001|Tube001|Torus002|Take 001|BaseLayer|Tube001|Torus002|Ta
+  - first:
+      74: 4063907850796593995
+    second: Tube001|Tube001|Tube001|Tube001|Take 001|BaseLayer|Tube001|Tube001|Take
+  - first:
+      74: 1920897958113061575
+    second: Tube001|Tube001|Tube001|whistle|Take 001|BaseLayer|Tube001|whistle|Take
+  - first:
+      74: 5042542134505101309
+    second: Tube001|whisper|whisper|Bone.001_end|Take 001|BaseLayer|whisper|Bone.00
+  - first:
+      74: -7404035042286659242
+    second: Tube001|whisper|whisper|Cylinder001|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -2087323748418937655
+    second: Tube001|whisper|whisper|Cylinder002|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -2348420845668247256
+    second: Tube001|whisper|whisper|Cylinder003|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -6312978929556803768
+    second: Tube001|whisper|whisper|Fire_extinguisher_body|Take 001|BaseLayer|whisp
+  - first:
+      74: 3970026972477848072
+    second: Tube001|whisper|whisper|Fire_extinguisher_down|Take 001|BaseLayer|whisp
+  - first:
+      74: -7386095495759708966
+    second: Tube001|whisper|whisper|Fire_extinguisher_up|Take 001|BaseLayer|whisper
+  - first:
+      74: -8743786143616046863
+    second: Tube001|whisper|whisper|flashlight|Take 001|BaseLayer|whisper|flashligh
+  - first:
+      74: -7847322480939913706
+    second: Tube001|whisper|whisper|hand.001|Take 001|BaseLayer|whisper|hand.001|Ta
+  - first:
+      74: 7364255725108157332
+    second: Tube001|whisper|whisper|Object002|Take 001|BaseLayer|whisper|Object002|
+  - first:
+      74: -3822923750358429974
+    second: Tube001|whisper|whisper|Torus002|Take 001|BaseLayer|whisper|Torus002|Ta
+  - first:
+      74: -1314116336541885648
+    second: Tube001|whisper|whisper|Tube001|Take 001|BaseLayer|whisper|Tube001|Take
+  - first:
+      74: -8097736267492934161
+    second: Tube001|whisper|whisper|whistle|Take 001|BaseLayer|whisper|whistle|Take
+  - first:
+      74: 6169656771602952442
+    second: flashlight|Circle|Circle|Bone.001_end|Take 001|BaseLayer|Circle|Bone.001_e
+  - first:
+      74: 1545892853347665715
+    second: flashlight|Circle|Circle|Cylinder001|Take 001|BaseLayer|Circle|Cylinder001
+  - first:
+      74: 6501157820429198512
+    second: flashlight|Circle|Circle|Cylinder002|Take 001|BaseLayer|Circle|Cylinder002
+  - first:
+      74: 7977789137049511395
+    second: flashlight|Circle|Circle|Cylinder003|Take 001|BaseLayer|Circle|Cylinder003
+  - first:
+      74: 683651502248917639
+    second: flashlight|Circle|Circle|Fire_extinguisher_body|Take 001|BaseLayer|Circle|
+  - first:
+      74: -8801500787048000392
+    second: flashlight|Circle|Circle|Fire_extinguisher_down|Take 001|BaseLayer|Circle|
+  - first:
+      74: -2139887942354024139
+    second: flashlight|Circle|Circle|Fire_extinguisher_up|Take 001|BaseLayer|Circle|Fi
+  - first:
+      74: 8027187424372120337
+    second: flashlight|Circle|Circle|flashlight|Take 001|BaseLayer|Circle|flashlight|T
+  - first:
+      74: -1861124010863320852
+    second: 'flashlight|Circle|Circle|hand.001|Take 001|BaseLayer|Circle|hand.001|Take '
+  - first:
+      74: 2800489870161935101
+    second: flashlight|Circle|Circle|Object002|Take 001|BaseLayer|Circle|Object002|Tak
+  - first:
+      74: 7367088148922599081
+    second: 'flashlight|Circle|Circle|Torus002|Take 001|BaseLayer|Circle|Torus002|Take '
+  - first:
+      74: 3788100085699757644
+    second: flashlight|Circle|Circle|Tube001|Take 001|BaseLayer|Circle|Tube001|Take
+      00
+  - first:
+      74: 8678489358835114476
+    second: flashlight|Circle|Circle|whistle|Take 001|BaseLayer|Circle|whistle|Take
+      00
+  - first:
+      74: 2252769719030399788
+    second: flashlight|Cylinder002|Cylinder002|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: 2617864152141575963
+    second: flashlight|Cylinder002|Cylinder002|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -4670656433872263116
+    second: flashlight|Cylinder002|Cylinder002|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -855067302728496093
+    second: flashlight|Cylinder002|Cylinder002|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -837621468502834412
+    second: flashlight|Cylinder002|Cylinder002|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: -4477608300178436815
+    second: flashlight|Cylinder002|Cylinder002|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: -2606578585161209402
+    second: flashlight|Cylinder002|Cylinder002|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 1307367303333039295
+    second: flashlight|Cylinder002|Cylinder002|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: -482810700510263317
+    second: flashlight|Cylinder002|Cylinder002|hand.001|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: -7474839760988700537
+    second: flashlight|Cylinder002|Cylinder002|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: -666078896980622971
+    second: flashlight|Cylinder002|Cylinder002|Torus002|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: -6175545806547861808
+    second: flashlight|Cylinder002|Cylinder002|Tube001|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: -8795967633906175569
+    second: flashlight|Cylinder002|Cylinder002|whistle|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: 8055189041803949395
+    second: flashlight|Cylinder003|Cylinder003|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: -1477416968006697927
+    second: flashlight|Cylinder003|Cylinder003|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -337406115893279878
+    second: flashlight|Cylinder003|Cylinder003|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -7123335637590335080
+    second: flashlight|Cylinder003|Cylinder003|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -1046409138406783342
+    second: flashlight|Cylinder003|Cylinder003|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: -9063988306236079265
+    second: flashlight|Cylinder003|Cylinder003|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: 4252042752345954792
+    second: flashlight|Cylinder003|Cylinder003|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 7426000189524820072
+    second: flashlight|Cylinder003|Cylinder003|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: 4656392315043927589
+    second: flashlight|Cylinder003|Cylinder003|hand.001|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: -6073983291326448574
+    second: flashlight|Cylinder003|Cylinder003|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: -1319316297225865293
+    second: flashlight|Cylinder003|Cylinder003|Torus002|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: 2590339069331914333
+    second: flashlight|Cylinder003|Cylinder003|Tube001|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: 994704642996881218
+    second: flashlight|Cylinder003|Cylinder003|whistle|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: -1790005807897804090
+    second: flashlight|flashlight|flashlight|Bone.001_end|Take 001|BaseLayer|flashligh
+  - first:
+      74: 5562488385846576834
+    second: flashlight|flashlight|flashlight|Cylinder001|Take 001|BaseLayer|flashlight
+  - first:
+      74: 858117252011191243
+    second: flashlight|flashlight|flashlight|Cylinder002|Take 001|BaseLayer|flashlight
+  - first:
+      74: -1087219368324648620
+    second: flashlight|flashlight|flashlight|Cylinder003|Take 001|BaseLayer|flashlight
+  - first:
+      74: 1090533756302514793
+    second: flashlight|flashlight|flashlight|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: -7710582136941503902
+    second: flashlight|flashlight|flashlight|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: 2091085784959444144
+    second: flashlight|flashlight|flashlight|Fire_extinguisher_up|Take 001|BaseLayer|f
+  - first:
+      74: 1069059427252837165
+    second: flashlight|flashlight|flashlight|flashlight|Take 001|BaseLayer|flashlight|
+  - first:
+      74: -8572764735885734150
+    second: flashlight|flashlight|flashlight|hand.001|Take 001|BaseLayer|flashlight|ha
+  - first:
+      74: 6273110367929765913
+    second: flashlight|flashlight|flashlight|Object002|Take 001|BaseLayer|flashlight|O
+  - first:
+      74: 2876869762341914915
+    second: flashlight|flashlight|flashlight|Torus002|Take 001|BaseLayer|flashlight|To
+  - first:
+      74: -4187958687635156241
+    second: flashlight|flashlight|flashlight|Tube001|Take 001|BaseLayer|flashlight|Tub
+  - first:
+      74: -4693158076795783840
+    second: flashlight|flashlight|flashlight|whistle|Take 001|BaseLayer|flashlight|whi
+  - first:
+      74: 6162240205089493318
+    second: flashlight|Tube001|Tube001|Bone.001_end|Take 001|BaseLayer|Tube001|Bone.00
+  - first:
+      74: 4582563041946355811
+    second: flashlight|Tube001|Tube001|Cylinder001|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: -6328564757694850306
+    second: flashlight|Tube001|Tube001|Cylinder002|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 5530209003659654855
+    second: flashlight|Tube001|Tube001|Cylinder003|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: 1791556517451109102
+    second: flashlight|Tube001|Tube001|Fire_extinguisher_body|Take 001|BaseLayer|Tube0
+  - first:
+      74: 1353072674403805748
+    second: flashlight|Tube001|Tube001|Fire_extinguisher_down|Take 001|BaseLayer|Tube0
+  - first:
+      74: 7337241436833720768
+    second: flashlight|Tube001|Tube001|Fire_extinguisher_up|Take 001|BaseLayer|Tube001
+  - first:
+      74: 1739402632178848794
+    second: flashlight|Tube001|Tube001|flashlight|Take 001|BaseLayer|Tube001|flashligh
+  - first:
+      74: 3995902135360344238
+    second: flashlight|Tube001|Tube001|hand.001|Take 001|BaseLayer|Tube001|hand.001|Ta
+  - first:
+      74: 2625557154970818324
+    second: flashlight|Tube001|Tube001|Object002|Take 001|BaseLayer|Tube001|Object002|
+  - first:
+      74: 4446313738799062535
+    second: flashlight|Tube001|Tube001|Torus002|Take 001|BaseLayer|Tube001|Torus002|Ta
+  - first:
+      74: -3338131397218586392
+    second: flashlight|Tube001|Tube001|Tube001|Take 001|BaseLayer|Tube001|Tube001|Take
+  - first:
+      74: -1163767609191440828
+    second: flashlight|Tube001|Tube001|whistle|Take 001|BaseLayer|Tube001|whistle|Take
+  - first:
+      74: -1002147372057022367
+    second: flashlight|whisper|whisper|Bone.001_end|Take 001|BaseLayer|whisper|Bone.00
+  - first:
+      74: 1766708521853141387
+    second: flashlight|whisper|whisper|Cylinder001|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -8668488605457375147
+    second: flashlight|whisper|whisper|Cylinder002|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -4051634059346403698
+    second: flashlight|whisper|whisper|Cylinder003|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -7473769983478854340
+    second: flashlight|whisper|whisper|Fire_extinguisher_body|Take 001|BaseLayer|whisp
+  - first:
+      74: -6524689517751349396
+    second: flashlight|whisper|whisper|Fire_extinguisher_down|Take 001|BaseLayer|whisp
+  - first:
+      74: -3441857783439649814
+    second: flashlight|whisper|whisper|Fire_extinguisher_up|Take 001|BaseLayer|whisper
+  - first:
+      74: 4747145255067174007
+    second: flashlight|whisper|whisper|flashlight|Take 001|BaseLayer|whisper|flashligh
+  - first:
+      74: -541028106887526003
+    second: flashlight|whisper|whisper|hand.001|Take 001|BaseLayer|whisper|hand.001|Ta
+  - first:
+      74: 5924102902805100928
+    second: flashlight|whisper|whisper|Object002|Take 001|BaseLayer|whisper|Object002|
+  - first:
+      74: -3776720250599598835
+    second: flashlight|whisper|whisper|Torus002|Take 001|BaseLayer|whisper|Torus002|Ta
+  - first:
+      74: -7281788732017450020
+    second: flashlight|whisper|whisper|Tube001|Take 001|BaseLayer|whisper|Tube001|Take
+  - first:
+      74: 8106206674321617138
+    second: flashlight|whisper|whisper|whistle|Take 001|BaseLayer|whisper|whistle|Take
+  - first:
+      74: -6166081312678213019
+    second: whisper|Circle|Circle|Bone.001_end|Take 001|BaseLayer|Circle|Bone.001_e
+  - first:
+      74: -5699545040241321216
+    second: whisper|Circle|Circle|Cylinder001|Take 001|BaseLayer|Circle|Cylinder001
+  - first:
+      74: 5456166519372086502
+    second: whisper|Circle|Circle|Cylinder002|Take 001|BaseLayer|Circle|Cylinder002
+  - first:
+      74: -3409497035225363715
+    second: whisper|Circle|Circle|Cylinder003|Take 001|BaseLayer|Circle|Cylinder003
+  - first:
+      74: 4798523925603448839
+    second: whisper|Circle|Circle|Fire_extinguisher_body|Take 001|BaseLayer|Circle|
+  - first:
+      74: 6067005200831758652
+    second: whisper|Circle|Circle|Fire_extinguisher_down|Take 001|BaseLayer|Circle|
+  - first:
+      74: 7734472843121751933
+    second: whisper|Circle|Circle|Fire_extinguisher_up|Take 001|BaseLayer|Circle|Fi
+  - first:
+      74: -1365688526713927204
+    second: whisper|Circle|Circle|flashlight|Take 001|BaseLayer|Circle|flashlight|T
+  - first:
+      74: 4742926145984589499
+    second: 'whisper|Circle|Circle|hand.001|Take 001|BaseLayer|Circle|hand.001|Take '
+  - first:
+      74: 4878435835162840244
+    second: whisper|Circle|Circle|Object002|Take 001|BaseLayer|Circle|Object002|Tak
+  - first:
+      74: 1464821683596021655
+    second: 'whisper|Circle|Circle|Torus002|Take 001|BaseLayer|Circle|Torus002|Take '
+  - first:
+      74: -8665986782023712308
+    second: whisper|Circle|Circle|Tube001|Take 001|BaseLayer|Circle|Tube001|Take
+      00
+  - first:
+      74: -4143602871239051562
+    second: whisper|Circle|Circle|whistle|Take 001|BaseLayer|Circle|whistle|Take
+      00
+  - first:
+      74: 6481179028951358961
+    second: whisper|Cylinder002|Cylinder002|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: 834681694008388927
+    second: whisper|Cylinder002|Cylinder002|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -6752676667136172949
+    second: whisper|Cylinder002|Cylinder002|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -7223535200994441518
+    second: whisper|Cylinder002|Cylinder002|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -5061258992728436827
+    second: whisper|Cylinder002|Cylinder002|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: -1886369672369345711
+    second: whisper|Cylinder002|Cylinder002|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: -1789702758092639203
+    second: whisper|Cylinder002|Cylinder002|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 7185095891159620191
+    second: whisper|Cylinder002|Cylinder002|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: -1021608836992276750
+    second: whisper|Cylinder002|Cylinder002|hand.001|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: 9100730907292537469
+    second: whisper|Cylinder002|Cylinder002|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: 6482922962894402804
+    second: whisper|Cylinder002|Cylinder002|Torus002|Take 001|BaseLayer|Cylinder002
+  - first:
+      74: -4339282275626037455
+    second: whisper|Cylinder002|Cylinder002|Tube001|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: -8766331211492795099
+    second: whisper|Cylinder002|Cylinder002|whistle|Take 001|BaseLayer|Cylinder002|
+  - first:
+      74: 7819606209154704317
+    second: whisper|Cylinder003|Cylinder003|Bone.001_end|Take 001|BaseLayer|Cylinde
+  - first:
+      74: 2968897205386177030
+    second: whisper|Cylinder003|Cylinder003|Cylinder001|Take 001|BaseLayer|Cylinder
+  - first:
+      74: 7151844005112363953
+    second: whisper|Cylinder003|Cylinder003|Cylinder002|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -9112021797672517234
+    second: whisper|Cylinder003|Cylinder003|Cylinder003|Take 001|BaseLayer|Cylinder
+  - first:
+      74: -7878145322880863590
+    second: whisper|Cylinder003|Cylinder003|Fire_extinguisher_body|Take 001|BaseLay
+  - first:
+      74: -586608517081375053
+    second: whisper|Cylinder003|Cylinder003|Fire_extinguisher_down|Take 001|BaseLay
+  - first:
+      74: -1387181129556389214
+    second: whisper|Cylinder003|Cylinder003|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: -7776674085689868261
+    second: whisper|Cylinder003|Cylinder003|flashlight|Take 001|BaseLayer|Cylinder0
+  - first:
+      74: 8168187944441155287
+    second: whisper|Cylinder003|Cylinder003|hand.001|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: -1614943294233330443
+    second: whisper|Cylinder003|Cylinder003|Object002|Take 001|BaseLayer|Cylinder00
+  - first:
+      74: -4013920907656634585
+    second: whisper|Cylinder003|Cylinder003|Torus002|Take 001|BaseLayer|Cylinder003
+  - first:
+      74: 1985395971686637866
+    second: whisper|Cylinder003|Cylinder003|Tube001|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: 1286783842601396100
+    second: whisper|Cylinder003|Cylinder003|whistle|Take 001|BaseLayer|Cylinder003|
+  - first:
+      74: 99898137868911368
+    second: whisper|flashlight|flashlight|Bone.001_end|Take 001|BaseLayer|flashligh
+  - first:
+      74: -7919663762925761612
+    second: whisper|flashlight|flashlight|Cylinder001|Take 001|BaseLayer|flashlight
+  - first:
+      74: 1788389110859356235
+    second: whisper|flashlight|flashlight|Cylinder002|Take 001|BaseLayer|flashlight
+  - first:
+      74: -1457299125708059550
+    second: whisper|flashlight|flashlight|Cylinder003|Take 001|BaseLayer|flashlight
+  - first:
+      74: 5100324288073249465
+    second: whisper|flashlight|flashlight|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: 3389376327592472317
+    second: whisper|flashlight|flashlight|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: -1907684576987092901
+    second: whisper|flashlight|flashlight|Fire_extinguisher_up|Take 001|BaseLayer|f
+  - first:
+      74: 761941511598505921
+    second: whisper|flashlight|flashlight|flashlight|Take 001|BaseLayer|flashlight|
+  - first:
+      74: -3817873355687663581
+    second: whisper|flashlight|flashlight|hand.001|Take 001|BaseLayer|flashlight|ha
+  - first:
+      74: -6316558869496118914
+    second: whisper|flashlight|flashlight|Object002|Take 001|BaseLayer|flashlight|O
+  - first:
+      74: 5329339451799124311
+    second: whisper|flashlight|flashlight|Torus002|Take 001|BaseLayer|flashlight|To
+  - first:
+      74: 4382943350799732509
+    second: whisper|flashlight|flashlight|Tube001|Take 001|BaseLayer|flashlight|Tub
+  - first:
+      74: -5706950428308392409
+    second: whisper|flashlight|flashlight|whistle|Take 001|BaseLayer|flashlight|whi
+  - first:
+      74: -7060788818598341103
+    second: whisper|Tube001|Tube001|Bone.001_end|Take 001|BaseLayer|Tube001|Bone.00
+  - first:
+      74: 4336840259474894576
+    second: whisper|Tube001|Tube001|Cylinder001|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: -7655683769992430656
+    second: whisper|Tube001|Tube001|Cylinder002|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: -567582393968360696
+    second: whisper|Tube001|Tube001|Cylinder003|Take 001|BaseLayer|Tube001|Cylinder
+  - first:
+      74: -1546255242737672833
+    second: whisper|Tube001|Tube001|Fire_extinguisher_body|Take 001|BaseLayer|Tube0
+  - first:
+      74: -9018062604986043010
+    second: whisper|Tube001|Tube001|Fire_extinguisher_down|Take 001|BaseLayer|Tube0
+  - first:
+      74: 6787708715414398879
+    second: whisper|Tube001|Tube001|Fire_extinguisher_up|Take 001|BaseLayer|Tube001
+  - first:
+      74: 5140895824643687752
+    second: whisper|Tube001|Tube001|flashlight|Take 001|BaseLayer|Tube001|flashligh
+  - first:
+      74: -8352704098086940689
+    second: whisper|Tube001|Tube001|hand.001|Take 001|BaseLayer|Tube001|hand.001|Ta
+  - first:
+      74: 5995836447776571414
+    second: whisper|Tube001|Tube001|Object002|Take 001|BaseLayer|Tube001|Object002|
+  - first:
+      74: 1383242420579701680
+    second: whisper|Tube001|Tube001|Torus002|Take 001|BaseLayer|Tube001|Torus002|Ta
+  - first:
+      74: -1719287644265688565
+    second: whisper|Tube001|Tube001|Tube001|Take 001|BaseLayer|Tube001|Tube001|Take
+  - first:
+      74: -7734150931805272491
+    second: whisper|Tube001|Tube001|whistle|Take 001|BaseLayer|Tube001|whistle|Take
+  - first:
+      74: 4909724386248753424
+    second: whisper|whisper|whisper|Bone.001_end|Take 001|BaseLayer|whisper|Bone.00
+  - first:
+      74: 1364627007980273417
+    second: whisper|whisper|whisper|Cylinder001|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: 4293092154155747813
+    second: whisper|whisper|whisper|Cylinder002|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: -2032844161887852878
+    second: whisper|whisper|whisper|Cylinder003|Take 001|BaseLayer|whisper|Cylinder
+  - first:
+      74: 7654987823489591589
+    second: whisper|whisper|whisper|Fire_extinguisher_body|Take 001|BaseLayer|whisp
+  - first:
+      74: -6360103134126328732
+    second: whisper|whisper|whisper|Fire_extinguisher_down|Take 001|BaseLayer|whisp
+  - first:
+      74: 3446355334877976212
+    second: whisper|whisper|whisper|Fire_extinguisher_up|Take 001|BaseLayer|whisper
+  - first:
+      74: 43638860069464428
+    second: whisper|whisper|whisper|flashlight|Take 001|BaseLayer|whisper|flashligh
+  - first:
+      74: 5726324074881950505
+    second: whisper|whisper|whisper|hand.001|Take 001|BaseLayer|whisper|hand.001|Ta
+  - first:
+      74: -4390871318002406712
+    second: whisper|whisper|whisper|Object002|Take 001|BaseLayer|whisper|Object002|
+  - first:
+      74: 8754448298179363232
+    second: whisper|whisper|whisper|Torus002|Take 001|BaseLayer|whisper|Torus002|Ta
+  - first:
+      74: -1497588391374588414
+    second: whisper|whisper|whisper|Tube001|Take 001|BaseLayer|whisper|Tube001|Take
+  - first:
+      74: 3361274429435866083
+    second: whisper|whisper|whisper|whistle|Take 001|BaseLayer|whisper|whistle|Take
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 2f1b484f75712f0498337f8e11131532, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 6aa5a2047756c084587f469665f93f42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: f827359abe8b18c4588cf320420585fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.012
+    second: {fileID: 2100000, guid: 0eec9e5a8e04ed242b184eaadae01fd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.014
+    second: {fileID: 2100000, guid: 228b8edd858582a4e8fe292c656865f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.015
+    second: {fileID: 2100000, guid: 4342f43d05751fd438596c71b220faca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.016
+    second: {fileID: 2100000, guid: d85dd4e7a010c25488dc82aac73ea3d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.019
+    second: {fileID: 2100000, guid: 2337ec67b3811894cbdf690756dd8aa2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.020
+    second: {fileID: 2100000, guid: ae47b2556fb26784f91a20bb8bab0bf4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: book
+    second: {fileID: 2100000, guid: dc5392558f08c1c4a8489b54ca4e76dd, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

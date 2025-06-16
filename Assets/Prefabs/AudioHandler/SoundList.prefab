@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7278014804576355823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7278014804576355817}
+  - component: {fileID: 7278014804576355816}
+  m_Layer: 0
+  m_Name: SoundList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7278014804576355817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7278014804576355823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7278014804576355816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7278014804576355823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b96f5f3b8007a46aa0096116ab7d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beep: {fileID: 8300000, guid: 93c40e36bd20870479cefe773b526db3, type: 3}
+  changeOption: {fileID: 8300000, guid: 9a3202ce68517a14090f87520b363099, type: 3}
+  error: {fileID: 8300000, guid: b0871e39c0bf3454ab84ed0c1552fb19, type: 3}
+  hover: {fileID: 8300000, guid: c1e29f06cf7ad6b458befd63fb2e1823, type: 3}
+  newStage: {fileID: 8300000, guid: 8f43ef23d38c4cb4684ee6ae4ae72e96, type: 3}
+  pencil: {fileID: 8300000, guid: 0cfe1a37a79bbc94886ee51f429f2e97, type: 3}
+  select: {fileID: 8300000, guid: c727849ec720f2f4cafb062e15b8233a, type: 3}
+  titleBeep: {fileID: 8300000, guid: 503148ab6de7e4a449b75a0b6319b086, type: 3}
+  typing: {fileID: 8300000, guid: 6cfd225bd98df9c478e5abb0bace5255, type: 3}
+  warning: {fileID: 8300000, guid: 01fc12129f7925c42a089bdf01137d32, type: 3}
+  wrong_v1: {fileID: 8300000, guid: ed6c9acb23adb3e46a9c324c37a97044, type: 3}
+  wrong_v2: {fileID: 8300000, guid: 0ebf8b70e557a09439604238d74aa8a3, type: 3}
+  glassBreak: {fileID: 8300000, guid: 78b04781608e13a4fa8fc56fd8181676, type: 3}
+  slogan: {fileID: 8300000, guid: ab23ecc234fe6ed40a41ec07f66f0c10, type: 3}
+  Great: {fileID: 8300000, guid: 6aea61c574b17084ca1e846b92830393, type: 3}

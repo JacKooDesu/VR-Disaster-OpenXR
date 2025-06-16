@@ -1,0 +1,739 @@
+fileFormatVersion: 2
+guid: 305843f464a611048b21ec02acceef6c
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 4056178131195074314
+    second: Waterproof_gate|Area.001|Take 001|BaseLayer
+  - first:
+      74: -1636429004130006776
+    second: Waterproof_gate|Area.002|Take 001|BaseLayer
+  - first:
+      74: 8391848652777442010
+    second: Waterproof_gate|Area.004|Take 001|BaseLayer
+  - first:
+      74: 3379648295990042722
+    second: Waterproof_gate|Area|Take 001|BaseLayer
+  - first:
+      74: 8553462083184974610
+    second: Waterproof_gate|B_cabinet|Take 001|BaseLayer
+  - first:
+      74: 8698825485240707753
+    second: Waterproof_gate|bag|Take 001|BaseLayer
+  - first:
+      74: 629402289295747778
+    second: Waterproof_gate|BezierCircle.001|Take 001|BaseLayer
+  - first:
+      74: -5994894667695784008
+    second: Waterproof_gate|BezierCircle|Take 001|BaseLayer
+  - first:
+      74: -6102916361147671752
+    second: Waterproof_gate|Bike|Take 001|BaseLayer
+  - first:
+      74: -6431786378215912293
+    second: Waterproof_gate|break_cell.001|Take 001|BaseLayer
+  - first:
+      74: -2992212515904505471
+    second: Waterproof_gate|break_cell.002|Take 001|BaseLayer
+  - first:
+      74: 8319197081796074006
+    second: Waterproof_gate|break_cell.003|Take 001|BaseLayer
+  - first:
+      74: 7083538719654644151
+    second: Waterproof_gate|break_cell.004|Take 001|BaseLayer
+  - first:
+      74: -4960425895884992557
+    second: Waterproof_gate|break_cell.005|Take 001|BaseLayer
+  - first:
+      74: 4959713000285098005
+    second: Waterproof_gate|break_cell.006|Take 001|BaseLayer
+  - first:
+      74: -1203927658739417255
+    second: Waterproof_gate|break_cell.007|Take 001|BaseLayer
+  - first:
+      74: 4609865621376423713
+    second: Waterproof_gate|break_cell.008|Take 001|BaseLayer
+  - first:
+      74: -2926352520635844119
+    second: Waterproof_gate|break_cell.009|Take 001|BaseLayer
+  - first:
+      74: -5514652811874566646
+    second: Waterproof_gate|break_cell.010|Take 001|BaseLayer
+  - first:
+      74: 1698932610051561143
+    second: Waterproof_gate|break_cell.011|Take 001|BaseLayer
+  - first:
+      74: 2762284994891689242
+    second: Waterproof_gate|break_cell.012|Take 001|BaseLayer
+  - first:
+      74: -2997310719472404531
+    second: Waterproof_gate|break_cell.013|Take 001|BaseLayer
+  - first:
+      74: 5658296152734942496
+    second: Waterproof_gate|break_cell.014|Take 001|BaseLayer
+  - first:
+      74: -8724390074389607585
+    second: Waterproof_gate|break_cell.015|Take 001|BaseLayer
+  - first:
+      74: -1900031124931311303
+    second: Waterproof_gate|break_cell.016|Take 001|BaseLayer
+  - first:
+      74: 7449295341555269700
+    second: Waterproof_gate|break_cell.017|Take 001|BaseLayer
+  - first:
+      74: -8176924357137307735
+    second: Waterproof_gate|break_cell.018|Take 001|BaseLayer
+  - first:
+      74: -3812112691418111546
+    second: Waterproof_gate|break_cell.019|Take 001|BaseLayer
+  - first:
+      74: -9217480202744822806
+    second: Waterproof_gate|break_cell.020|Take 001|BaseLayer
+  - first:
+      74: -5599417964035872475
+    second: Waterproof_gate|break_cell.021|Take 001|BaseLayer
+  - first:
+      74: 3483783164143343752
+    second: Waterproof_gate|break_cell.022|Take 001|BaseLayer
+  - first:
+      74: -1348447736344431154
+    second: Waterproof_gate|break_cell.023|Take 001|BaseLayer
+  - first:
+      74: -2594229737004970085
+    second: Waterproof_gate|break_cell.024|Take 001|BaseLayer
+  - first:
+      74: -3441459455148648783
+    second: Waterproof_gate|break_cell.025|Take 001|BaseLayer
+  - first:
+      74: -2235999092187440259
+    second: Waterproof_gate|break_cell.026|Take 001|BaseLayer
+  - first:
+      74: 3559370938142956313
+    second: Waterproof_gate|break_cell.027|Take 001|BaseLayer
+  - first:
+      74: 1036938961360044350
+    second: Waterproof_gate|break_cell.028|Take 001|BaseLayer
+  - first:
+      74: 5007828327995994238
+    second: Waterproof_gate|break_cell.029|Take 001|BaseLayer
+  - first:
+      74: -4799515235500968836
+    second: Waterproof_gate|break_cell.030|Take 001|BaseLayer
+  - first:
+      74: 7639120512706777620
+    second: Waterproof_gate|break_cell.031|Take 001|BaseLayer
+  - first:
+      74: -1214366685668189115
+    second: Waterproof_gate|break_cell.032|Take 001|BaseLayer
+  - first:
+      74: 9034243478240747099
+    second: Waterproof_gate|break_cell.033|Take 001|BaseLayer
+  - first:
+      74: 772767503599613219
+    second: Waterproof_gate|break_cell.034|Take 001|BaseLayer
+  - first:
+      74: 643404523772037825
+    second: Waterproof_gate|break_cell.035|Take 001|BaseLayer
+  - first:
+      74: 8404501871051771141
+    second: Waterproof_gate|break_cell.036|Take 001|BaseLayer
+  - first:
+      74: -1277540692159087255
+    second: Waterproof_gate|break_cell.037|Take 001|BaseLayer
+  - first:
+      74: -2057547892766458729
+    second: Waterproof_gate|break_cell.038|Take 001|BaseLayer
+  - first:
+      74: -421906647059729048
+    second: Waterproof_gate|break_cell.039|Take 001|BaseLayer
+  - first:
+      74: -4204309641296506184
+    second: Waterproof_gate|break_cell.040|Take 001|BaseLayer
+  - first:
+      74: -1310435010017530195
+    second: Waterproof_gate|break_cell.041|Take 001|BaseLayer
+  - first:
+      74: -6754099309066651115
+    second: Waterproof_gate|break_cell.042|Take 001|BaseLayer
+  - first:
+      74: 5417410373654197765
+    second: Waterproof_gate|break_cell.043|Take 001|BaseLayer
+  - first:
+      74: -2354347857430023698
+    second: Waterproof_gate|break_cell.044|Take 001|BaseLayer
+  - first:
+      74: -1422928989122360087
+    second: Waterproof_gate|break_cell.045|Take 001|BaseLayer
+  - first:
+      74: -732520667319548206
+    second: Waterproof_gate|break_cell.046|Take 001|BaseLayer
+  - first:
+      74: -3294995258034234502
+    second: Waterproof_gate|break_cell.047|Take 001|BaseLayer
+  - first:
+      74: -6371133706235495154
+    second: Waterproof_gate|break_cell.048|Take 001|BaseLayer
+  - first:
+      74: 4981899871927165492
+    second: Waterproof_gate|break_cell.049|Take 001|BaseLayer
+  - first:
+      74: 5691650061419812107
+    second: Waterproof_gate|break_cell.050|Take 001|BaseLayer
+  - first:
+      74: 1449245799309667938
+    second: Waterproof_gate|break_cell.051|Take 001|BaseLayer
+  - first:
+      74: 5009647980118380100
+    second: Waterproof_gate|break_cell.052|Take 001|BaseLayer
+  - first:
+      74: -1523778717706135636
+    second: Waterproof_gate|break_cell.053|Take 001|BaseLayer
+  - first:
+      74: 4167425289507640192
+    second: Waterproof_gate|break_cell.054|Take 001|BaseLayer
+  - first:
+      74: 2212616453400119836
+    second: Waterproof_gate|break_cell.055|Take 001|BaseLayer
+  - first:
+      74: 8265627085120869510
+    second: Waterproof_gate|break_cell.056|Take 001|BaseLayer
+  - first:
+      74: -1713011375075825552
+    second: Waterproof_gate|break_cell.057|Take 001|BaseLayer
+  - first:
+      74: 82101644909418729
+    second: Waterproof_gate|break_cell.058|Take 001|BaseLayer
+  - first:
+      74: -7173468177576858009
+    second: Waterproof_gate|break_cell.059|Take 001|BaseLayer
+  - first:
+      74: -6165864086107302501
+    second: Waterproof_gate|break_cell.060|Take 001|BaseLayer
+  - first:
+      74: 7348852245097665257
+    second: Waterproof_gate|break_cell.061|Take 001|BaseLayer
+  - first:
+      74: 7240449842484709628
+    second: Waterproof_gate|break_cell.062|Take 001|BaseLayer
+  - first:
+      74: 4154606984974813288
+    second: Waterproof_gate|break_cell.063|Take 001|BaseLayer
+  - first:
+      74: 2788333737536955603
+    second: Waterproof_gate|break_cell.064|Take 001|BaseLayer
+  - first:
+      74: 4646445698826440287
+    second: Waterproof_gate|break_cell.065|Take 001|BaseLayer
+  - first:
+      74: -7088910835394043495
+    second: Waterproof_gate|break_cell.066|Take 001|BaseLayer
+  - first:
+      74: 2041277150945794479
+    second: Waterproof_gate|break_cell.067|Take 001|BaseLayer
+  - first:
+      74: -5793907955658826670
+    second: Waterproof_gate|break_cell.068|Take 001|BaseLayer
+  - first:
+      74: 2034843199682951265
+    second: Waterproof_gate|break_cell.069|Take 001|BaseLayer
+  - first:
+      74: -8886476571681609075
+    second: Waterproof_gate|break_cell.070|Take 001|BaseLayer
+  - first:
+      74: 887955746589749615
+    second: Waterproof_gate|break_cell.071|Take 001|BaseLayer
+  - first:
+      74: 8123257254098216365
+    second: Waterproof_gate|break_cell.072|Take 001|BaseLayer
+  - first:
+      74: 7617914067358670810
+    second: Waterproof_gate|break_cell.073|Take 001|BaseLayer
+  - first:
+      74: -7793748631087639475
+    second: Waterproof_gate|break_cell.074|Take 001|BaseLayer
+  - first:
+      74: 5673369749361444289
+    second: Waterproof_gate|break_cell.075|Take 001|BaseLayer
+  - first:
+      74: 7376304418973423994
+    second: Waterproof_gate|break_cell.076|Take 001|BaseLayer
+  - first:
+      74: 6722195046666107342
+    second: Waterproof_gate|break_cell.077|Take 001|BaseLayer
+  - first:
+      74: 5910843769518732696
+    second: Waterproof_gate|break_cell.078|Take 001|BaseLayer
+  - first:
+      74: 4654982016483292673
+    second: Waterproof_gate|break_cell.079|Take 001|BaseLayer
+  - first:
+      74: -2875305888226567098
+    second: Waterproof_gate|break_cell.080|Take 001|BaseLayer
+  - first:
+      74: -1202246740315046644
+    second: Waterproof_gate|break_cell.081|Take 001|BaseLayer
+  - first:
+      74: -7651617451515197840
+    second: Waterproof_gate|break_cell.082|Take 001|BaseLayer
+  - first:
+      74: -4149771093403115801
+    second: Waterproof_gate|break_cell.083|Take 001|BaseLayer
+  - first:
+      74: -1018777846840396008
+    second: Waterproof_gate|break_cell.084|Take 001|BaseLayer
+  - first:
+      74: 257213839797417748
+    second: Waterproof_gate|break_cell.085|Take 001|BaseLayer
+  - first:
+      74: -7107520857785012915
+    second: Waterproof_gate|break_cell.086|Take 001|BaseLayer
+  - first:
+      74: 1528786578187697073
+    second: Waterproof_gate|break_cell.087|Take 001|BaseLayer
+  - first:
+      74: 6215496523493083080
+    second: Waterproof_gate|break_cell.088|Take 001|BaseLayer
+  - first:
+      74: 3536044113714673391
+    second: Waterproof_gate|break_cell.089|Take 001|BaseLayer
+  - first:
+      74: 7923500403683837983
+    second: Waterproof_gate|break_cell.090|Take 001|BaseLayer
+  - first:
+      74: -6507365772247261564
+    second: Waterproof_gate|break_cell.091|Take 001|BaseLayer
+  - first:
+      74: 6087490088570873242
+    second: Waterproof_gate|break_cell.092|Take 001|BaseLayer
+  - first:
+      74: -3630331363090560392
+    second: Waterproof_gate|break_cell.093|Take 001|BaseLayer
+  - first:
+      74: -8084114852358071683
+    second: Waterproof_gate|break_cell.094|Take 001|BaseLayer
+  - first:
+      74: 560870926663291940
+    second: Waterproof_gate|break_cell.095|Take 001|BaseLayer
+  - first:
+      74: 993222267714328320
+    second: Waterproof_gate|break_cell.096|Take 001|BaseLayer
+  - first:
+      74: -2318356909410825241
+    second: Waterproof_gate|break_cell.097|Take 001|BaseLayer
+  - first:
+      74: -1338536974088423697
+    second: Waterproof_gate|break_cell.098|Take 001|BaseLayer
+  - first:
+      74: 6674421522936963876
+    second: Waterproof_gate|break_cell.099|Take 001|BaseLayer
+  - first:
+      74: -8533513558705697697
+    second: Waterproof_gate|break_cell.100|Take 001|BaseLayer
+  - first:
+      74: -643542139327427868
+    second: Waterproof_gate|break_cell|Take 001|BaseLayer
+  - first:
+      74: 7497044576198979410
+    second: Waterproof_gate|break_wall|Take 001|BaseLayer
+  - first:
+      74: 8314115142147697210
+    second: Waterproof_gate|cabinet|Take 001|BaseLayer
+  - first:
+      74: -1764735527926708668
+    second: Waterproof_gate|Cube.001|Take 001|BaseLayer
+  - first:
+      74: 1821176470046908279
+    second: Waterproof_gate|Cube.002|Take 001|BaseLayer
+  - first:
+      74: 8265813356898801163
+    second: Waterproof_gate|Cube.003|Take 001|BaseLayer
+  - first:
+      74: -4522657877259057771
+    second: Waterproof_gate|Cube.004|Take 001|BaseLayer
+  - first:
+      74: 7514541011899646047
+    second: Waterproof_gate|Cube.005|Take 001|BaseLayer
+  - first:
+      74: -3394271129846747294
+    second: Waterproof_gate|Cube.008|Take 001|BaseLayer
+  - first:
+      74: -2743589599790247443
+    second: Waterproof_gate|Cube.009|Take 001|BaseLayer
+  - first:
+      74: 8738075240694934519
+    second: Waterproof_gate|Cube.010|Take 001|BaseLayer
+  - first:
+      74: 6199989437039486907
+    second: Waterproof_gate|Cube.012|Take 001|BaseLayer
+  - first:
+      74: -4107095927061561244
+    second: Waterproof_gate|Cube.014|Take 001|BaseLayer
+  - first:
+      74: -5152019828024494144
+    second: Waterproof_gate|Cube.015|Take 001|BaseLayer
+  - first:
+      74: -8363462320726876758
+    second: Waterproof_gate|Cube.016|Take 001|BaseLayer
+  - first:
+      74: -6781678237585289149
+    second: Waterproof_gate|Cube.017|Take 001|BaseLayer
+  - first:
+      74: 1122129834538148788
+    second: Waterproof_gate|Cube.018|Take 001|BaseLayer
+  - first:
+      74: 6699006562298806569
+    second: Waterproof_gate|Cube.022|Take 001|BaseLayer
+  - first:
+      74: 6600649490785140585
+    second: Waterproof_gate|Cube.026|Take 001|BaseLayer
+  - first:
+      74: 9023017833801105802
+    second: Waterproof_gate|Cube.031|Take 001|BaseLayer
+  - first:
+      74: -5711027357086291658
+    second: Waterproof_gate|Cube.032|Take 001|BaseLayer
+  - first:
+      74: -6438262856263650384
+    second: Waterproof_gate|Cube.034|Take 001|BaseLayer
+  - first:
+      74: 7867204736061651788
+    second: Waterproof_gate|Cube.035|Take 001|BaseLayer
+  - first:
+      74: -5128776531054261583
+    second: Waterproof_gate|Cube.037|Take 001|BaseLayer
+  - first:
+      74: 1808074817318035691
+    second: Waterproof_gate|Cube.038|Take 001|BaseLayer
+  - first:
+      74: -65968872448182864
+    second: Waterproof_gate|Cube.039|Take 001|BaseLayer
+  - first:
+      74: 8547519249392702457
+    second: Waterproof_gate|Cube.040|Take 001|BaseLayer
+  - first:
+      74: -7600216968838845313
+    second: Waterproof_gate|Cube.041|Take 001|BaseLayer
+  - first:
+      74: -6023940398076171991
+    second: Waterproof_gate|Cube.042|Take 001|BaseLayer
+  - first:
+      74: -11266794187040167
+    second: Waterproof_gate|Gate_left|Take 001|BaseLayer
+  - first:
+      74: 2290810096958999192
+    second: Waterproof_gate|Gate_right|Take 001|BaseLayer
+  - first:
+      74: 737750660045386576
+    second: Waterproof_gate|Gate|Take 001|BaseLayer
+  - first:
+      74: -5469837248665903467
+    second: Waterproof_gate|greenwindow|Take 001|BaseLayer
+  - first:
+      74: -4348655963688545514
+    second: Waterproof_gate|house|Take 001|BaseLayer
+  - first:
+      74: -2128245406148601380
+    second: Waterproof_gate|kid_boy.001|Take 001|BaseLayer
+  - first:
+      74: 2683155007421556646
+    second: Waterproof_gate|kid_boy|Take 001|BaseLayer
+  - first:
+      74: 1098375235431502005
+    second: Waterproof_gate|kid_girl|Take 001|BaseLayer
+  - first:
+      74: 3273980431683729731
+    second: Waterproof_gate|leaf_1|Take 001|BaseLayer
+  - first:
+      74: 4996154737907235525
+    second: Waterproof_gate|leaf_1|Take 001|BaseLayer.001
+  - first:
+      74: -2071090042756678819
+    second: Waterproof_gate|leaf_1|Take 001|BaseLayer.002
+  - first:
+      74: -1210522287390179422
+    second: Waterproof_gate|leaf_1|Take 001|BaseLayer.003
+  - first:
+      74: 8366667122168925941
+    second: Waterproof_gate|leaf_1|Take 001|BaseLayer.005
+  - first:
+      74: 2633565373227374004
+    second: Waterproof_gate|leaf_2|Take 001|BaseLayer
+  - first:
+      74: 6635472586488446585
+    second: Waterproof_gate|leaf_3|Take 001|BaseLayer
+  - first:
+      74: 9043630506983784869
+    second: Waterproof_gate|main_gate|Take 001|BaseLayer
+  - first:
+      74: -2015050820510818254
+    second: Waterproof_gate|main_house|Take 001|BaseLayer
+  - first:
+      74: 9083285070811216951
+    second: Waterproof_gate|pan|Take 001|BaseLayer
+  - first:
+      74: 1037074005825144449
+    second: Waterproof_gate|Plant_1|Take 001|BaseLayer
+  - first:
+      74: -4128608368308593661
+    second: Waterproof_gate|Plant_1|Take 001|BaseLayer.001
+  - first:
+      74: 9028557617425912038
+    second: Waterproof_gate|Plant_2.001|Take 001|BaseLayer
+  - first:
+      74: -2689649173535179604
+    second: Waterproof_gate|Plant_2|Take 001|BaseLayer
+  - first:
+      74: -1192106122749611059
+    second: Waterproof_gate|Plant_3.001|Take 001|BaseLayer
+  - first:
+      74: 6463579257316185297
+    second: Waterproof_gate|Plant_3|Take 001|BaseLayer
+  - first:
+      74: -1615351755461502179
+    second: Waterproof_gate|Plant|Take 001|BaseLayer
+  - first:
+      74: -3419420291365583030
+    second: Waterproof_gate|refrigerator|Take 001|BaseLayer
+  - first:
+      74: 3674319842248392681
+    second: Waterproof_gate|Scooter.001|Take 001|BaseLayer
+  - first:
+      74: -5642983668427229710
+    second: Waterproof_gate|Scooter_01|Take 001|BaseLayer
+  - first:
+      74: -3775339262582811839
+    second: Waterproof_gate|Scooter|Take 001|BaseLayer
+  - first:
+      74: 1917332457394427380
+    second: Waterproof_gate|stairs|Take 001|BaseLayer
+  - first:
+      74: -5042679558292224949
+    second: Waterproof_gate|Steel_bar010|Take 001|BaseLayer
+  - first:
+      74: -6223240011223854516
+    second: Waterproof_gate|Steel_bar011|Take 001|BaseLayer
+  - first:
+      74: 8015459944597263917
+    second: Waterproof_gate|Steel_bar012|Take 001|BaseLayer
+  - first:
+      74: 4577830851742704093
+    second: Waterproof_gate|Steel_bar013|Take 001|BaseLayer
+  - first:
+      74: 7894766172906457439
+    second: Waterproof_gate|Steel_bar014|Take 001|BaseLayer
+  - first:
+      74: 1042333353080575294
+    second: Waterproof_gate|Steel_bar015|Take 001|BaseLayer
+  - first:
+      74: 3569112932655622143
+    second: Waterproof_gate|Steel_bar016|Take 001|BaseLayer
+  - first:
+      74: -6396337819597182763
+    second: Waterproof_gate|Steel_bar017|Take 001|BaseLayer
+  - first:
+      74: -2371940125096319049
+    second: Waterproof_gate|Steel_bar01|Take 001|BaseLayer
+  - first:
+      74: -2557150584588107389
+    second: Waterproof_gate|Steel_bar02.001|Take 001|BaseLayer
+  - first:
+      74: 2317780455951078946
+    second: Waterproof_gate|Steel_bar02|Take 001|BaseLayer
+  - first:
+      74: -1351109468634444019
+    second: Waterproof_gate|Steel_bar03|Take 001|BaseLayer
+  - first:
+      74: -1785229927587853761
+    second: Waterproof_gate|Steel_bar04|Take 001|BaseLayer
+  - first:
+      74: 7067761627010200213
+    second: Waterproof_gate|Steel_bar05|Take 001|BaseLayer
+  - first:
+      74: -7976649617368544881
+    second: Waterproof_gate|Steel_bar06|Take 001|BaseLayer
+  - first:
+      74: -422037528686855756
+    second: Waterproof_gate|Steel_bar07|Take 001|BaseLayer
+  - first:
+      74: 5473112951354144132
+    second: Waterproof_gate|Steel_bar08|Take 001|BaseLayer
+  - first:
+      74: -5318314022388432921
+    second: Waterproof_gate|Steel_bar|Take 001|BaseLayer
+  - first:
+      74: -2152720535548208476
+    second: Waterproof_gate|steel|Take 001|BaseLayer
+  - first:
+      74: -3379441404585985862
+    second: Waterproof_gate|Stove.001|Take 001|BaseLayer
+  - first:
+      74: 466520421770442069
+    second: Waterproof_gate|Stove.002|Take 001|BaseLayer
+  - first:
+      74: -2002088347434115847
+    second: Waterproof_gate|Stove|Take 001|BaseLayer
+  - first:
+      74: -7595815482237235330
+    second: Waterproof_gate|two_floor|Take 001|BaseLayer
+  - first:
+      74: 8712462064167190156
+    second: Waterproof_gate|wall|Take 001|BaseLayer
+  - first:
+      74: 5925084071475629893
+    second: Waterproof_gate|water_gate|Take 001|BaseLayer
+  - first:
+      74: -6687142816929060138
+    second: Waterproof_gate|water_gate|Take 001|BaseLayer.001
+  - first:
+      74: -8871648281571796187
+    second: Waterproof_gate|water_gate|Take 001|BaseLayer.002
+  - first:
+      74: 70919279803091860
+    second: Waterproof_gate|water_gate|Take 001|BaseLayer.003
+  - first:
+      74: 1610650463963478432
+    second: Waterproof_gate|Waterproof_gate01|Take 001|BaseLayer
+  - first:
+      74: -4273657325054506318
+    second: Waterproof_gate|Waterproof_gate02|Take 001|BaseLayer
+  - first:
+      74: 7337643908213537402
+    second: Waterproof_gate|Waterproof_gate03|Take 001|BaseLayer
+  - first:
+      74: 7080782175025611194
+    second: Waterproof_gate|Waterproof_gate04|Take 001|BaseLayer
+  - first:
+      74: -2141382309282017514
+    second: Waterproof_gate|Waterproof_gate04|Take 001|BaseLayer.001
+  - first:
+      74: 7404390080315306585
+    second: Waterproof_gate|Waterproof_gate04|Take 001|BaseLayer.002
+  - first:
+      74: -2920226960191216838
+    second: Waterproof_gate|Waterproof_gate04|Take 001|BaseLayer.003
+  - first:
+      74: -5705893907515664597
+    second: Waterproof_gate|Waterproof_gate04|Take 001|BaseLayer.004
+  - first:
+      74: 2322569271118303761
+    second: Waterproof_gate|Waterproof_left2|Take 001|BaseLayer
+  - first:
+      74: 2407215105307768270
+    second: Waterproof_gate|Waterproof_left|Take 001|BaseLayer
+  - first:
+      74: 3076546126315171877
+    second: Waterproof_gate|Waterproof_right2|Take 001|BaseLayer
+  - first:
+      74: -4517378649491561652
+    second: Waterproof_gate|Waterproof_right|Take 001|BaseLayer
+  - first:
+      74: -2955821191100066346
+    second: Waterproof_gate|waterproof|Take 001|BaseLayer
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: iron.004
+    second: {fileID: 2100000, guid: eb53deca04140ab47b8435eda74e25b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rubber
+    second: {fileID: 2100000, guid: 15f0bcf742d50b44687e32215c2a15a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rubber.002
+    second: {fileID: 2100000, guid: 942ab58b6def4684bb03c38b36a47602, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.46
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.46
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

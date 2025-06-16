@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9684fedddf7aa4b9c08686b5dfe7bb, type: 3}
+  m_Name: Earthquake
+  m_EditorClassIdentifier: 
+  missionName: "\u5730\u9707\u55AE\u5143"
+  defaultHint: "\u505A\u5F97\u597D\u6975\u4E86\uFF01\r\n\u5730\u9707\u6642\u4E5F\u8981\u5B78\u6703\r\n\u4FDD\u8B77\u81EA\u8EAB\u5B89\u5168\u5594\uFF01 "
+  settings:
+  - name: "\u78BA\u8A8D\u5730\u9707\u4FDD\u547D\u4E09\u6B65\u9A5F"
+    score: 10
+    desc: "\u78BA\u8A8D\u5730\u9707\u4FDD\u547D\u4E09\u6B65\u9A5F"
+    hint: 
+  - name: PWave
+    score: 0
+    desc: 
+    hint: 
+  - name: "\u5730\u9707\u8D70\u684C\u6905"
+    score: 5
+    desc: "\u5730\u9707\u767C\u751F\u6642\uFF0C\u8FC5\u901F\u8D95\u5F80\u684C\u6905\u8655"
+    hint: 
+  - name: "\u8DB4\u4E0B"
+    score: 15
+    desc: "\u57F7\u884C \u8DB4\u4E0B \u52D5\u4F5C"
+    hint: 
+  - name: "\u63A9\u8B77"
+    score: 15
+    desc: "\u57F7\u884C \u63A9\u8B77 \u52D5\u4F5C"
+    hint: 
+  - name: "\u7A69\u4F4F"
+    score: 15
+    desc: "\u57F7\u884C \u7A69\u4F4F \u52D5\u4F5C"
+    hint: 
+  - name: SWave
+    score: 0
+    desc: 
+    hint: 
+  - name: "\u524D\u5F80\u9003\u751F\u51FA\u53E3"
+    score: 20
+    desc: "\u524D\u5F80\u9003\u751F\u51FA\u53E3"
+    hint: "\u6C92\u6709\u9078\u64C7\u6B63\u78BA\u9003\u751F\u8DEF\u7DDA\uFF1F"
+  - name: "\u88DD\u5165\u6025\u96E3\u6551\u52A9\u5305\u7269\u54C1"
+    score: 10
+    desc: "\u88DD\u5165\u6025\u96E3\u6551\u52A9\u5305\u7269\u54C1"
+    hint: "\u6C92\u6709\r\u62FF\u5230\u6B63\u78BA\u7684\u7269\u54C1\u55CE\uFF1F\r"
+  - name: "\u9003\u51FA\u5716\u66F8\u9928"
+    score: 10
+    desc: "\u9003\u51FA\u5716\u66F8\u9928"
+    hint: 
+  icon: {fileID: 21300000, guid: 99d735687592c03418f19e95516fcd70, type: 3}

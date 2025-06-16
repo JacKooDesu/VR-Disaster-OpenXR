@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9684fedddf7aa4b9c08686b5dfe7bb, type: 3}
+  m_Name: Flood
+  m_EditorClassIdentifier: 
+  missionName: "\u98A8\u707D\u55AE\u5143"
+  defaultHint: "\u505A\u5F97\u597D\u6975\u4E86\uFF01\n\u98B1\u98A8\u4F86\u81E8\u6642\uFF0C\u4FDD\u6301\u8B66\u89BA\n\u96A8\u6642\u9748\u6A5F\u61C9\u8B8A\u5594\uFF01"
+  settings:
+  - name: "\u78BA\u8A8D\u98A8\u707D\u55AE\u5143"
+    score: 10
+    desc: "\u78BA\u8A8D\u98B1\u98A8\u55AE\u5143\u8AAA\u660E\u4ECB\u7D39"
+    hint: 
+  - name: "\u89C0\u67E5\u91CF\u96E8\u5668"
+    score: 10
+    desc: "\u89C0\u6E2C <color=#FFF67F>\u91CF\u96E8\u5668</color> \u60C5\u6CC1"
+    hint: 
+  - name: "\u79FB\u52D5\u82B1\u76C6"
+    score: 10
+    desc: "\u5C0F\u5FC3\u6389\u843D\u7269\uFF0C\u653E\u4E0B\u9AD8\u8655 <color=#FFF67F>\u76C6\u683D</color>"
+    hint: 
+  - name: "\u5B89\u88DD\u9632\u6C34\u9598\u9580"
+    score: 0
+    desc: 
+    hint: 
+  - name: "\u5B89\u88DD\u9632\u6C34\u9598\u9580"
+    score: 10
+    desc: "\u8A2D\u7F6E <color=#FFF67F>\u9632\u6C34\u9598\u9580</color>"
+    hint: 
+  - name: "\u62FF\u53D6\u624B\u96FB\u7B52"
+    score: 10
+    desc: "\u505C\u96FB\u6642\uFF0C\u958B\u555F <color=#FFF67F>\u624B\u96FB\u7B52</color>"
+    hint: 
+  - name: "\u95DC\u96FB\u7BB1"
+    score: 10
+    desc: "\u95DC\u9589 <color=#FFF67F>\u7E3D\u96FB\u6E90</color>"
+    hint: 
+  - name: "\u95DC\u74E6\u65AF"
+    score: 10
+    desc: "\u7B1B\u97F3\u58FA\u97FF\u8D77\uFF0C\u95DC\u9589 <color=#FFF67F>\u74E6\u65AF\u7210</color>"
+    hint: 
+  - name: "\u6025\u96E3\u6551\u52A9\u5305"
+    score: 10
+    desc: "\u88DD\u5165\u6025\u96E3\u6551\u52A9\u5305\u7269\u54C1"
+    hint: 
+  - name: "\u9003\u51FA"
+    score: 10
+    desc: "\u9003\u5F80\u5C4B\u5916\uFF0C\u524D\u5F80\u907F\u96E3\u6240"
+    hint: 
+  icon: {fileID: 21300000, guid: 12a3d9598a2b6f24ebfb63a39a96e558, type: 3}

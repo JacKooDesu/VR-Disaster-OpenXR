@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5363457410816030772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5363457410816030770}
+  - component: {fileID: 185190156645814346}
+  m_Layer: 0
+  m_Name: AudioHandler_FireTruck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5363457410816030770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363457410816030772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.234677, y: 5.1180053, z: 28.798336}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5363457411677947771}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185190156645814346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363457410816030772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39be9198fb3c5b74e8406b8619d8e924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePrefab: {fileID: 4375246061363510548, guid: 1d90b23a11783b045927d8c4abe82cf4,
+    type: 3}
+  speaker: {fileID: 0}
+  speakerPrefab: {fileID: 7441481755767106181, guid: 692b3ceb640878f4789c56dafc4eabf8,
+    type: 3}
+  soundList: {fileID: 5363457411677947770}
+  currentPlayingSound: {fileID: 0}
+  squatDown: {fileID: 8300000, guid: c26e046587dd56742bb2369c62f30e11, type: 3}
+  extinguisherTutorial: {fileID: 8300000, guid: 4207d9b2e5fb36840891bec53533ffad,
+    type: 3}
+  takeBreaker: {fileID: 8300000, guid: 69fcf14bc0edc3949be6fc4bac04bd3e, type: 3}
+  glassBreaker: {fileID: 8300000, guid: fb8e6868dc4c0314aba12e19646de35b, type: 3}
+  finish: {fileID: 8300000, guid: 2104bc49dfe9b8b45a3534ec3b7bfcaa, type: 3}
+  bgm1: {fileID: 8300000, guid: 181de2ca9be06114e8d2e4adfe81ed6c, type: 3}
+  bgm2: {fileID: 8300000, guid: 63b6d72f726c95b4eb3f75d4fca7564d, type: 3}
+  extinguisher: {fileID: 8300000, guid: f39e388f15c9ac24f8a51e9b263c6d9f, type: 3}
+  fireSound: {fileID: 8300000, guid: 8af3cc7228fb4394dbe6ca61afa4bde8, type: 3}
+--- !u!1 &5363457411677947773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5363457411677947771}
+  - component: {fileID: 5363457411677947770}
+  m_Layer: 0
+  m_Name: SoundList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5363457411677947771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363457411677947773}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.234677, y: -5.1180053, z: -28.798336}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5363457410816030770}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5363457411677947770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363457411677947773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b96f5f3b8007a46aa0096116ab7d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beep: {fileID: 8300000, guid: 93c40e36bd20870479cefe773b526db3, type: 3}
+  changeOption: {fileID: 8300000, guid: 9a3202ce68517a14090f87520b363099, type: 3}
+  error: {fileID: 8300000, guid: b0871e39c0bf3454ab84ed0c1552fb19, type: 3}
+  hover: {fileID: 8300000, guid: c1e29f06cf7ad6b458befd63fb2e1823, type: 3}
+  newStage: {fileID: 8300000, guid: 8f43ef23d38c4cb4684ee6ae4ae72e96, type: 3}
+  pencil: {fileID: 8300000, guid: 0cfe1a37a79bbc94886ee51f429f2e97, type: 3}
+  select: {fileID: 8300000, guid: c727849ec720f2f4cafb062e15b8233a, type: 3}
+  titleBeep: {fileID: 8300000, guid: 503148ab6de7e4a449b75a0b6319b086, type: 3}
+  typing: {fileID: 8300000, guid: 6cfd225bd98df9c478e5abb0bace5255, type: 3}
+  warning: {fileID: 8300000, guid: 01fc12129f7925c42a089bdf01137d32, type: 3}
+  wrong_v1: {fileID: 8300000, guid: ed6c9acb23adb3e46a9c324c37a97044, type: 3}
+  wrong_v2: {fileID: 8300000, guid: 0ebf8b70e557a09439604238d74aa8a3, type: 3}
+  glassBreak: {fileID: 8300000, guid: 78b04781608e13a4fa8fc56fd8181676, type: 3}
+  slogan: {fileID: 8300000, guid: ab23ecc234fe6ed40a41ec07f66f0c10, type: 3}
+  Great: {fileID: 8300000, guid: 6aea61c574b17084ca1e846b92830393, type: 3}

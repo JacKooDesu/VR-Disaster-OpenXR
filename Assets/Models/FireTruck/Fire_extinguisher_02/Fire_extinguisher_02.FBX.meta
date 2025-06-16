@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: edaca8019c5524e4c9037ac0af9eb7c4
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  - first:
+      74: 1991969442808577973
+    second: Fire_extinguisher_up|Bone.001_end|Take 001|BaseLayer
+  - first:
+      74: -6445564418940661153
+    second: Fire_extinguisher_up|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: -7206863541943453851
+    second: Fire_extinguisher_up|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: -5471277101363695641
+    second: Fire_extinguisher_up|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 4772301528747717195
+    second: Fire_extinguisher_up|Object002|Take 001|BaseLayer
+  - first:
+      74: -4048778392540238660
+    second: Fire_extinguisher_body|Bone.001_end|Take 001|BaseLayer
+  - first:
+      74: -7266823206183471863
+    second: Fire_extinguisher_body|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: -9046013067214786733
+    second: Fire_extinguisher_body|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: -1177443688952339431
+    second: Fire_extinguisher_body|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 5692075771932061640
+    second: Fire_extinguisher_body|Object002|Take 001|BaseLayer
+  - first:
+      74: -6688676089111618163
+    second: Fire_extinguisher_down|Bone.001_end|Take 001|BaseLayer
+  - first:
+      74: -838276684786385694
+    second: Fire_extinguisher_down|Fire_extinguisher_body|Take 001|BaseLayer
+  - first:
+      74: -1821842177811641388
+    second: Fire_extinguisher_down|Fire_extinguisher_down|Take 001|BaseLayer
+  - first:
+      74: 4774519985551248139
+    second: Fire_extinguisher_down|Fire_extinguisher_up|Take 001|BaseLayer
+  - first:
+      74: 7939718999115785766
+    second: Fire_extinguisher_down|Object002|Take 001|BaseLayer
+  - first:
+      74: -4863669509078988984
+    second: Fire_extinguisher_up|Fire_extinguisher_body|Fire_extinguisher_body|Bone.001_end|Take
+  - first:
+      74: -9459453264695722
+    second: Fire_extinguisher_up|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extingui
+  - first:
+      74: -2480685792194401360
+    second: Fire_extinguisher_up|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extingui.001
+  - first:
+      74: 1881815159415456309
+    second: Fire_extinguisher_up|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher
+  - first:
+      74: -4527710436678930037
+    second: Fire_extinguisher_up|Fire_extinguisher_body|Fire_extinguisher_body|Object002|Take
+      00
+  - first:
+      74: -5963268812381782535
+    second: Fire_extinguisher_up|Fire_extinguisher_down|Fire_extinguisher_down|Bone.001_end|Take
+  - first:
+      74: 4417290971172504158
+    second: Fire_extinguisher_up|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extingui
+  - first:
+      74: 2595366141242238757
+    second: Fire_extinguisher_up|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extingui.001
+  - first:
+      74: -3371523663838175976
+    second: Fire_extinguisher_up|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher
+  - first:
+      74: -2092121702720013055
+    second: Fire_extinguisher_up|Fire_extinguisher_down|Fire_extinguisher_down|Object002|Take
+      00
+  - first:
+      74: 6687817156939906596
+    second: Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|Bone.001_end|Take
+      001
+  - first:
+      74: 1513549325817746668
+    second: Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_bod
+  - first:
+      74: 2771368310862333834
+    second: Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_dow
+  - first:
+      74: -6031945535128530359
+    second: Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|
+  - first:
+      74: 8575132654517720653
+    second: Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|Object002|Take
+      001|Ba
+  - first:
+      74: -483592115844860224
+    second: Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher_body|Bone.001_end|Take
+  - first:
+      74: -7209039113995007567
+    second: Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extingui
+  - first:
+      74: -143075833357920167
+    second: Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extingui.001
+  - first:
+      74: 5086689907337392714
+    second: Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher
+  - first:
+      74: 6569744209180391181
+    second: Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher_body|Object002|Take
+      00
+  - first:
+      74: -403280985451722124
+    second: Fire_extinguisher_body|Fire_extinguisher_down|Fire_extinguisher_down|Bone.001_end|Take
+  - first:
+      74: -9095581887021913963
+    second: Fire_extinguisher_body|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extingui
+  - first:
+      74: 4982193635908272527
+    second: Fire_extinguisher_body|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extingui.001
+  - first:
+      74: -2579739537931707054
+    second: Fire_extinguisher_body|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher
+  - first:
+      74: 4697244081801236863
+    second: Fire_extinguisher_body|Fire_extinguisher_down|Fire_extinguisher_down|Object002|Take
+      00
+  - first:
+      74: 1242987627426931395
+    second: Fire_extinguisher_body|Fire_extinguisher_up|Fire_extinguisher_up|Bone.001_end|Take
+      001
+  - first:
+      74: 3835726235981523182
+    second: Fire_extinguisher_body|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_bod
+  - first:
+      74: -6934313745008132559
+    second: Fire_extinguisher_body|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_dow
+  - first:
+      74: -440559684898311940
+    second: Fire_extinguisher_body|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|
+  - first:
+      74: 4199383811235843998
+    second: Fire_extinguisher_body|Fire_extinguisher_up|Fire_extinguisher_up|Object002|Take
+      001|Ba
+  - first:
+      74: -3690469230979661906
+    second: Fire_extinguisher_down|Fire_extinguisher_body|Fire_extinguisher_body|Bone.001_end|Take
+  - first:
+      74: -7232755895797109833
+    second: Fire_extinguisher_down|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extingui
+  - first:
+      74: -7807867014324767379
+    second: Fire_extinguisher_down|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extingui.001
+  - first:
+      74: 8707858400578092522
+    second: Fire_extinguisher_down|Fire_extinguisher_body|Fire_extinguisher_body|Fire_extinguisher
+  - first:
+      74: 3996971161881574529
+    second: Fire_extinguisher_down|Fire_extinguisher_body|Fire_extinguisher_body|Object002|Take
+      00
+  - first:
+      74: 7614361443617948475
+    second: Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher_down|Bone.001_end|Take
+  - first:
+      74: -2284660893032046046
+    second: Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extingui
+  - first:
+      74: 2282036278254699727
+    second: Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extingui.001
+  - first:
+      74: -3059258430027218881
+    second: Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher
+  - first:
+      74: -539063629132708811
+    second: Fire_extinguisher_down|Fire_extinguisher_down|Fire_extinguisher_down|Object002|Take
+      00
+  - first:
+      74: 1529910790826990906
+    second: Fire_extinguisher_down|Fire_extinguisher_up|Fire_extinguisher_up|Bone.001_end|Take
+      001
+  - first:
+      74: -812065221792260738
+    second: Fire_extinguisher_down|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_bod
+  - first:
+      74: 9067688655374454319
+    second: Fire_extinguisher_down|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_dow
+  - first:
+      74: 1288431685765035547
+    second: Fire_extinguisher_down|Fire_extinguisher_up|Fire_extinguisher_up|Fire_extinguisher_up|
+  - first:
+      74: 2626241738529976069
+    second: Fire_extinguisher_down|Fire_extinguisher_up|Fire_extinguisher_up|Object002|Take
+      001|Ba
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.2
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

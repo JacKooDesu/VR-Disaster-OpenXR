@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: b19f0fe03556d854893131d39f3e2d27
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - beep: {fileID: 8300000, guid: 93c40e36bd20870479cefe773b526db3, type: 3}
+  - changeOption: {fileID: 8300000, guid: 9a3202ce68517a14090f87520b363099, type: 3}
+  - error: {fileID: 8300000, guid: b0871e39c0bf3454ab84ed0c1552fb19, type: 3}
+  - hover: {fileID: 8300000, guid: c1e29f06cf7ad6b458befd63fb2e1823, type: 3}
+  - newStage: {instanceID: 0}
+  - pencil: {instanceID: 0}
+  - select: {instanceID: 0}
+  - titleBeep: {instanceID: 0}
+  - typing: {instanceID: 0}
+  - warning: {instanceID: 0}
+  - wrong_v1: {instanceID: 0}
+  - wrong_v2: {instanceID: 0}
+  - audioSourcePrefab: {instanceID: 0}
+  - speaker: {instanceID: 0}
+  - speakerPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
