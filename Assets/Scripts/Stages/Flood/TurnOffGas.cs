@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using Cysharp.Threading.Tasks;
 
 public class TurnOffGas : Stage
 {
@@ -20,11 +21,11 @@ public class TurnOffGas : Stage
 
         JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
         AudioSource boil = a.PlaySound(a.boilWater);
-        StartCoroutine(GameHandler.Singleton.Counter(5, delegate
+        GameHandler.Singleton.Counter(5, delegate
        {
            boil.volume = .4f;
            a.PlaySound(a.turnOffGas);
-       }));
+       }).Forget();
 
         onFinishEvent += () => boil.Stop();
         onGetToTarget += () =>

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class PKnowledge : Stage
@@ -16,11 +17,10 @@ public class PKnowledge : Stage
 
         UI.TurnOn();
 
-        StartCoroutine(
-            UI.WaitStatusChange(delegate
-            {
-                isFinish = true;
-            }, false));
+        UI.WaitStatusChange(delegate
+        {
+            isFinish = true;
+        }, false).Forget();
     }
 
     public override void OnUpdate()

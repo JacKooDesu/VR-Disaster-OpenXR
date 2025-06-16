@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace JacDev.Audio
@@ -39,7 +40,7 @@ namespace JacDev.Audio
             AudioSource audioSource = temp.GetComponent<AudioSource>();
             audioSource.clip = sound;
             audioSource.Play();
-            StartCoroutine(DestroyAudioSource(sound.length, temp));
+            DestroyAudioSource(sound.length, temp).Forget();
 
             return currentPlayingSound = audioSource;
         }
@@ -49,7 +50,7 @@ namespace JacDev.Audio
             float t = 0f;
             foreach (AudioClip a in sounds)
             {
-                StartCoroutine(GameHandler.Singleton.Counter(t, t, delegate { PlaySound(a); }));
+                GameHandler.Singleton.Counter(t, t, () => PlaySound(a)).Forget();
                 t += a.length + interval;
             }
         }
@@ -65,7 +66,7 @@ namespace JacDev.Audio
             if (loop)
                 audioSource.loop = loop;
             else
-                StartCoroutine(DestroyAudioSource(audio.length, temp));
+                DestroyAudioSource(audio.length, temp).Forget();
 
             return audioSource;
         }
@@ -87,15 +88,15 @@ namespace JacDev.Audio
             if (loop)
                 audioSource.loop = loop;
             else
-                StartCoroutine(DestroyAudioSource(audio.length, temp));
+                DestroyAudioSource(audio.length, temp).Forget();
 
             return audioSource;
         }
 
         // 摧毀音源
-        IEnumerator DestroyAudioSource(float t, GameObject target)
+        async UniTask DestroyAudioSource(float t, GameObject target)
         {
-            yield return new WaitForSeconds(t);
+            await UniTask.WaitForSeconds(t);
             Destroy(target);
         }
 

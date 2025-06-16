@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class Escape : Stage
@@ -19,18 +20,17 @@ public class Escape : Stage
 
         player.SetCanMove(false);
 
-        StartCoroutine(
-            GameHandler.Singleton.Counter(
-                a.waterIn.length,
-                delegate
-                {
-                    a.PlaySound(a.broadcast2);
-                }
-            ));
 
-        StartCoroutine(
-            GameHandler.Singleton.Counter(
-                a.waterIn.length + 5f,
+        GameHandler.Singleton.Counter(
+            a.waterIn.length,
+            delegate
+            {
+                a.PlaySound(a.broadcast2);
+            }
+        ).Forget();
+
+        GameHandler.Singleton.Counter(
+            a.waterIn.length + 5f,
                 delegate
                 {
                     a.GetSoundAudioSource(a.broadcast2).volume = .4f;
@@ -38,8 +38,7 @@ public class Escape : Stage
 
                     player.SetCanMove(true);
                 }
-            )
-        );
+            ).Forget();
 
         water.SetActive(true);
         iTween.MoveTo(water, Vector3.one * -1.46f, 12f);

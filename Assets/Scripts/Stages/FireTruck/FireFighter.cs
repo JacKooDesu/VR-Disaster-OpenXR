@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class FireFighter : Stage
@@ -23,10 +24,10 @@ public class FireFighter : Stage
         //base.OnBegin();
 
         ui1.TurnOn();
-        StartCoroutine(GameHandler.Singleton.Counter(3f, 3f, delegate
+        GameHandler.Singleton.Counter(3f, 3f, delegate
         {
             ui1.TurnOff();
-        }));
+        }).Forget();
 
     }
 
@@ -58,17 +59,17 @@ public class FireFighter : Stage
     {
         ui1.TurnOff();
         ui2.TurnOn();
-        StartCoroutine(GameHandler.Singleton.Counter(3f, 3f, delegate
+        GameHandler.Singleton.Counter(3f, 3f, delegate
         {
             ui2.TurnOff();
             ui3.TurnOn();
-        }));
+        }).Forget();
 
-        StartCoroutine(GameHandler.Singleton.Counter(6f, 6f, delegate { ui3.TurnOff(); }));
-        StartCoroutine(PlayExtinguisher());
+        GameHandler.Singleton.Counter(6f, 6f, delegate { ui3.TurnOff(); }).Forget();
+        PlayExtinguisher().Forget();
     }
 
-    IEnumerator PlayExtinguisher()
+    async UniTask PlayExtinguisher()
     {
         JacDev.Audio.FireTruck audio = (JacDev.Audio.FireTruck)GameHandler.Singleton.audioHandler;
         while (!isFinish)
@@ -89,7 +90,7 @@ public class FireFighter : Stage
                 if (GetComponentInChildren<AudioSource>())
                     Destroy(GetComponentInChildren<AudioSource>().gameObject);
             }
-            yield return null;
+            await UniTask.Yield();
         }
     }
 

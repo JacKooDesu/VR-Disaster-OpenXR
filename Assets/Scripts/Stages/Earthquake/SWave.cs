@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.ImageEffects;
 using DG.Tweening;
+using Cysharp.Threading.Tasks;
 
 public class SWave : Stage
 {
@@ -27,13 +28,13 @@ public class SWave : Stage
         GameHandler.Singleton.player.SetCanMove(false);
         earthquake.SetQuake(20f);
 
-        StartCoroutine(GameHandler.Singleton.Counter(
+        GameHandler.Singleton.Counter(
             20, 20,
             delegate
             {
                 isFinish = true;
             }
-        ));
+        ).Forget();
 
         BreakRoof();
         StartCoroutine(MakeFog(5f, 40f));

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utils;
 using UnityEngine.UI;
+using Cysharp.Threading.Tasks;
 
 public class Kit : MonoBehaviour
 {
@@ -113,10 +114,10 @@ public class Kit : MonoBehaviour
 
         DrawItem(correctCount, wrongCount, vipItems);
 
-        StartCoroutine(KitMission(capacity, onComplete));
+        KitMission(capacity, onComplete).Forget();
     }
 
-    IEnumerator KitMission(int capacity, System.Action<int> onComplete) // Action<int> 表示正確的數量
+    async UniTask KitMission(int capacity, System.Action<int> onComplete) // Action<int> 表示正確的數量
     {
         // Init Ui
         List<GameObject> checkedUis = new List<GameObject>();
@@ -169,7 +170,7 @@ public class Kit : MonoBehaviour
                 }
             }
 
-            yield return null;
+            await UniTask.Yield();
         }
 
         foreach (var item in items)

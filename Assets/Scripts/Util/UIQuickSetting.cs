@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using Cysharp.Threading.Tasks;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class UIQuickSetting : MonoBehaviour
@@ -67,7 +68,7 @@ public class UIQuickSetting : MonoBehaviour
 
         if (fadeIn)
         {
-            StartCoroutine(FadingIn());
+            FadingIn().Forget();
         }
     }
 
@@ -77,7 +78,7 @@ public class UIQuickSetting : MonoBehaviour
             return;
         if (fadeOut)
         {
-            StartCoroutine(FadingOut());
+            FadingOut().Forget();
         }
     }
 
@@ -134,33 +135,33 @@ public class UIQuickSetting : MonoBehaviour
 
     }
 
-    IEnumerator FadingIn()
+    async UniTask FadingIn()
     {
         Status = true;
         while (Mathf.Abs(canvasGroup.alpha - 1) > 0.01f && Status)
         {
             canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 1, .1f);
-            yield return null;
+            await UniTask.Yield();
         }
         canvasGroup.alpha = 1;
     }
 
-    IEnumerator FadingOut()
+    async UniTask FadingOut()
     {
         Status = false;
         while (Mathf.Abs(canvasGroup.alpha - 0) > 0.01f && !Status)
         {
             canvasGroup.alpha = Mathf.Lerp(canvasGroup.alpha, 0, .1f);
-            yield return null;
+            await UniTask.Yield();
         }
         canvasGroup.alpha = 0;
     }
 
-    public IEnumerator WaitStatusChange(UnityAction action, bool status)
+    public async UniTask WaitStatusChange(UnityAction action, bool status)
     {
         while (Status != status)
         {
-            yield return null;
+            await UniTask.Yield();
         }
         // Debug.Log("bool change");
         action.Invoke();

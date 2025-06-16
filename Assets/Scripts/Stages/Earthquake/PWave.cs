@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public class PWave : Stage
 {
@@ -10,7 +11,7 @@ public class PWave : Stage
     {
         base.OnBegin();
         FindObjectOfType<HintCanvas>().SetHintText("地震！地震！", true);
-        StartCoroutine(MakeEarthquake());
+        MakeEarthquake().Forget();
     }
 
     public override void OnFinish()
@@ -19,7 +20,7 @@ public class PWave : Stage
         //GameHandler.Singleton.audioHandler.ClearSpeaker();
     }
 
-    IEnumerator MakeEarthquake()
+    async UniTask MakeEarthquake()
     {
         GameHandler.Singleton.player.SetCanMove(true);
 
@@ -28,18 +29,18 @@ public class PWave : Stage
 
         audio.PlayAudio(audio.cwbeew, true);    // 蜂鳴器
 
-        yield return new WaitForSeconds(3f);
+        await UniTask.Delay(3000);
 
         audio.PlaySound(audio.PWave);   // 地震聲音
         audio.GetSoundAudioSource(audio.PWave).volume = .8f;
         earthquake.SetQuake(48f);
 
-        yield return new WaitForSeconds(3f);
+        await UniTask.Delay(3000);
 
         audio.GetSpeakerAudioSource(audio.cwbeew).volume = .2f;
         audio.PlayAudio(audio.earthquakeRadio, false);      // 廣播
 
-        yield return new WaitForSeconds(8f);
+        await UniTask.Delay(8000);
 
         audio.GetSoundAudioSource(audio.PWave).volume = .1f;
         audio.GetSpeakerAudioSource(audio.earthquakeRadio).volume = .1f;
@@ -48,7 +49,7 @@ public class PWave : Stage
         GameHandler.Singleton.StageFinish();
 
         while (earthquake.isQuaking)
-            yield return null;
+            await UniTask.Yield();
 
         audio.ClearSpeaker();
     }

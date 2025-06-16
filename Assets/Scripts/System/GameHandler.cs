@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using JacDev.Audio;
-using UnityEngine.SceneManagement;
-using UnityStandardAssets.ImageEffects;
+using Cysharp.Threading.Tasks;
 
 public class GameHandler : MonoBehaviour
 {
@@ -69,7 +68,7 @@ public class GameHandler : MonoBehaviour
             playerData.SetMissionData(currentScene);
             currentMissionIndex = 0;
 
-            StartCoroutine(PlayStage(firstStage));
+            PlayStage(firstStage).Forget();
         }
         else
         {
@@ -77,7 +76,7 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    public IEnumerator PlayStage(Stage stg)
+    public async UniTask PlayStage(Stage stg)
     {
         print(stg.name);
 
@@ -97,7 +96,7 @@ public class GameHandler : MonoBehaviour
         {
             timer += Time.deltaTime;
             stg.OnUpdate();
-            yield return null;
+            await UniTask.Yield();
         }
 
         stg.OnFinish();
@@ -113,12 +112,12 @@ public class GameHandler : MonoBehaviour
             audioHandler.StopCurrent();
             stg.StopAllCoroutines();
 
-            yield return StartCoroutine(PlayStage(stg.nextStage));
+            await PlayStage(stg.nextStage);
         }
         else
         {
             while (audioHandler.currentPlayingSound != null)
-                yield return null;
+                await UniTask.Yield();
 
             // SavePlayerData();
             sceneLoader.LoadScene("Result Scene");
@@ -161,7 +160,7 @@ public class GameHandler : MonoBehaviour
         }
         */
 
-    public IEnumerator Counter(float min, float max, IEnumerator nextFunction)
+    public async UniTask Counter(float min, float max, UniTask nextFunction)
     {
         float t = Random.Range(min, max);
         float counter = 0;
@@ -170,13 +169,13 @@ public class GameHandler : MonoBehaviour
         {
             counter += Time.deltaTime;
 
-            yield return null;
+            await UniTask.Yield();
         }
 
-        StartCoroutine(nextFunction);
+        await nextFunction;
     }
 
-    public IEnumerator Counter(float min, float max, UnityAction action)
+    public async UniTask Counter(float min, float max, UnityAction action)
     {
         float t = Random.Range(min, max);
         float counter = 0;
@@ -185,19 +184,19 @@ public class GameHandler : MonoBehaviour
         {
             counter += Time.deltaTime;
 
-            yield return null;
+            await UniTask.Yield();
         }
 
         action.Invoke();
     }
 
-    public IEnumerator Counter(float t, UnityAction action)
+    public async UniTask Counter(float t, UnityAction action)
     {
         float counter = 0;
         while (counter < t)
         {
             counter += Time.deltaTime;
-            yield return null;
+            await UniTask.Yield();
         }
 
         action.Invoke();

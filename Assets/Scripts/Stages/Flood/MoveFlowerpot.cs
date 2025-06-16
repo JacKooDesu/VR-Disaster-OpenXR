@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class MoveFlowerpot : Stage
@@ -16,15 +17,15 @@ public class MoveFlowerpot : Stage
 
         JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
         AudioSource broadcast = a.PlaySound(a.broadcast1);
-        StartCoroutine(
-            GameHandler.Singleton.Counter(
-                3f,
-                delegate
-                {
-                    broadcast.volume = .4f;
-                    a.PlaySound(a.plantDown);
-                }
-            ));
+
+        GameHandler.Singleton.Counter(
+            3f,
+            delegate
+            {
+                broadcast.volume = .4f;
+                a.PlaySound(a.plantDown);
+            }
+        ).Forget();
     }
 
     public override void OnUpdate()

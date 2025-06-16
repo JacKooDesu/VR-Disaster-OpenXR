@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class WalkInLibrary : Stage
@@ -19,7 +20,7 @@ public class WalkInLibrary : Stage
 
         UI.TurnOn();
 
-        StartCoroutine(UI.WaitStatusChange(
+        UI.WaitStatusChange(
             () =>
             {
                 elevator.SetTrigger("Open");
@@ -27,9 +28,9 @@ public class WalkInLibrary : Stage
                 JacDev.Audio.Earthquake audio = (JacDev.Audio.Earthquake)GameHandler.Singleton.audioHandler;
                 audio.PlayAudio(audio.libraryBgm, true);
 
-                StartCoroutine(GameHandler.Singleton.Counter(minTime, maxTime, delegate { isFinish = true; }));
+                GameHandler.Singleton.Counter(minTime, maxTime, delegate { isFinish = true; }).Forget();
             }, false
-        ));
+        ).Forget();
     }
 
     public override void OnFinish()

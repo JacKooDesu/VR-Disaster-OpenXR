@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cysharp.Threading.Tasks;
 
 public class Earthquake : MonoBehaviour
 {
@@ -38,10 +39,10 @@ public class Earthquake : MonoBehaviour
 
     public void SetQuake(float t)
     {
-        StartCoroutine(StartQuake(t));
+        StartQuake(t).Forget();
     }
 
-    IEnumerator StartQuake(float t)
+    async UniTask StartQuake(float t)
     {
         BindRigidbody();
 
@@ -82,7 +83,7 @@ public class Earthquake : MonoBehaviour
             //rb.AddForce(force,ForceMode.Acceleration);
             // print(force);
 
-            yield return null;
+            await UniTask.Yield();
         }
 
         rb.isKinematic = true;
