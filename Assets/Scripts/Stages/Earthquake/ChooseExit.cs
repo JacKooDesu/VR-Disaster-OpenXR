@@ -24,7 +24,7 @@ public class ChooseExit : Stage
         JacDev.Audio.Earthquake audio = (JacDev.Audio.Earthquake)GameHandler.Singleton.audioHandler;
         audio.PlaySound(audio.protectHead);
 
-        FindObjectOfType<HintCanvas>().SetHintText("注意掉落物，小心頭部安全！", true);
+        FindAnyObjectByType<HintCanvas>().SetHintText("注意掉落物，小心頭部安全！", true);
 
         foreach (TeleportPoint tp in FindStageObjects<TeleportPoint>("逃生門"))
         {

@@ -37,7 +37,7 @@ public class SWave : Stage
         ).Forget();
 
         BreakRoof();
-        StartCoroutine(MakeFog(5f, 40f));
+        MakeFog(5f, 40f).Forget();
 
         JacDev.Audio.Earthquake audio = (JacDev.Audio.Earthquake)GameHandler.Singleton.audioHandler;
         audio.ClearSpeaker();
@@ -107,7 +107,7 @@ public class SWave : Stage
         }
     }
 
-    public IEnumerator MakeFog(float time, float fogEnd)
+    public async UniTask MakeFog(float time, float fogEnd)
     {
         float t = 0;
         float maxDistance = 1000;
@@ -121,7 +121,7 @@ public class SWave : Stage
 
             RenderSettings.fogEndDistance -= ((maxDistance - fogEnd) / time * Time.deltaTime);
 
-            yield return null;
+            await UniTask.Yield();
         }
     }
 }

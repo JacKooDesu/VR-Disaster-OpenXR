@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -34,22 +35,22 @@ public class TeleportPoint : MonoBehaviour
         isSelected = true;
         onSelectAction.Invoke();
         this.raycaster = raycaster;
-        StartCoroutine(CheckSelecting());
+        CheckSelecting().Forget();
 
         if (showHint)
         {
-            FindObjectOfType<HintCanvas>().SetHintText($"傳送至{pointName}", true);
+            FindAnyObjectByType<HintCanvas>().SetHintText($"傳送至{pointName}", true);
         }
     }
 
-    IEnumerator CheckSelecting()
+    async UniTask CheckSelecting()
     {
         while (raycaster.HitResult.gameObject == gameObject)
         {
-            yield return null;
+            await UniTask.Yield();
         }
         isSelected = false;
-        FindObjectOfType<HintCanvas>().ShowHintText(false);
+        FindAnyObjectByType<HintCanvas>().ShowHintText(false);
     }
 
     public async void BeingTeleported()

@@ -44,7 +44,7 @@ public class HoverHandler : MonoBehaviour
 
             if (timer >= mainMenuTime)
             {
-                FindObjectOfType<AsyncLoadingScript>().LoadScene("MissionSelect");
+                FindAnyObjectByType<AsyncLoadingScript>().LoadScene("MissionSelect");
                 isCallingMenu = false;
             }
         }

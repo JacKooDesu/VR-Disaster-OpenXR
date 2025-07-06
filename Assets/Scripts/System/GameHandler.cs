@@ -15,7 +15,7 @@ public class GameHandler : MonoBehaviour
     {
         get
         {
-            singleton = FindObjectOfType(typeof(GameHandler)) as GameHandler;
+            singleton = FindAnyObjectByType(typeof(GameHandler)) as GameHandler;
 
             if (singleton == null)
             {
@@ -60,7 +60,7 @@ public class GameHandler : MonoBehaviour
             playerData = new PlayerData();
 
         if (player == null)
-            player = FindObjectOfType<Player>();
+            player = FindAnyObjectByType<Player>();
 
         var currentScene = SceneLoader.Singleton.GetCurrentSceneName();
         if (currentScene != "MissionSelect" && currentScene != "Result Scene")

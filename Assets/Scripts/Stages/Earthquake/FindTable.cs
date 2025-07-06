@@ -19,7 +19,7 @@ public class FindTable : Stage
         audio.PlaySound(audio.goUnderTable);
         audio.currentPlayingSound = null;
 
-        FindObjectOfType<HintCanvas>().SetHintText("找到桌椅避難掩護！", true);
+        FindAnyObjectByType<HintCanvas>().SetHintText("找到桌椅避難掩護！", true);
         var tp = FindStageObject<TeleportPoint>();
         tp.onTeleportAction.AddListener(() =>
         {
@@ -27,7 +27,7 @@ public class FindTable : Stage
             Destroy(tp.gameObject);
         });
 
-        FindObjectOfType<NavMeshSurface>().BuildNavMesh();
+        FindAnyObjectByType<NavMeshSurface>().BuildNavMesh();
         GameHandler.Singleton.player.PathFinding(tp.transform.position);
 
         dchUI.SetActive(true);

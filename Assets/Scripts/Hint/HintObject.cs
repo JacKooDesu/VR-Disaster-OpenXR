@@ -19,8 +19,8 @@ public class HintObject : MonoBehaviour
 
     private void Start()
     {
-        ui = FindObjectOfType<HintUI>();
-        cam = FindObjectOfType<HintObejctCamera>();
+        ui = FindAnyObjectByType<HintUI>();
+        cam = FindAnyObjectByType<HintObejctCamera>();
 
 #if UNITY_EDITOR
         if (Application.isEditor)

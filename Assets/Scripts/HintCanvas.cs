@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using CoroutineUtility;
+using Cysharp.Threading.Tasks;
 
 public class HintCanvas : MonoBehaviour
 {
@@ -51,10 +52,10 @@ public class HintCanvas : MonoBehaviour
         hintText.gameObject.SetActive(show);
 
         if (!show)
-            StopCoroutine(LerpToHeadAngle());
+            LerpToHeadAngle().Forget();
 
         if (forceToForward)
-            StartCoroutine(LerpToHeadAngle());
+            LerpToHeadAngle().Forget();
     }
 
     public void SetHintText(string str)
@@ -98,7 +99,7 @@ public class HintCanvas : MonoBehaviour
 
         if (trackingDelayCounter >= trackingDelay)
         {
-            StartCoroutine(LerpToHeadAngle());
+            LerpToHeadAngle().Forget();
         }
     }
 
@@ -107,20 +108,20 @@ public class HintCanvas : MonoBehaviour
         trackingDelayCounter += trackingDelay;
     }
 
-    IEnumerator LerpToHeadAngle()
+    async UniTask LerpToHeadAngle()
     {
         Vector3 origin = transform.eulerAngles;
         float targetAngleAmount = Mathf.DeltaAngle(transform.eulerAngles.y, head.eulerAngles.y);
         float yAngle = 0;
         while (Mathf.Abs(yAngle - targetAngleAmount) >= .001f)
         {
-            yield return new WaitForEndOfFrame();
+            await UniTask.Yield();
             yAngle = Mathf.Lerp(yAngle, targetAngleAmount, .1f);
             transform.eulerAngles = Vector3.up * yAngle + origin;
 
             trackingDelayCounter = 0f;
 
-            yield return null;
+            await UniTask.Yield();
         }
     }
     #endregion

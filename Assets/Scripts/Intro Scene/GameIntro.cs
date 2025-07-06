@@ -22,7 +22,7 @@ public class GameIntro : MonoBehaviour
             await Task.Delay(500);
         }
 
-        var sceneLoader = FindObjectOfType<AsyncLoadingScript>();
+        var sceneLoader = FindAnyObjectByType<AsyncLoadingScript>();
         // var timer = new Timer(
         //     time,
         //     () => sceneLoader.LoadScene("MissionSelect")

@@ -15,7 +15,7 @@ namespace CoroutineUtility
                 if (singleton != null)
                     return singleton;
 
-                singleton = FindObjectOfType(typeof(CoroutineManager)) as CoroutineManager;
+                singleton = FindAnyObjectByType(typeof(CoroutineManager)) as CoroutineManager;
 
                 if (singleton == null)
                 {

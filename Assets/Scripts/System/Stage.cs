@@ -52,8 +52,6 @@ public class Stage : MonoBehaviour
             target.SetActive(true);
             GameHandler.Singleton.player.PathFinding(target.transform.position);
         }
-
-        //iTween.MoveTo(GameHandler.Singleton.player.gameObject, spawnpoint, .5f);
     }
 
     public virtual void OnUpdate()

@@ -28,11 +28,11 @@ public class AsyncLoadingScript : MonoBehaviour
         isLoading = true;
         targetSceneName = name;
         // SceneManager.LoadScene("AsyncLoadingScene");    // 跳到異步加載場景
-        var fadeUtil = FindObjectOfType<CameraFadeUtil>();
+        var fadeUtil = FindAnyObjectByType<CameraFadeUtil>();
         fadeUtil.FadeOut(.5f, null, () => SceneManager.LoadSceneAsync(targetSceneName));
         // async = SceneManager.LoadSceneAsync(targetSceneName);
         // async.allowSceneActivation = true;
-        // StartCoroutine(Loading());
+        // FindAnyObjectByType(Loading());
     }
 
     // private void Start()
@@ -41,7 +41,7 @@ public class AsyncLoadingScript : MonoBehaviour
     //     {
     //         async = SceneManager.LoadSceneAsync(targetSceneName);
     //         async.allowSceneActivation = false;
-    //         StartCoroutine(Loading());
+    //         FindAnyObjectByType(Loading());
     //     }
     // }
 

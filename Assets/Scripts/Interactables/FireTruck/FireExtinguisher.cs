@@ -33,7 +33,7 @@ public class FireExtinguisher : InteracableObject
 
     // public void CheckSpray()
     // {
-    //     StartCoroutine(Spray());
+    //     FindAnyObjectByType(Spray());
     // }
 
     // IEnumerator Spray()

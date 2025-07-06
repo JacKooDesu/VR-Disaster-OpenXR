@@ -13,7 +13,7 @@ public class ChooseRescueKitEarthquake : Stage
     public override void OnBegin()
     {
         base.OnBegin();
-        FindObjectOfType<HintCanvas>().SetHintText("整理急難救助包！", true);
+        FindAnyObjectByType<HintCanvas>().SetHintText("整理急難救助包！", true);
         JacDev.Audio.Earthquake audio = (JacDev.Audio.Earthquake)GameHandler.Singleton.audioHandler;
         audio.PlaySound(audio.selectWhistle);
 
@@ -47,7 +47,7 @@ public class ChooseRescueKitEarthquake : Stage
     //     JacDev.Audio.Earthquake audio = (JacDev.Audio.Earthquake)GameHandler.Singleton.audioHandler;
     //     audio.PlaySound(audio.whistle);
 
-    //     // StartCoroutine(
+    //     // FindAnyObjectByType(
     //     //     GameHandler.Singleton.Counter(
     //     //         audio.whistle.length + 1,
     //     //         audio.whistle.length + 1,
@@ -58,7 +58,7 @@ public class ChooseRescueKitEarthquake : Stage
     //     //     )
     //     // );
 
-    //     // StartCoroutine(
+    //     // FindAnyObjectByType(
     //     //     GameHandler.Singleton.Counter(
     //     //         audio.whistle.length + 1 + audio.missionComplete.length + 1,
     //     //         audio.whistle.length + 1 + audio.missionComplete.length + 1,

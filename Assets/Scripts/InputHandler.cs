@@ -10,7 +10,7 @@ public class InputHandler : MonoBehaviour
     {
         get
         {
-            singleton = FindObjectOfType(typeof(InputHandler)) as InputHandler;
+            singleton = FindAnyObjectByType(typeof(InputHandler)) as InputHandler;
 
             if (singleton == null)
             {

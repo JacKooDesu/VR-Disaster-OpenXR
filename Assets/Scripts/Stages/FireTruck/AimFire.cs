@@ -26,7 +26,7 @@ public class AimFire : Stage
 
         changer.ChangeColor();
 
-        // FindObjectOfType<HintCanvas>().SetHintText("靠近一點火源", true);
+        // FindAnyObjectByType<HintCanvas>().SetHintText("靠近一點火源", true);
 
         JacDev.Audio.FireTruck audio = (JacDev.Audio.FireTruck)GameHandler.Singleton.audioHandler;
         audio.StopCurrent();
@@ -36,7 +36,7 @@ public class AimFire : Stage
         {
             isNearFire = true;
             GameHandler.Singleton.player.SetCanMove(false);
-            FindObjectOfType<HintCanvas>().SetHintText("瞄準火源", true);
+            FindAnyObjectByType<HintCanvas>().SetHintText("瞄準火源", true);
         };
     }
 

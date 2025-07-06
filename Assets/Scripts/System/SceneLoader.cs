@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,7 +13,7 @@ public class SceneLoader : MonoBehaviour    // 場景載入腳本，不摧毀
     {
         get
         {
-            singleton = FindObjectOfType(typeof(SceneLoader)) as SceneLoader;
+            singleton = FindAnyObjectByType(typeof(SceneLoader)) as SceneLoader;
 
             if (singleton == null)
             {
@@ -42,11 +43,11 @@ public class SceneLoader : MonoBehaviour    // 場景載入腳本，不摧毀
     public void Load(string scene)
     {
         GetComponent<Canvas>().worldCamera = GameHandler.Singleton.uiCamera;
-        StartCoroutine(LoadSceneAsync(scene));
+        LoadSceneAsync(scene).Forget();
     }
 
     // 同步加載場景
-    IEnumerator LoadSceneAsync(string name)
+    async UniTask LoadSceneAsync(string name)
     {
         float temp = 0;
 
@@ -54,7 +55,7 @@ public class SceneLoader : MonoBehaviour    // 場景載入腳本，不摧毀
         {
             temp += Time.deltaTime * fadeSpeed;
             BG.alpha = temp;
-            yield return null;
+            await UniTask.Yield();
         }
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(name);
@@ -65,7 +66,7 @@ public class SceneLoader : MonoBehaviour    // 場景載入腳本，不摧毀
         {
             loadArc.fillAmount = (1 / .9f) * asyncLoad.progress;
 
-            yield return null;
+            await UniTask.Yield();
         }
 
         if (loadArc.fillAmount != 1)
@@ -76,10 +77,10 @@ public class SceneLoader : MonoBehaviour    // 場景載入腳本，不摧毀
         asyncLoad.allowSceneActivation = true;
 
         while (!asyncLoad.isDone)
-            yield return null;
+            await UniTask.Yield();
 
         while (GameHandler.Singleton.uiCamera == null)
-            yield return null;
+            await UniTask.Yield();
 
         print(GameHandler.Singleton.uiCamera);
         GetComponent<Canvas>().worldCamera = GameHandler.Singleton.uiCamera;
@@ -88,7 +89,7 @@ public class SceneLoader : MonoBehaviour    // 場景載入腳本，不摧毀
         {
             temp -= Time.deltaTime * fadeSpeed;
             BG.alpha = temp;
-            yield return null;
+            await UniTask.Yield();
         }
     }
 

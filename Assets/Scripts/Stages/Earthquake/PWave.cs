@@ -10,7 +10,7 @@ public class PWave : Stage
     public override void OnBegin()
     {
         base.OnBegin();
-        FindObjectOfType<HintCanvas>().SetHintText("地震！地震！", true);
+        FindAnyObjectByType<HintCanvas>().SetHintText("地震！地震！", true);
         MakeEarthquake().Forget();
     }
 

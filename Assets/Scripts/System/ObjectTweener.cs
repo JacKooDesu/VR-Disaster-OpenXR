@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [System.Serializable]
 public class ObjectTweener : MonoBehaviour  // 物件位移類別
@@ -12,7 +13,7 @@ public class ObjectTweener : MonoBehaviour  // 物件位移類別
     [System.Serializable]
     public class TweenPoint
     {
-        public iTween.EaseType easeType = iTween.EaseType.easeInOutSine;
+        public DG.Tweening.Ease easeType = DG.Tweening.Ease.InOutSine;
         public float animationTime = .8f;
 
     }
@@ -29,14 +30,14 @@ public class ObjectTweener : MonoBehaviour  // 物件位移類別
     public void MoveNextPoint()     // 尚未定義完整
     {
         currentPoint++;
-        iTween.MoveTo(target.gameObject, points[currentPoint].position, moveTime);
-        iTween.RotateTo(target.gameObject, points[currentPoint].eulerAngles, moveTime);
+        DOTween.To(() => target.position, x => target.position = x, points[currentPoint].position, moveTime);
+        DOTween.To(() => target.eulerAngles, x => target.eulerAngles = x, points[currentPoint].eulerAngles, moveTime);
     }
 
     public void MoveToPoint(int p)  // 位移至定點
     {
-        iTween.MoveTo(target.gameObject, points[p].position, moveTime);
-        iTween.RotateTo(target.gameObject, points[p].eulerAngles, moveTime);
+        DOTween.To(() => target.position, x => target.position = x, points[p].position, moveTime);
+        DOTween.To(() => target.eulerAngles, x => target.eulerAngles = x, points[p].eulerAngles, moveTime);
 
         currentPoint = p;
     }

@@ -28,7 +28,7 @@ public class Earthquake : MonoBehaviour
 
         BindRigidbody();
 
-        // StartCoroutine(StartQuake(20));
+        // FindAnyObjectByType(StartQuake(20));
         //rb.isKinematic = true;
     }
 
