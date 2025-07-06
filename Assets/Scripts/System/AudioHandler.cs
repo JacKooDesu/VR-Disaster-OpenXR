@@ -12,7 +12,7 @@ namespace JacDev.Audio
         {
             get
             {
-                singleton = FindObjectOfType(typeof(AudioHandler)) as AudioHandler;
+                singleton = FindAnyObjectByType(typeof(AudioHandler)) as AudioHandler;
 
                 if (singleton == null)
                 {
@@ -111,7 +111,7 @@ namespace JacDev.Audio
 
         public void StopAll()
         {
-            foreach (AudioSource a in FindObjectsOfType<AudioSource>())
+            foreach (AudioSource a in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
             {
                 a.Stop();
             }
@@ -137,7 +137,7 @@ namespace JacDev.Audio
             //         return speaker.transform.GetChild(i - 1).GetComponent<AudioSource>();
             // }
 
-            foreach (AudioSource a in FindObjectsOfType<AudioSource>())
+            foreach (AudioSource a in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
             {
                 if (a.clip == ac)
                     return a;
