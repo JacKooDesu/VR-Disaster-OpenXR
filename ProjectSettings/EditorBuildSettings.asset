@@ -23,4 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Result Scene.unity
     guid: b168c0dbee2069f499e0dd2d59f4b664
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e915cf3ab7c5d6f43915a0156e1d30a5,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 988f6c0de6574f94d868c37f8a5f5194,
+      type: 2}
+  m_UseUCBPForAssetBundles: 0
