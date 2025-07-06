@@ -11,7 +11,7 @@ public class ChooseRescueKitFlood : Stage
     public override void OnBegin()
     {
         base.OnBegin();
-        FindObjectOfType<HintCanvas>().SetHintText("整理急難救助包！", true);
+        FindAnyObjectByType<HintCanvas>().SetHintText("整理急難救助包！", true);
 
         var player = GameHandler.Singleton.player;
 

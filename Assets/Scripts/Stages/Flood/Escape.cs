@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using DG.Tweening;
 
 public class Escape : Stage
 {
@@ -41,7 +42,7 @@ public class Escape : Stage
             ).Forget();
 
         water.SetActive(true);
-        iTween.MoveTo(water, Vector3.one * -1.46f, 12f);
+        water.transform.DOMove(Vector3.one * -1.46f, 12f);
 
         waterfall.SetActive(true);
 
