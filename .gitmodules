@@ -1,3 +1,4 @@
 [submodule "Sndproj"]
 	path = Sndproj
 	url = https://github.com/JacKooDesu/VR-Disaster-Sndproj.git
+	branch = main
