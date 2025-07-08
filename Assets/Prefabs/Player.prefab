@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 2133074072}
   - component: {fileID: 2133074075}
   - component: {fileID: 2133074074}
-  - component: {fileID: 2133074073}
+  - component: {fileID: 8526411745440698975}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 20
   m_PresetInfoIsWorld: 1
---- !u!114 &2133074073
+--- !u!114 &8526411745440698975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,14 +280,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2133074071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &179496170748022872
 GameObject:
   m_ObjectHideFlags: 0
@@ -6234,11 +6236,6 @@ PrefabInstance:
       propertyPath: m_RayOriginTransform
       value: 
       objectReference: {fileID: 5465599604069777887}
-    - target: {fileID: 2761784063978902503, guid: c1800acf6366418a9b5f610249000331,
-        type: 3}
-      propertyPath: m_RaycastMask.m_Bits
-      value: 2147483681
-      objectReference: {fileID: 0}
     - target: {fileID: 2761784063978902503, guid: c1800acf6366418a9b5f610249000331,
         type: 3}
       propertyPath: m_SelectInput.m_InputActionReferenceValue
