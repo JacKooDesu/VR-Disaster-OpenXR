@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 public class TeleportPoint : MonoBehaviour
 {
@@ -26,6 +27,20 @@ public class TeleportPoint : MonoBehaviour
     public bool showHint;
 
     bool invokeState = false; // 避免重複觸發
+    TeleportationAnchor _anchorProxy;
+
+    void Awake()
+    {
+        _anchorProxy = GetComponentInChildren<TeleportationAnchor>();
+
+        if (_anchorProxy == null)
+        {
+            Debug.LogError("TeleportationAnchor component is missing on the TeleportPoint object.");
+            return;
+        }
+
+        _anchorProxy.teleporting.AddListener(arg => onTeleportAction?.Invoke());
+    }
 
     public void BeingSelect(XRBaseRaycaster raycaster)
     {
@@ -70,7 +85,7 @@ public class TeleportPoint : MonoBehaviour
 
     private void Update()
     {
-        LerpColor();
+        // LerpColor();
 
         // if (isSelected && !selectArrowParticle.activeInHierarchy)
         //     selectArrowParticle.SetActive(true);
