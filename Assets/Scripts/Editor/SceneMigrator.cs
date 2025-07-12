@@ -9,21 +9,34 @@ using XRGraphicRaycaster = UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGr
 using DefaultGraphicRaycaster = UnityEngine.UI.GraphicRaycaster;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using UnityEditor.SceneManagement;
 
-public class SceneMigrator : EditorWindow
+public partial class SceneMigrator : EditorWindow
 {
     abstract class MigrateType
     {
         public abstract Type From { get; }
         public abstract Type To { get; }
 
-        public Component[] GetMigrateObjects() =>
-            UnityEngine.Object
-                .FindObjectsByType(From, FindObjectsSortMode.None)
-                .Cast<Component>()
-                .ToArray();
+        public Func<Component, bool> _targetFilter = null;
 
-        public void Migrate(Component[] targetComponents)
+        public virtual Component[] GetMigrateObjects()
+        {
+
+            var components = (PrefabStageUtility.GetCurrentPrefabStage() is PrefabStage stg ?
+                stg.prefabContentsRoot.GetComponentsInChildren(From, true) :
+                UnityEngine.Object.FindObjectsByType(From, FindObjectsInactive.Include, FindObjectsSortMode.None))
+                .Cast<Component>();
+
+            return _targetFilter is null ?
+                components.ToArray() :
+                components
+                .Where(x => _targetFilter(x))
+                .ToArray();
+        }
+
+        public void Migrate(params Component[] targetComponents)
         {
             foreach (var target in targetComponents)
             {
@@ -89,6 +102,7 @@ public class SceneMigrator : EditorWindow
     static MigrateType[] _MigrationTypes = new MigrateType[]
     {
         new SwapType<DefaultGraphicRaycaster, XRGraphicRaycaster>(),
+        InteractableMigration(),
     };
     static Dictionary<Type, Component[]> _MigrateObjects = new();
     static MigrateType _CurrentMigrateType = null;
@@ -148,8 +162,17 @@ public class SceneMigrator : EditorWindow
                 _scrollPos = GUILayout.BeginScrollView(_scrollPos);
                 foreach (var component in components)
                 {
+                    GUILayout.BeginHorizontal();
+
                     if (GUILayout.Button($"{component.name}"))
                         Selection.SetActiveObjectWithContext(component, null);
+
+                    var style = new GUIStyle(GUI.skin.button);
+                    style.fixedWidth = 24;
+                    if (GUILayout.Button("@", style))
+                        _CurrentMigrateType.Migrate(component);
+
+                    GUILayout.EndHorizontal();
                 }
                 GUILayout.EndScrollView();
             }
@@ -164,8 +187,21 @@ public class SceneMigrator : EditorWindow
         {
             var type = migrateType.GetType();
 
-            var targets = UnityEngine.Object.FindObjectsByType(migrateType.From, FindObjectsSortMode.None);
             _MigrateObjects[type] = migrateType.GetMigrateObjects();
+        }
+    }
+
+    static void ReflectAssign<T>(T target, string fieldName, object value)
+    {
+        var type = typeof(T);
+        var field = type.GetField(fieldName, (BindingFlags)int.MaxValue);
+        if (field != null)
+        {
+            field.SetValue(target, value);
+        }
+        else
+        {
+            Debug.LogError($"Field {fieldName} not found in {type.Name}");
         }
     }
 }

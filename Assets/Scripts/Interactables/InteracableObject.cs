@@ -3,9 +3,13 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using CoroutineUtility;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField]
+    XRGrabInteractable _interactableProxy;
+
     [Header("位置重置")]
     public bool positionReset = true;
     public float resetTime;
