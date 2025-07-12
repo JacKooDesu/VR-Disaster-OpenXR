@@ -52,10 +52,10 @@ public class HintCanvas : MonoBehaviour
         hintText.gameObject.SetActive(show);
 
         if (!show)
-            LerpToHeadAngle().Forget();
+            LerpToHeadAngleSync();
 
         if (forceToForward)
-            LerpToHeadAngle().Forget();
+            LerpToHeadAngleSync();
     }
 
     public void SetHintText(string str)
@@ -99,7 +99,7 @@ public class HintCanvas : MonoBehaviour
 
         if (trackingDelayCounter >= trackingDelay)
         {
-            LerpToHeadAngle().Forget();
+            LerpToHeadAngleSync();
         }
     }
 
@@ -107,6 +107,11 @@ public class HintCanvas : MonoBehaviour
     {
         trackingDelayCounter += trackingDelay;
     }
+
+    void LerpToHeadAngleSync() =>
+        LerpToHeadAngle()
+                .AttachExternalCancellation(gameObject.GetCancellationTokenOnDestroy())
+                .Forget();
 
     async UniTask LerpToHeadAngle()
     {

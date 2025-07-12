@@ -114,7 +114,9 @@ public class Kit : MonoBehaviour
 
         DrawItem(correctCount, wrongCount, vipItems);
 
-        KitMission(capacity, onComplete).Forget();
+        KitMission(capacity, onComplete)
+            .AttachExternalCancellation(gameObject.GetCancellationTokenOnDestroy())
+            .Forget();
     }
 
     async UniTask KitMission(int capacity, System.Action<int> onComplete) // Action<int> 表示正確的數量

@@ -17,8 +17,8 @@ public class HintObejctCamera : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Application.isEditor)
-            cam.enabled = false;
+        // if (Application.isEditor)
+        //     cam.enabled = false;
     }
     // private void Start()
     // {
