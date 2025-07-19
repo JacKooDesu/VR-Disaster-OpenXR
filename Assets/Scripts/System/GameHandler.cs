@@ -72,7 +72,7 @@ public class GameHandler : MonoBehaviour
         }
         else
         {
-            firstStage.OnBegin();
+            firstStage?.OnBegin();
         }
     }
 

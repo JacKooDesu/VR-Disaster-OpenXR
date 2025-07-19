@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using CoroutineUtility;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Attachment;
 
-public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class InteracableObject : MonoBehaviour
 {
     [SerializeField]
     XRGrabInteractable _interactableProxy;
@@ -19,7 +21,9 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     protected Transform originParent;
     [Header("抓取")]
     public bool canGrab = true;
-    public UnityEvent onGrabEvent;
+    [FormerlySerializedAs("onGrabEvent")]
+    public UnityEvent OnGrabbed;
+    public UnityEvent OnFishing;
     [Header("放開")]
     public UnityEvent onReleaseEvent;
     protected const int HOVER_LAYER = 22;
@@ -30,10 +34,21 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     protected Timer hoverTimer;
     protected HoverHandler hoveringHand;
 
-    [SerializeField] protected bool isGrabbing;
+    public bool IsFishing { get; private set; }
+
+    public enum EGrabMode
+    {
+        None,
+        Fishing,
+        Pulling,
+        Grabbed
+    }
+
+    [field: SerializeField]
+    public EGrabMode GrabMode { get; protected set; } = EGrabMode.None;
     public bool IsGrabbing
     {
-        get => isGrabbing;
+        get => GrabMode != EGrabMode.None;
     }
 
     public bool Interactable
@@ -41,8 +56,8 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         set
         {
             interactable = value;
-            if (outline != null && !value)
-                outline.enabled = false;
+            if (_outline != null && !value)
+                _outline.enabled = false;
         }
         get
         {
@@ -59,19 +74,12 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     protected Collider col;
 
     // outline 設定
-    protected Outline outline;
+    protected Outline _outline;
     public bool interactableOutline = true;    // 是否開啟outline開關
 
-    [Header("其他")]
-    public bool trackVelocity = false;
-    protected float currentVelocity;
-    public float CurrentVelocity
-    {
-        get => currentVelocity * velocityMutiply;
-    }
-    public float velocityMutiply = 100000f;
-
     protected Vector3 currentPos, lastPos;
+
+    protected InteractableFarAttachMode _originAttachMode;
 
     public bool debugVelocity;
     protected Text debugText = null;
@@ -80,11 +88,16 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         SetupOrigin();
 
-        if (GetComponent<Outline>())
+        BindInteractable();
+
+        if (TryGetComponent<Outline>(out var outline))
         {
-            outline = GetComponent<Outline>();
+            _outline = outline;
             if (interactableOutline)
-                outline.enabled = false;
+                _outline.enabled = false;
+
+            _interactableProxy.hoverEntered.AddListener(arg => _outline.enabled = true);
+            _interactableProxy.hoverExited.AddListener(arg => _outline.enabled = false);
         }
 
         if (debugVelocity)
@@ -97,8 +110,8 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     // 定義原位置訊息
     protected void SetupOrigin()
     {
-        originPos = transform.position;
-        originRotation = transform.rotation;
+        originPos = transform.localPosition;
+        originRotation = transform.localRotation;
         originParent = transform.parent;
 
         if (!GetComponent<Rigidbody>())
@@ -115,6 +128,15 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         this.col = GetComponent<Collider>();
     }
 
+    protected virtual void BindInteractable()
+    {
+        if (_interactableProxy == null ||
+            !TryGetComponent<XRGrabInteractable>(out var interactable))
+            return;
+
+        _interactableProxy = interactable;
+    }
+
     protected virtual void Update()
     {
         // if (!Interactable && isGrabbing)
@@ -122,13 +144,7 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         CheckPosReset();
 
         currentPos = transform.position;
-        if (isGrabbing && trackVelocity)
-            currentVelocity = (currentPos - lastPos).magnitude;
-        else
-            currentVelocity = 0f;
 
-        if (debugVelocity && debugText != null)
-            debugText.text = $"Velocity = {CurrentVelocity.ToString("F2")}";
         lastPos = currentPos;
     }
 
@@ -137,7 +153,7 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (!positionReset)
             return;
 
-        if (isGrabbing)
+        if (IsGrabbing)
             return;
 
         timer += Time.deltaTime;
@@ -158,26 +174,29 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
             rig.useGravity = originUseGravity;
         }
 
-        transform.SetPositionAndRotation(originPos, originRotation);
+        transform.localPosition = originPos;
+        transform.localRotation = originRotation;
     }
 
-    public void Grabbed()
+    public void UpdateGrabState(EGrabMode mode)
     {
-        if (isGrabbing)
-            return;
-
-        onGrabEvent.Invoke();
-        isGrabbing = true;
+        var trigger = mode switch
+        {
+            EGrabMode.Fishing => OnFishing,
+            EGrabMode.Grabbed => OnGrabbed,
+            _ => null
+        };
+        trigger?.Invoke();
+        GrabMode = mode;
     }
 
     public void Released()
     {
-        print($"Has Release {transform.GetInstanceID()}");
-        if (!isGrabbing)
+        if (!IsGrabbing)
             return;
 
         onReleaseEvent.Invoke();
-        isGrabbing = false;
+        GrabMode = EGrabMode.None;
     }
 
     public void Hovered()
@@ -191,19 +210,21 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         hoveringHand = null;
     }
 
-    public virtual void OnPointerEnter(PointerEventData eventData)
+    public virtual void OnBeginSelecting()
     {
+        Debug.Log($"OnBeginSelecting {transform.name}");
+
         if (!Interactable)
             return;
 
         if (!interactableOutline)
             return;
 
-        if (outline != null)
-            outline.enabled = true;
+        if (_outline != null)
+            _outline.enabled = true;
     }
 
-    public virtual void OnPointerExit(PointerEventData eventData)
+    public virtual void OnEndSelecting()
     {
         if (!Interactable)
             return;
@@ -211,8 +232,8 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (!interactableOutline)
             return;
 
-        if (outline != null)
-            outline.enabled = false;
+        if (_outline != null)
+            _outline.enabled = false;
     }
 
     protected virtual void OnTriggerEnter(Collider other)
@@ -226,8 +247,8 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (other.gameObject.layer != HOVER_LAYER)
             return;
 
-        if (outline != null)
-            outline.enabled = true;
+        if (_outline != null)
+            _outline.enabled = true;
 
         if (hoverTimer.HasRun)
             return;
@@ -260,8 +281,8 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (other.gameObject.layer != HOVER_LAYER)
             return;
 
-        if (outline != null)
-            outline.enabled = true;
+        if (_outline != null)
+            _outline.enabled = true;
 
         hoverTimer.Stop();
 
@@ -298,7 +319,7 @@ public class InteracableObject : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [ContextMenu("Grab 測試")]
     void GrabTest()
     {
-        Grabbed();
+        UpdateGrabState(EGrabMode.Grabbed);
     }
 
     [ContextMenu("Release 測試")]

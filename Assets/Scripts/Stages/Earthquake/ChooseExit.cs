@@ -30,6 +30,7 @@ public class ChooseExit : Stage
         {
             tp.onTeleportAction.AddListener(() =>
             {
+                GameHandler.Singleton.player.kit.transform.position = Vector3.zero;
                 GameHandler.Singleton.StageFinish();
             });
         }

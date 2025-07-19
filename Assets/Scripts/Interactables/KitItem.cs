@@ -14,14 +14,21 @@ public class KitItem : InteracableObject
     protected override void Start()
     {
         base.Start();
-        onGrabEvent.AddListener(() => hasTaken = true);
-        onReleaseEvent.AddListener(() => { new CoroutineUtility.Timer(3f, () => ResetPosition()); });
+        OnGrabbed.AddListener(() =>
+        {
+            hasTaken = true;
+            rig.isKinematic = false;
+        });
+        onReleaseEvent.AddListener(() =>
+        {
+            new CoroutineUtility.Timer(3f, () => ResetPosition());
+        });
     }
 
     protected override void Update()
     {
         base.Update();
-        if (!isGrabbing)
+        if (!IsGrabbing)
             transform.Rotate(Vector3.up * 20 * Time.deltaTime);
     }
 }

@@ -12,7 +12,7 @@ public class Glass : MonoBehaviour
     public Transform brokenParent;
 
     // public List<BrokenGlass> brokenGlasses = new List<BrokenGlass>();
-    public InteracableObject[] breakPoints;
+    public KnockableObject[] breakPoints;
 
     public GameObject hint;
 
@@ -28,14 +28,14 @@ public class Glass : MonoBehaviour
     public void EnableBreaker(bool enable)
     {
         foreach (var bPoint in breakPoints)
-            bPoint.Interactable = enable;
+            bPoint.CanKnock = enable;
     }
 
     void BindBreakPoints()
     {
         foreach (var bPoint in breakPoints)
         {
-            bPoint.onHoverEvent.AddListener(GlassBroken);
+            bPoint.OnKnocked.AddListener(GlassBroken);
         }
     }
 

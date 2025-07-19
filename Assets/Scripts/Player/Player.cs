@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using DG.Tweening;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Attachment;
+using System;
+using System.Reflection;
+using Cysharp.Threading.Tasks;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 
 public class Player : MonoBehaviour
 {
@@ -32,7 +39,11 @@ public class Player : MonoBehaviour
     public Kit kit;
 
     [Header("控制器")]
-    public Transform leftHandler, rightHandler;
+    public Transform leftHandler;
+    public Transform rightHandler;
+
+    [SerializeField]
+    float _objectToHandTime = .2f;
 
     public Transform foot;
 
@@ -50,9 +61,27 @@ public class Player : MonoBehaviour
     [SerializeField] UIQuickSetting warningUi;
     [SerializeField] UIQuickSetting nguUi;   //never give up
 
+    NearFarInteractor _leftNearFarInteractor;
+    NearFarInteractor _rightNearFarInteractor;
+    InteractionAttachController _leftInteractionAttachController;
+    InteractionAttachController _rightInteractionAttachController;
+
+    public float State_LTrigger => _leftNearFarInteractor.selectInput.ReadValue();
+    public float State_RTrigger => _rightNearFarInteractor.selectInput.ReadValue();
+    public bool State_LGrip => _leftNearFarInteractor.activateInput.ReadIsPerformed();
+    public bool State_RGrip => _rightNearFarInteractor.activateInput.ReadIsPerformed();
+
+    InteracableObject _leftObject;
+    InteracableObject _rightObject;
+
     private async void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        _leftNearFarInteractor = leftHandler.GetComponentInChildren<NearFarInteractor>();
+        _rightNearFarInteractor = rightHandler.GetComponentInChildren<NearFarInteractor>();
+        _leftInteractionAttachController = _leftNearFarInteractor.interactionAttachController as InteractionAttachController;
+        _rightInteractionAttachController = _rightNearFarInteractor.interactionAttachController as InteractionAttachController;
 
         // hintCanvas.head = head;
 
@@ -69,11 +98,95 @@ public class Player : MonoBehaviour
 
         // SetupOverlayEffect();
 
-        onTeleportEvent.AddListener(() => agent.Warp(transform.position));
+        onTeleportEvent.AddListener(() => Debug.Log(agent.Warp(transform.position)));
 
         // 避免過快載入(下下策)
         await System.Threading.Tasks.Task.Delay(800);
         fadeUtil.FadeIn(.5f);
+
+        _leftNearFarInteractor.selectEntered.AddListener(args =>
+            TryUpdateSelectEnter(args, _leftInteractionAttachController, ref _leftObject));
+        _rightNearFarInteractor.selectEntered.AddListener(args =>
+            TryUpdateSelectEnter(args, _rightInteractionAttachController, ref _rightObject));
+        _leftNearFarInteractor.selectExited.AddListener(args =>
+            TryUpdateSelectExit(args, ref _leftObject));
+        _rightNearFarInteractor.selectExited.AddListener(args =>
+            TryUpdateSelectExit(args, ref _rightObject));
+
+        void TryUpdateSelectEnter(
+            SelectEnterEventArgs args, InteractionAttachController attachController, ref InteracableObject obj)
+        {
+            obj = args.interactableObject.transform
+                .GetComponent<InteracableObject>();
+
+            if (obj is null)
+                return;
+
+            obj?.UpdateGrabState(
+                attachController.hasOffset ?
+                    InteracableObject.EGrabMode.Fishing :
+                    InteracableObject.EGrabMode.Grabbed);
+        }
+
+        void TryUpdateSelectExit(
+            SelectExitEventArgs args, ref InteracableObject obj)
+        {
+            if (obj is null)
+                return;
+
+            obj?.Released();
+
+            obj = null;
+        }
+    }
+
+    void Update()
+    {
+        CheckPullToHand(_leftObject, _leftNearFarInteractor.activateInput, _leftInteractionAttachController);
+        CheckPullToHand(_rightObject, _rightNearFarInteractor.activateInput, _rightInteractionAttachController);
+    }
+
+    void CheckPullToHand(
+        InteracableObject target,
+        XRInputButtonReader input,
+        InteractionAttachController attachController)
+    {
+        if (target is null || !input.ReadIsPerformed())
+            return;
+
+        if (!target.canGrab ||
+            target.GrabMode is not InteracableObject.EGrabMode.Fishing)
+            return;
+
+        PullAnimation().Forget();
+
+        async UniTask PullAnimation()
+        {
+            IInteractionAttachController controller = attachController as IInteractionAttachController;
+
+            var anchor = controller.GetOrCreateAnchorTransform();
+            var anchorParent = anchor.parent;
+
+            var vec = anchor.position;
+            var endpoint = anchorParent.position;
+
+            target.UpdateGrabState(InteracableObject.EGrabMode.Pulling);
+
+            var tween = DOTween.To(
+                    () => vec,
+                    x => vec = x,
+                    endpoint,
+                    _objectToHandTime).Play();
+
+            while (tween.IsPlaying() && controller.hasOffset)
+            {
+                controller.MoveTo(vec);
+                await UniTask.Yield();
+            }
+
+            controller.ResetOffset();
+            target.UpdateGrabState(InteracableObject.EGrabMode.Grabbed);
+        }
     }
 
     void SetupOverlayEffect()
@@ -103,6 +216,7 @@ public class Player : MonoBehaviour
     public void PathFinding(Vector3 targetPos)
     {
         NavMeshPath path = new NavMeshPath();
+        agent.Warp(transform.position);
         agent.CalculatePath(targetPos, path);
 
         line.SetCorners(path.corners);

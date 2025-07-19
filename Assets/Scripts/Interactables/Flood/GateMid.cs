@@ -20,7 +20,7 @@ public class GateMid : InteracableObject
         if (hasInstalled) return;
         base.OnTriggerEnter(other);
 
-        if (isGrabbing) return;
+        if (IsGrabbing) return;
 
         if (other.gameObject == null) return;
 

@@ -75179,7 +75179,6 @@ GameObject:
   - component: {fileID: 758626353}
   - component: {fileID: 758626356}
   - component: {fileID: 758626355}
-  - component: {fileID: 758626354}
   - component: {fileID: 758626358}
   - component: {fileID: 758626357}
   m_Layer: 5
@@ -75209,18 +75208,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 35}
   m_SizeDelta: {x: 445.32983, y: 229.33069}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &758626354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758626352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e62188adca544cf1b96ccf1630f15f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &758626355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76422,7 +76409,7 @@ GameObject:
   - component: {fileID: 781745594}
   - component: {fileID: 781745593}
   - component: {fileID: 781745592}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Hover Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76451,15 +76438,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781745590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db9ba78b022325e4bb15f037b47181de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interactableProxy: {fileID: 0}
   positionReset: 0
   resetTime: 0
   canGrab: 0
-  onGrabEvent:
+  OnGrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFishing:
     m_PersistentCalls:
       m_Calls: []
   onReleaseEvent:
@@ -76482,11 +76473,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  isGrabbing: 0
+  <GrabMode>k__BackingField: 0
   interactable: 1
   interactableOutline: 1
-  trackVelocity: 0
-  velocityMutiply: 100000
   debugVelocity: 0
 --- !u!54 &781745593
 Rigidbody:
@@ -171042,6 +171031,7 @@ MonoBehaviour:
   uiSwitcher: {fileID: 536730202}
   progressImage: {fileID: 1586682286}
   tableLower: {fileID: 126762931}
+  _holdArea: {fileID: 781745590}
   changer:
     parent: {fileID: 1341503533}
     skyboxInclude: 1

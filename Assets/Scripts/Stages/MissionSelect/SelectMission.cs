@@ -178,7 +178,7 @@ public class SelectMission : Stage
 
     void BindPlant()
     {
-        plant.onGrabEvent.AddListener(async () =>
+        plant.OnGrabbed.AddListener(async () =>
         {
             var go = Instantiate(plant.gameObject, plant.transform.position, Quaternion.identity);
             var interact = go.GetComponent<Plant>();

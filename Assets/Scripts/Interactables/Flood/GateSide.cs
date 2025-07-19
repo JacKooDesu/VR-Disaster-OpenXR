@@ -11,8 +11,11 @@ public class GateSide : InteracableObject
     protected override void Start()
     {
         base.Start();
-        foreach (Transform t in targetParent)
-            targets.Add(t);
+        if (targetParent is not null)
+        {
+            foreach (Transform t in targetParent)
+                targets.Add(t);
+        }
 
         onReleaseEvent.AddListener(() =>
         {
@@ -24,7 +27,7 @@ public class GateSide : InteracableObject
     {
         base.OnTriggerEnter(other);
 
-        if (isGrabbing) return;
+        if (IsGrabbing) return;
 
         if (other.gameObject == null) return;
 

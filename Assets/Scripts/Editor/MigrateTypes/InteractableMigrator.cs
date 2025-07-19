@@ -12,6 +12,12 @@ public partial class SceneMigrator
         {
             var go = oldComponent.gameObject;
             newComponent.farAttachMode = InteractableFarAttachMode.DeferToInteractor;
+            newComponent.useDynamicAttach = true;
+            newComponent.snapToColliderVolume = false;
+            newComponent.matchAttachPosition = true;
+            newComponent.matchAttachRotation = true;
+            newComponent.reinitializeDynamicAttachEverySingleGrab = true;
+
             ReflectAssign(oldComponent, "_interactableProxy", newComponent);
         };
 

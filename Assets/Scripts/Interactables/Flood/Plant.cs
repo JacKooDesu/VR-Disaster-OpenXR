@@ -14,7 +14,7 @@ public class Plant : InteracableObject
 
     private void OnCollisionEnter(Collision other)
     {
-        if (isGrabbing)
+        if (IsGrabbing)
             return;
 
         if (other.gameObject.layer != 0)
