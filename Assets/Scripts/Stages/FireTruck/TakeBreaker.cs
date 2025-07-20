@@ -20,7 +20,7 @@ public class TakeBreaker : Stage
 
         foreach (var b in breakers)
         {
-            b.onHoverEvent.AddListener(() => isFinish = true);
+            b.OnGrabbed.AddListener(() => isFinish = true);
             b.Interactable = true;
         }
 

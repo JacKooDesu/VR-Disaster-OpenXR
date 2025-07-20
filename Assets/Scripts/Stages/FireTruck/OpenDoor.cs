@@ -4,10 +4,11 @@ using UnityEngine;
 using CoroutineUtility;
 using DG.Tweening;
 using System.Threading.Tasks;
+using Runtime.Common;
 
 public class OpenDoor : Stage
 {
-    public InteracableObject door;
+    public GameObject door;
     public GameObject hintPoint;
     public GameObject informUi;
 
@@ -21,8 +22,17 @@ public class OpenDoor : Stage
     {
         base.OnBegin();
 
-        door.Interactable = true;
-        door.onHoverEvent.AddListener(() => DoorAnimation());
+        var trigger = door.AddComponent<TriggerEventHandler>();
+        trigger.Register<NearCollisionFlag>(
+            TriggerEventHandler.Timing.Stay,
+            t =>
+            {
+                if (!t.ReadAsHandGripState())
+                    return;
+
+                DoorAnimation();
+                trigger.enabled = false;
+            });
 
         hintPoint.SetActive(true);
 
@@ -35,15 +45,13 @@ public class OpenDoor : Stage
         GameHandler.Singleton.player.PathFinding(hintPoint.transform.position);
     }
 
-    async void DoorAnimation()
+    [ContextMenu("Test Door")]
+    void DoorAnimation()
     {
-        door.Interactable = false;
-
-        doorHandlerModel.DOLocalRotate(Vector3.up * 20, .5f, RotateMode.LocalAxisAdd);
-        await Task.Delay(500);
-
-        doorModel.DOLocalRotate(Vector3.forward * 80, .5f, RotateMode.LocalAxisAdd);
-        isFinish = true;
+        DOTween.Sequence()
+            .Append(doorHandlerModel.DOLocalRotate(Vector3.back * 20, 1f, RotateMode.LocalAxisAdd))
+            .Append(doorModel.DOLocalRotate(Vector3.up * 80, 1f, RotateMode.LocalAxisAdd))
+            .OnComplete(() => isFinish = true);
     }
 
     public override void OnFinish()

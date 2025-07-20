@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,10 +56,15 @@ public class ResultUI : MonoBehaviour
         score.text = mData.score.ToString();
         string hint = string.Empty;
 
-        for (int i = 0; i < mSetting.settings.Count; ++i)
+
+        var arr = mData.stgDatas
+            .Zip(
+                mSetting.settings,
+                (pData, stgData) => new { pData, stgData });
+        foreach (var item in arr)
         {
-            var stgSetting = mSetting.settings[i];
-            var stgData = mData.stgDatas[i];
+            var stgSetting = item.stgData;
+            var stgData = item.pData;
 
             if (stgSetting.desc == string.Empty)
                 continue;

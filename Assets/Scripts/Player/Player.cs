@@ -11,6 +11,7 @@ using System;
 using System.Reflection;
 using Cysharp.Threading.Tasks;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class Player : MonoBehaviour
 {
@@ -61,28 +62,49 @@ public class Player : MonoBehaviour
     [SerializeField] UIQuickSetting warningUi;
     [SerializeField] UIQuickSetting nguUi;   //never give up
 
+    ControllerInputActionManager _leftController;
+    ControllerInputActionManager _rightController;
     NearFarInteractor _leftNearFarInteractor;
     NearFarInteractor _rightNearFarInteractor;
     InteractionAttachController _leftInteractionAttachController;
     InteractionAttachController _rightInteractionAttachController;
 
-    public float State_LTrigger => _leftNearFarInteractor.selectInput.ReadValue();
-    public float State_RTrigger => _rightNearFarInteractor.selectInput.ReadValue();
-    public bool State_LGrip => _leftNearFarInteractor.activateInput.ReadIsPerformed();
-    public bool State_RGrip => _rightNearFarInteractor.activateInput.ReadIsPerformed();
+    int _originalTeleportLayer;
+    XRRayInteractor _leftTeleportInteractor;
+    XRRayInteractor _rightTeleportInteractor;
+
+    public float State_LTrigger => _leftNearFarInteractor?.selectInput.ReadValue() ?? 0f;
+    public float State_RTrigger => _rightNearFarInteractor?.selectInput.ReadValue() ?? 0f;
+    public bool State_LGrip => _leftNearFarInteractor?.activateInput.ReadIsPerformed() ?? false;
+    public bool State_RGrip => _rightNearFarInteractor?.activateInput.ReadIsPerformed() ?? false;
 
     InteracableObject _leftObject;
     InteracableObject _rightObject;
 
-    private async void Start()
+    public bool State_LInteracting => _leftObject != null;
+    public bool State_RInteracting => _rightObject != null;
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
 
+        _leftController = leftHandler.GetComponentInChildren<ControllerInputActionManager>();
+        _rightController = rightHandler.GetComponentInChildren<ControllerInputActionManager>();
+
         _leftNearFarInteractor = leftHandler.GetComponentInChildren<NearFarInteractor>();
         _rightNearFarInteractor = rightHandler.GetComponentInChildren<NearFarInteractor>();
+
         _leftInteractionAttachController = _leftNearFarInteractor.interactionAttachController as InteractionAttachController;
         _rightInteractionAttachController = _rightNearFarInteractor.interactionAttachController as InteractionAttachController;
 
+        _leftTeleportInteractor = leftHandler.GetComponentInChildren<XRRayInteractor>(true);
+        _rightTeleportInteractor = rightHandler.GetComponentInChildren<XRRayInteractor>(true);
+
+        _originalTeleportLayer = _leftTeleportInteractor.interactionLayers.value;
+    }
+
+    private async void Start()
+    {
         // hintCanvas.head = head;
 
         // curveLine.gameObject.SetActive(false);
@@ -199,6 +221,19 @@ public class Player : MonoBehaviour
     {
         // if (rb == null)
         //     rb = GetComponent<Rigidbody>();
+
+        if (b)
+        {
+            _leftTeleportInteractor.interactionLayers
+                = _rightTeleportInteractor.interactionLayers
+                = _originalTeleportLayer;
+        }
+        else
+        {
+            _leftTeleportInteractor.interactionLayers
+                = _rightTeleportInteractor.interactionLayers
+                = 0;
+        }
 
         canMove = b;
         //rb.isKinematic = !b;

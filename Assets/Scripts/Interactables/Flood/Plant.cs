@@ -9,6 +9,7 @@ public class Plant : InteracableObject
     public bool hasMoved = false;
     public bool isBroken = false;
     public ObjectSwitcher switcher;
+    public UnityEvent OnBroken;
 
     Vector3 lastVelocity;
 
@@ -24,6 +25,7 @@ public class Plant : InteracableObject
         {
             switcher.Switch(1);
             isBroken = true;
+            OnBroken?.Invoke();
         }
         else
         {

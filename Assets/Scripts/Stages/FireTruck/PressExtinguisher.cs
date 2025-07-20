@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PressExtinguisher : Stage
 {
+    const float THRESHOLD = FireTruck_Constants.EXTINGUISHER_TRIGGER_THRESHOLD;
     public CustomControllerBehaviour controller;
 
     [Header("UI設定")]
@@ -11,6 +12,8 @@ public class PressExtinguisher : Stage
     public GameObject progressImage;
     CoroutineUtility.Timer uiTimer;
 
+    [SerializeField]
+    Transform _fire;
 
     public override void OnBegin()
     {
@@ -28,8 +31,19 @@ public class PressExtinguisher : Stage
     public override void OnUpdate()
     {
         base.OnUpdate();
-        bool isPressing = XRInputManager.Instance.Button(controller.Device, null);
-        if (isPressing)
+        var lPress = GameHandler.Singleton.player.State_LTrigger > 0;
+        var rPress = GameHandler.Singleton.player.State_RTrigger > 0;
+
+        var lHand = GameHandler.Singleton.player.leftHandler;
+        var rHand = GameHandler.Singleton.player.rightHandler;
+
+        var lCast = Physics.Raycast(new Ray(lHand.position, lHand.forward), out var lHit, 10f);
+        var rCast = Physics.Raycast(new Ray(rHand.position, rHand.forward), out var rHit, 10f);
+
+        if (lCast && lHit.transform == _fire && rPress && !lPress)
+            isFinish = true;
+
+        if (rCast && rHit.transform == _fire && lPress && !rPress)
             isFinish = true;
     }
 

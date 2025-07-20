@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Runtime.Common;
 
 public class PullTorus : Stage
 {
@@ -26,18 +27,25 @@ public class PullTorus : Stage
         uiTimer = new CoroutineUtility.Timer(3f, () => uiSwitcher.HideAll());
 
         torus.GetComponent<Outline>().enabled = true;
-        var torusInteract = torus.GetComponent<InteracableObject>();
-        torusInteract.enabled = true;
-        torusInteract.onHoverEvent.AddListener(() => isFinish = true);
 
         JacDev.Audio.FireTruck audio = (JacDev.Audio.FireTruck)GameHandler.Singleton.audioHandler;
         audio.StopCurrent();
         audio.PlaySound(audio.pullTutorial);
+
+        torus.AddComponent<TriggerEventHandler>()
+            .Register<NearCollisionFlag>(
+                TriggerEventHandler.Timing.Stay,
+                col =>
+                {
+                    if (col.ReadAsHandInteractingState() ^ col.ReadAsHandGripState())
+                        this.isFinish = true;
+                });
     }
 
     public override void OnUpdate()
     {
         base.OnUpdate();
+
     }
 
     public override void OnFinish()

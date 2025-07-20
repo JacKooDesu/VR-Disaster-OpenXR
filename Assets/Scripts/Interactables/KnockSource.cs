@@ -17,7 +17,7 @@ public class KnockSource : MonoBehaviour
 
     void Awake()
     {
-        _interactProxy = GetComponent<InteracableObject>();
+        _interactProxy ??= GetComponent<InteracableObject>();
         _collider = GetComponent<Collider>();
 
         _collider.isTrigger = true;
@@ -48,7 +48,7 @@ public class KnockSource : MonoBehaviour
         var currentPosition = transform.position;
 
         if (_currentFrame > _trackingFrames)
-            CurrentVelocity = currentPosition - _trackingPositions.Aggregate(Vector3.zero, (acc, pos) => acc + pos) / _trackingFrames;
+            CurrentVelocity = currentPosition - _trackingPositions.Aggregate(Vector3.zero, (acc, pos) => acc += pos) / (float)_trackingFrames;
 
         _trackingPositions[_currentFrame % _trackingFrames] = currentPosition;
 

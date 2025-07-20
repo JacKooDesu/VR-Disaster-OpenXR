@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TakeExtinguisher : Stage
 {
-    public Animator topExitAni;
+    public Animation topExitAni;
 
     public InteracableObject fireExtinguisherBody;
 
@@ -15,7 +15,7 @@ public class TakeExtinguisher : Stage
         base.OnBegin();
         changer.ChangeColor();
 
-        topExitAni.enabled = true;
+        topExitAni.Play();
 
         var player = GameHandler.Singleton.player;
         player.SetCanMove(true);
@@ -29,9 +29,7 @@ public class TakeExtinguisher : Stage
         // audio.currentPlayingSound = null;
 
         audio.PlayAudio(audio.bgm2, true, GameHandler.Singleton.player.transform).volume = .1f;
-
-        fireExtinguisherBody.onHoverEvent.AddListener(() => print("拿取滅火器"));
-        fireExtinguisherBody.onHoverEvent.AddListener(() => isFinish = true);
+        fireExtinguisherBody.OnGrabbed.AddListener(ExtinguisherGrabbed);
 
         player.hintCanvas.SetHintText("照著箭頭引導指示拿取滅火器", true);
     }
@@ -45,8 +43,13 @@ public class TakeExtinguisher : Stage
     {
         base.OnFinish();
         changer.BackOriginColor();
+        fireExtinguisherBody.OnGrabbed.RemoveListener(ExtinguisherGrabbed);
 
-        fireExtinguisherBody.onHoverEvent.RemoveAllListeners();
         fireExtinguisherBody.Interactable = false;
+    }
+
+    void ExtinguisherGrabbed()
+    {
+        isFinish = true;
     }
 }

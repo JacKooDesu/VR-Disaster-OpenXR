@@ -17,7 +17,7 @@ public class Fire : MonoBehaviour
     {
         if (other.name == "Powder")
         {
-            print("extinguishing");
+            // print("extinguishing");
             if (hasExtinguishTime < extinguishTime)
             {
                 hasExtinguishTime += Time.deltaTime;

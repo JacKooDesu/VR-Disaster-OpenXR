@@ -1025,6 +1025,58 @@ MonoBehaviour:
           m_StringArgument: MissionSelect
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1515298728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515298730}
+  - component: {fileID: 1515298729}
+  m_Layer: 0
+  m_Name: Audio Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1515298729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515298728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19f0fe03556d854893131d39f3e2d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSourcePrefab: {fileID: 4375246061363510548, guid: 1d90b23a11783b045927d8c4abe82cf4,
+    type: 3}
+  speaker: {fileID: 0}
+  speakerPrefab: {fileID: 7441481755767106181, guid: 692b3ceb640878f4789c56dafc4eabf8,
+    type: 3}
+  soundList: {fileID: 7278014804576355816, guid: 78a34abe269868144b3c326910dd0e01,
+    type: 3}
+  currentPlayingSound: {fileID: 0}
+--- !u!4 &1515298730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515298728}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.638852, y: 0.05543175, z: 4.896755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548715905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,3 +2024,4 @@ SceneRoots:
   - {fileID: 1672742031}
   - {fileID: 1862934213}
   - {fileID: 1572625063}
+  - {fileID: 1515298730}

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class SprayFire : Stage
 {
+    const float THRESHOLD = FireTruck_Constants.EXTINGUISHER_TRIGGER_THRESHOLD;
     public CustomControllerBehaviour controller;
     public ParticleSystem powder;
     [Header("UI設定")]
@@ -15,6 +17,13 @@ public class SprayFire : Stage
     public UIQuickSetting hint; // 超過時間
     // private variable
     JacDev.Audio.FireTruck audioHandler;
+
+#if UNITY_EDITOR
+    [SerializeField]
+    bool _debugMode = false;
+    [SerializeField, Range(0f, 1f)]
+    float _debugL, _debugR;
+#endif
     public override void OnBegin()
     {
         base.OnBegin();
@@ -37,9 +46,34 @@ public class SprayFire : Stage
     public override void OnUpdate()
     {
         base.OnUpdate();
-        bool isPressing = XRInputManager.Instance.Button(controller.Device, null);
-        if (isPressing)
+        var lValue = GameHandler.Singleton.player.State_LTrigger;
+        var rValue = GameHandler.Singleton.player.State_RTrigger;
+#if UNITY_EDITOR
+        if (_debugMode)
         {
+            lValue = _debugL;
+            rValue = _debugR;
+        }
+#endif
+        var finalValue = 0f;
+
+        if (lValue > THRESHOLD && rValue > THRESHOLD)
+            finalValue = 0;
+        else if (lValue > THRESHOLD)
+        {
+            finalValue = lValue;
+            BindPowderToTransform(GameHandler.Singleton.player.rightHandler);
+        }
+        else if (rValue > THRESHOLD)
+        {
+            finalValue = rValue;
+            BindPowderToTransform(GameHandler.Singleton.player.leftHandler);
+        }
+
+        if (finalValue > 0)
+        {
+            var e = powder.emission;
+            e.rateOverTime = math.lerp(0, 30, finalValue);
             if (!powder.isPlaying)
                 powder.Play();
 
@@ -77,5 +111,12 @@ public class SprayFire : Stage
         powder.gameObject.SetActive(false);
         if (GetComponentInChildren<AudioSource>())
             Destroy(GetComponentInChildren<AudioSource>().gameObject);
+    }
+
+    void BindPowderToTransform(Transform t)
+    {
+        powder.transform.SetParent(t);
+        powder.transform.localPosition = Vector3.zero;
+        powder.transform.localRotation = Quaternion.identity;
     }
 }

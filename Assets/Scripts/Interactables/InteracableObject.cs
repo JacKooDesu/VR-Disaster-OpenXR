@@ -21,6 +21,7 @@ public class InteracableObject : MonoBehaviour
     protected Transform originParent;
     [Header("抓取")]
     public bool canGrab = true;
+    public UnityEvent OnInteracted;
     [FormerlySerializedAs("onGrabEvent")]
     public UnityEvent OnGrabbed;
     public UnityEvent OnFishing;
@@ -180,6 +181,10 @@ public class InteracableObject : MonoBehaviour
 
     public void UpdateGrabState(EGrabMode mode)
     {
+        if (GrabMode is EGrabMode.None &&
+            mode is EGrabMode.Fishing or EGrabMode.Grabbed)
+            OnInteracted?.Invoke();
+
         var trigger = mode switch
         {
             EGrabMode.Fishing => OnFishing,

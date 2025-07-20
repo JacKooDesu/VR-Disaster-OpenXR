@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -19,6 +20,7 @@ public class Stage : MonoBehaviour
     }
 
     public GameObject target;  // 目的地
+    float2 _cachedTargetPos;
     public System.Action onGetToTarget; // 如果有目的地，到達時觸發
 
     public System.Action onFinishEvent;
@@ -49,6 +51,7 @@ public class Stage : MonoBehaviour
 
         if (target != null)
         {
+            _cachedTargetPos = new(target.transform.position.x, target.transform.position.z);
             target.SetActive(true);
             GameHandler.Singleton.player.PathFinding(target.transform.position);
         }
@@ -58,7 +61,9 @@ public class Stage : MonoBehaviour
     {
         if (target == null) return;
 
-        if (Vector3.Distance(target.transform.position, GameHandler.Singleton.player.transform.position) <= 1f)
+        float3 playerPos = GameHandler.Singleton.player.head.position;
+
+        if (math.distance(_cachedTargetPos, playerPos.xz) <= .5f)
         {
             GameHandler.Singleton.player.line.gameObject.SetActive(false);
             if (onGetToTarget != null)

@@ -13,14 +13,14 @@ public class BrokenGlass : MonoBehaviour
 
     bool hasHit;
 
-    private void Hit()
+    private void Hit(Transform other)
     {
         JacDev.Audio.AudioHandler audio = GameHandler.Singleton.audioHandler;
         audio.PlayAudio(audio.soundList.glassBreak, false, transform);
 
         var rig = GetComponent<Rigidbody>();
         rig.isKinematic = false;
-        rig.AddForce(transform.forward, ForceMode.Impulse);
+        rig.AddExplosionForce(200f, other.position, 5f);
 
         glassController.BreakCount++;
 
@@ -35,6 +35,6 @@ public class BrokenGlass : MonoBehaviour
         // print($"{other.gameObject.layer} , {glassController.breakerLayer}");
         // if (other.gameObject.layer != glassController.breakerLayer.value)
         //     return;
-        Hit();
+        Hit(other?.transform);
     }
 }

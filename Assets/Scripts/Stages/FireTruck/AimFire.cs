@@ -5,7 +5,6 @@ using UnityEngine;
 public class AimFire : Stage
 {
     public Transform firespot;
-    public CustomControllerBehaviour controller;
     [Header("UI設定")]
     public ObjectSwitcher uiSwitcher;
     public GameObject progressImage;
@@ -13,10 +12,17 @@ public class AimFire : Stage
     public MaterialChanger changer;
 
     bool isNearFire = false;
+    Transform[] hands;
 
     public override void OnBegin()
     {
         base.OnBegin();
+
+        hands = new[]
+        {
+            GameHandler.Singleton.player.leftHandler,
+            GameHandler.Singleton.player.rightHandler
+        };
 
         // GameHandler.Singleton.player.SetCanMove(false);
 
@@ -47,18 +53,20 @@ public class AimFire : Stage
         if (!isNearFire)
             return;
 
-        Transform origin = controller.transform;
 
         RaycastHit hit;
-        if (origin != null)
+        foreach (var t in hands)
         {
-            Ray ray = new Ray(origin.position, origin.forward);
-            if (Physics.Raycast(ray, out hit, 10f))
+            if (t != null)
             {
-                // print(hit.transform.name);
-                if (hit.transform == firespot)
+                Ray ray = new Ray(t.position, t.forward);
+                if (Physics.Raycast(ray, out hit, 10f))
                 {
-                    isFinish = true;
+                    // print(hit.transform.name);
+                    if (hit.transform == firespot)
+                    {
+                        isFinish = true;
+                    }
                 }
             }
         }
