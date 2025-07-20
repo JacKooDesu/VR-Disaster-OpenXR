@@ -22,14 +22,16 @@ public class ChooseRescueKitFlood : Stage
             var btn = ui.GetComponentInChildren<Button>();
             btn.onClick.AddListener(() =>
             {
-                player.kit.KitMissionSetup(
-                            4,
-                            i =>
-                            {
-                                SubScore((4 - i) * 5);
-                                isFinish = true;
-                            },
-                            4, 2, vipItem);
+                var kit = player.kit;
+                kit.transform.localPosition = Vector3.zero;
+                kit.KitMissionSetup(
+                    4,
+                    i =>
+                    {
+                        SubScore((4 - i) * 5);
+                        isFinish = true;
+                    },
+                    4, 2, vipItem);
 
                 // btn.interactable = false;
                 ui.TurnOff();

@@ -110,8 +110,6 @@ public class Kit : MonoBehaviour
 
     public void KitMissionSetup(int capacity, System.Action<int> onComplete, int correctCount, int wrongCount, params KitItem[] vipItems)
     {
-        transform.localPosition = Vector3.zero;
-
         ShowPack(true);
 
         DrawItem(correctCount, wrongCount, vipItems);

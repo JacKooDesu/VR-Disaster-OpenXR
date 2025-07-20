@@ -24,6 +24,8 @@ public class ChooseRescueKitEarthquake : Stage
         var btn = ui.GetComponentInChildren<Button>();
         btn.onClick.AddListener(() =>
         {
+            var kit = player.kit;
+            kit.transform.localPosition = Vector3.zero;
             player.kit.KitMissionSetup(
                         4,
                         i =>
