@@ -76408,8 +76408,7 @@ GameObject:
   - component: {fileID: 781745595}
   - component: {fileID: 781745594}
   - component: {fileID: 781745593}
-  - component: {fileID: 781745592}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hover Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76431,52 +76430,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 126762931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &781745592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781745590}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db9ba78b022325e4bb15f037b47181de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactableProxy: {fileID: 0}
-  positionReset: 0
-  resetTime: 0
-  canGrab: 0
-  OnGrabbed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFishing:
-    m_PersistentCalls:
-      m_Calls: []
-  onReleaseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  canHover: 1
-  hoverTime: 1.5
-  onHoverEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2023406235}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: SetFinish
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  <GrabMode>k__BackingField: 0
-  interactable: 1
-  interactableOutline: 1
-  debugVelocity: 0
 --- !u!54 &781745593
 Rigidbody:
   m_ObjectHideFlags: 0

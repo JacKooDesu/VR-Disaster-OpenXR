@@ -23,7 +23,7 @@ public class ChooseRescueKitFlood : Stage
             btn.onClick.AddListener(() =>
             {
                 var kit = player.kit;
-                kit.transform.localPosition = Vector3.zero;
+                player.AlignHeadXZ(kit.transform);
                 kit.KitMissionSetup(
                     4,
                     i =>

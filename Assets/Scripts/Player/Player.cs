@@ -12,6 +12,7 @@ using System.Reflection;
 using Cysharp.Threading.Tasks;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using Unity.Mathematics;
 
 public class Player : MonoBehaviour
 {
@@ -251,7 +252,7 @@ public class Player : MonoBehaviour
     public void PathFinding(Vector3 targetPos)
     {
         NavMeshPath path = new NavMeshPath();
-        agent.Warp(transform.position);
+        agent.Warp(head.position);
         agent.CalculatePath(targetPos, path);
 
         line.SetCorners(path.corners);
@@ -259,6 +260,20 @@ public class Player : MonoBehaviour
 
         line.gameObject.SetActive(true);
     }
+
+    public float2 HeadXZ()
+    {
+        float3 headPos = head.position;
+        return headPos.xz;
+    }
+
+    public void AlignHeadXZ(in Transform target)
+    {
+        var y = target.position.y;
+        var xz = HeadXZ();
+        target.position = new(xz.x, y, xz.y);
+    }
+
 
     #region Hint UI
     public async void ShowWarning()

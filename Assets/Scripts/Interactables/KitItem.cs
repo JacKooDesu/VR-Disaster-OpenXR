@@ -14,7 +14,7 @@ public class KitItem : InteracableObject
     protected override void Start()
     {
         base.Start();
-        OnGrabbed.AddListener(() =>
+        OnInteracted.AddListener(() =>
         {
             hasTaken = true;
             rig.isKinematic = false;

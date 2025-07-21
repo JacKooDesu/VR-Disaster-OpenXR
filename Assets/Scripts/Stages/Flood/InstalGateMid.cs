@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Runtime.Common;
 
 public class InstalGateMid : Stage
 {
     public GameObject spotlight;
     public Transform objParent;
-    GateMid[] gates;
-    [SerializeField] List<Transform> targets = new List<Transform>();
+    [SerializeField] 
+    List<Transform> targets = new List<Transform>();
 
     public override void OnBegin()
     {
@@ -16,29 +17,43 @@ public class InstalGateMid : Stage
         {
             var interact = t.GetComponent<GateMid>();
             interact.Interactable = true;
-            interact.targets = targets;
+
+            var trigger = t.gameObject.AddComponent<TriggerEventHandler>();
+            trigger.Register<NearCollisionFlag>(
+                TriggerEventHandler.Timing.Stay,
+                col =>
+                {
+                    if (!interact.Interactable || interact.IsGrabbing)
+                        return;
+
+                    var colTransform = col.transform;
+                    if (!targets.Contains(colTransform))
+                        return;
+
+                    var t = targets[0];
+                    interact.transform.SetPositionAndRotation(t.position, t.rotation);
+                    interact.positionReset = false;
+                    interact.Interactable = false;
+                    t.gameObject.SetActive(false);
+                    trigger.enabled = false;
+
+                    targets.RemoveAt(0);
+                    if (targets.Count > 0)
+                        targets[0].gameObject.SetActive(true);
+                    else
+                        isFinish = true;
+                });
         }
 
         JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
         a.PlaySound(a.instalGateMid);
 
         targets[0].gameObject.SetActive(true);
-
-        gates = new GateMid[objParent.childCount];
-        for (int i = 0; i < objParent.childCount; ++i)
-            gates[i] = objParent.GetChild(i).GetComponent<GateMid>();
     }
 
     public override void OnUpdate()
     {
         base.OnUpdate();
-
-        foreach (var g in gates)
-        {
-            if (!g.hasInstalled)
-                return;
-        }
-        isFinish = true;
     }
 
     public override void OnFinish()

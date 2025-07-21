@@ -59,6 +59,8 @@ public class InteracableObject : MonoBehaviour
             interactable = value;
             if (_outline != null && !value)
                 _outline.enabled = false;
+            if (_interactableProxy != null)
+                _interactableProxy.enabled = value;
         }
         get
         {
@@ -84,6 +86,12 @@ public class InteracableObject : MonoBehaviour
 
     public bool debugVelocity;
     protected Text debugText = null;
+
+    void Awake()
+    {
+        // Read editor setting of interactable
+        Interactable = interactable;
+    }
 
     protected virtual void Start()
     {

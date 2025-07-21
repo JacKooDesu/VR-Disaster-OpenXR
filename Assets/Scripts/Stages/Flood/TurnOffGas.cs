@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using Cysharp.Threading.Tasks;
+using Runtime.Common;
 
 public class TurnOffGas : Stage
 {
@@ -17,7 +18,16 @@ public class TurnOffGas : Stage
         base.OnBegin();
 
         gasSwitch.Interactable = true;
-        gasSwitch.onHoverEvent.AddListener(() => isFinish = true);
+        var trigger = gasSwitch.gameObject.AddComponent<TriggerEventHandler>();
+        trigger.Register<NearCollisionFlag>(
+            TriggerEventHandler.Timing.Stay,
+            col =>
+            {
+                if (!gasSwitch.Interactable || !col.ReadAsHandGripState())
+                    return;
+
+                isFinish = true;
+            });
 
         JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
         AudioSource boil = a.PlaySound(a.boilWater);

@@ -63,7 +63,7 @@ public class Stage : MonoBehaviour
 
         float3 playerPos = GameHandler.Singleton.player.head.position;
 
-        if (math.distance(_cachedTargetPos, playerPos.xz) <= .5f)
+        if (math.distance(_cachedTargetPos, playerPos.xz) <= 1f)
         {
             GameHandler.Singleton.player.line.gameObject.SetActive(false);
             if (onGetToTarget != null)
