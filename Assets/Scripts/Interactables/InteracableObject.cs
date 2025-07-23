@@ -78,6 +78,7 @@ public class InteracableObject : MonoBehaviour
 
     // outline 設定
     protected Outline _outline;
+    public Outline Outline => _outline;
     public bool interactableOutline = true;    // 是否開啟outline開關
 
     protected Vector3 currentPos, lastPos;
@@ -105,15 +106,15 @@ public class InteracableObject : MonoBehaviour
             if (interactableOutline)
                 _outline.enabled = false;
 
-            _interactableProxy.hoverEntered.AddListener(arg => _outline.enabled = true);
-            _interactableProxy.hoverExited.AddListener(arg => _outline.enabled = false);
+            _interactableProxy.hoverEntered.AddListener(arg => OnBeginSelecting());
+            _interactableProxy.hoverExited.AddListener(arg => OnEndSelecting());
         }
 
         if (debugVelocity)
             debugText = GetComponentInChildren<Text>();
 
-        if (canHover)
-            hoverTimer = new Timer(hoverTime, () => { }, HoverUpdate, Hovered, false);
+        // if (canHover)
+        //     hoverTimer = new Timer(hoverTime, () => { }, HoverUpdate, Hovered, false);
     }
 
     // 定義原位置訊息
@@ -225,8 +226,6 @@ public class InteracableObject : MonoBehaviour
 
     public virtual void OnBeginSelecting()
     {
-        Debug.Log($"OnBeginSelecting {transform.name}");
-
         if (!Interactable)
             return;
 

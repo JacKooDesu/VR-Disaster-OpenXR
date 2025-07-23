@@ -6,7 +6,8 @@ using System.Linq;
 
 public class FindFlashLight : Stage
 {
-    public GameObject flashlight;   // 手電筒
+    public InteracableObject flashlightObj;   // 手電筒
+    public Transform flashlight;   // 手電筒(光源)
     public Light globalLight;   // 環境光源
     public Light[] _roomLights;
 
@@ -35,14 +36,35 @@ public class FindFlashLight : Stage
         JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
         a.PlaySound(a.getRescueKit);
 
-        var timer = new Timer(a.getRescueKit.length, () => FlashlightOn());
+        var timer = new Timer(a.getRescueKit.length, () => ConfigFlashlight());
+    }
+
+    void ConfigFlashlight()
+    {
+        flashlightObj.Interactable = true;
+        // keep outline enabled until grabbed
+        flashlightObj.interactableOutline = false;
+        flashlightObj.Outline.enabled = true;
+
+        flashlightObj.OnGrabbed.AddListener(() =>
+        {
+            var targetHand = GameHandler.Singleton.player.State_LInteracting ?
+                GameHandler.Singleton.player.leftHandler : GameHandler.Singleton.player.rightHandler;
+
+            flashlightObj.gameObject.SetActive(false);
+            flashlight.SetParent(targetHand);
+            flashlight.SetLocalPositionAndRotation(
+                Vector3.zero, Quaternion.Euler(0, 0, 0));
+
+            FlashlightOn();
+        });
     }
 
     void FlashlightOn()
     {
         var light = flashlight.GetComponent<Light>();
         light.intensity = 0;
-        flashlight.SetActive(true);
+        flashlight.gameObject.SetActive(true);
         DG.Tweening.DOTween.To(
            () => light.intensity, x => light.intensity = x, 1f, .5f
         );
