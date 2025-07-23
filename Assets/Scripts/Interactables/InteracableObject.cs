@@ -179,8 +179,9 @@ public class InteracableObject : MonoBehaviour
 
         if (rig != null)
         {
-            rig.linearVelocity = Vector3.zero;
             rig.isKinematic = originIsKinematic;
+            if (rig.isKinematic)
+                rig.linearVelocity = Vector3.zero;
             rig.useGravity = originUseGravity;
         }
 
