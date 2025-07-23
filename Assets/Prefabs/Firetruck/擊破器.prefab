@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3929955441593405253}
   - component: {fileID: 1394149399434745820}
   - component: {fileID: 5464474977398486941}
+  - component: {fileID: 7517038205055637512}
   - component: {fileID: 3718765777179305095}
   m_Layer: 12
   m_Name: "\u64CA\u7834\u5668"
@@ -101,6 +102,9 @@ MonoBehaviour:
   positionReset: 1
   resetTime: 0
   canGrab: 1
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls: []
   OnGrabbed:
     m_PersistentCalls:
       m_Calls: []
@@ -119,6 +123,24 @@ MonoBehaviour:
   interactable: 0
   interactableOutline: 1
   debugVelocity: 0
+--- !u!114 &7517038205055637512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010997411112729484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.9768032, b: 0.57924527, a: 1}
+  outlineWidth: 1
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &3718765777179305095
 MonoBehaviour:
   m_ObjectHideFlags: 0
