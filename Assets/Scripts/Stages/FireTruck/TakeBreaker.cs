@@ -24,7 +24,7 @@ public class TakeBreaker : Stage
             b.Interactable = true;
         }
 
-        changer.ChangeColor();
+        // changer.ChangeColor();
 
         uiTimer = new Timer(
             5f,
@@ -36,12 +36,8 @@ public class TakeBreaker : Stage
     public override void OnFinish()
     {
         base.OnFinish();
-        foreach (var b in breakers)
-        {
-            b.Interactable = false;
-        }
 
-        changer.BackOriginColor();
+        // changer.BackOriginColor();
 
         uiTimer.Stop(true);
     }
