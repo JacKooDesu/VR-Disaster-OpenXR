@@ -250,8 +250,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactableProxy: {fileID: 7290327634232539750}
   positionReset: 1
-  resetTime: 0
+  resetTime: 10
   canGrab: 1
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls: []
   OnGrabbed:
     m_PersistentCalls:
       m_Calls: []

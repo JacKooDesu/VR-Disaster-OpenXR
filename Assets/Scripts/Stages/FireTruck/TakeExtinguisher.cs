@@ -32,6 +32,8 @@ public class TakeExtinguisher : Stage
         fireExtinguisherBody.OnGrabbed.AddListener(ExtinguisherGrabbed);
 
         player.hintCanvas.SetHintText("照著箭頭引導指示拿取滅火器", true);
+
+        fireExtinguisherBody.Interactable = true;
     }
 
     public override void OnUpdate()
@@ -44,8 +46,6 @@ public class TakeExtinguisher : Stage
         base.OnFinish();
         changer.BackOriginColor();
         fireExtinguisherBody.OnGrabbed.RemoveListener(ExtinguisherGrabbed);
-
-        fireExtinguisherBody.Interactable = false;
     }
 
     void ExtinguisherGrabbed()
