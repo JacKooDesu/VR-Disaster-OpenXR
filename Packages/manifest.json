@@ -2,6 +2,7 @@
   "dependencies": {
     "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git#3.3.10",
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.htc.upm.vive.openxr": "2.2.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.8",
     "com.unity.collab-proxy": "2.5.2",
@@ -49,5 +50,15 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "VIVE",
+      "url": "https://npm-registry.vive.com",
+      "scopes": [
+        "com.htc.upm"
+      ],
+      "overrideBuiltIns": false
+    }
+  ]
 }
