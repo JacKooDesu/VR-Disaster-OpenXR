@@ -165,18 +165,18 @@ public class GameViewEncoder_Editor : Editor
                 //Add symbol for render pipeline
                 Action_SetSymbol();
 
-                if (GVEncoder.MainCam == null)
-                {
-                    if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.GetComponent<Camera>();
-                    if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.AddComponent<Camera>();
-                }
-                else
-                {
-                    if (GVEncoder.MainCam != GVEncoder.gameObject.GetComponent<Camera>()) GVEncoder.MainCam = null;
+                // if (GVEncoder.MainCam == null)
+                // {
+                //     if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.GetComponent<Camera>();
+                //     if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.AddComponent<Camera>();
+                // }
+                // else
+                // {
+                //     if (GVEncoder.MainCam != GVEncoder.gameObject.GetComponent<Camera>()) GVEncoder.MainCam = null;
 
-                    if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.GetComponent<Camera>();
-                    if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.AddComponent<Camera>();
-                }
+                //     if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.GetComponent<Camera>();
+                //     if (GVEncoder.MainCam == null) GVEncoder.MainCam = GVEncoder.gameObject.AddComponent<Camera>();
+                // }
                 GUILayout.BeginVertical("box");
                 {
                     GUIStyle style = new GUIStyle();

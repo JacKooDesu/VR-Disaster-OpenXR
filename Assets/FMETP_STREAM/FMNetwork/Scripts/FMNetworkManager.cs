@@ -293,23 +293,18 @@ public class FMNetworkManager : MonoBehaviour
 
     void Awake()
     {
-        Application.runInBackground = true;
-        if (instance == null) instance = this;
+        // Application.runInBackground = true;
+        if (instance == null)
+        {
+            instance = this;
+            this.gameObject.transform.parent = null;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
-
-    //void Awake()
-    //{
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //        this.gameObject.transform.parent = null;
-    //        DontDestroyOnLoad(this.gameObject);
-    //    }
-    //    else
-    //    {
-    //        Destroy(this.gameObject);
-    //    }
-    //}
 
     // Use this for initialization
     void Start() { if (AutoInit) Init(); }

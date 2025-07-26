@@ -146,6 +146,12 @@ public class GameViewEncoder : MonoBehaviour
 
     private void Start()
     {
+        if (FMNetworkManager.instance is not null)
+        {
+            OnDataByteReadyEvent.RemoveAllListeners();
+            OnDataByteReadyEvent.AddListener(data => FMNetworkManager.instance.SendToServer(data));
+        }
+
         Application.runInBackground = true;
         ColorSpace = QualitySettings.activeColorSpace;
 
@@ -189,7 +195,7 @@ public class GameViewEncoder : MonoBehaviour
         switch (_CaptureMode)
         {
             case GameViewCaptureMode.MainCam:
-                if (MainCam == null) MainCam = this.GetComponent<Camera>();
+                // if (MainCam == null) MainCam = this.GetComponent<Camera>();
                 renderResolution = new Vector2(Screen.width, Screen.height) / Mathf.Pow(2, (int)Resize);
                 if (sourceDescriptor.vrUsage == VRTextureUsage.TwoEyes) renderResolution.x /= 2f;
                 break;
