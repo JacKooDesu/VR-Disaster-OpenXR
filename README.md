@@ -18,4 +18,19 @@ adb devices
 adb install <build.apk>
 ```
 
+## ADB tcpip (remote debug / scrcpy)
+
+1. Shell ip route check ip
+
+```bash
+adb shell ip route
+```
+
+2. Start ADB in tcpip
+
+```bash
+adb tcpip <port>
+adb connect <ipaddress>:<port>
+```
+
 WIP
