@@ -44,7 +44,7 @@ public class ChooseRescueKitFlood : Stage
     {
         base.OnFinish();
         var player = GameHandler.Singleton.player;
+        player.kit.ForceStopMission();
         player.SetCanMove(true);
-        // player.kit.ForceStopMission();
     }
 }
