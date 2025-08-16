@@ -126852,6 +126852,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand Tutorial Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8147520991807723182, guid: 4fb6fd1c53aab9549a677f3ab9f99a2a,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8147520992841760088, guid: 4fb6fd1c53aab9549a677f3ab9f99a2a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -183150,7 +183155,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &2111863197
 Canvas:
   m_ObjectHideFlags: 0
