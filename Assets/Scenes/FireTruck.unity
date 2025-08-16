@@ -991,6 +991,37 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &65942921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 65942922}
+  m_Layer: 0
+  m_Name: Ambient Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &65942922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65942921}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.53, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 850248987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &70699977
 GameObject:
   m_ObjectHideFlags: 0
@@ -10967,6 +10998,7 @@ MonoBehaviour:
       outline: 0
     targetColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     effectAlpha: 0
+  AmbientSoundPos: {fileID: 65942922}
 --- !u!4 &850248987
 Transform:
   m_ObjectHideFlags: 0
@@ -10982,6 +11014,7 @@ Transform:
   m_Children:
   - {fileID: 729307647}
   - {fileID: 1043117343}
+  - {fileID: 65942922}
   m_Father: {fileID: 1724360534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &879617058

@@ -23,6 +23,7 @@ namespace JacDev.Audio
         public AudioClip fireSound;
         public AudioClip carDriving;
         public AudioClip carCrash;
+        public AudioClip ambientSound;
     }
 }
 

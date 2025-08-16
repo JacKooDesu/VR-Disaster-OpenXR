@@ -9,6 +9,8 @@ public class TakeExtinguisher : Stage
     public InteracableObject fireExtinguisherBody;
 
     public MaterialChanger changer;
+    [SerializeField]
+    Transform AmbientSoundPos;
 
     public override void OnBegin()
     {
@@ -30,6 +32,11 @@ public class TakeExtinguisher : Stage
 
         audio.PlayAudio(audio.bgm2, true, GameHandler.Singleton.player.transform).volume = .1f;
         fireExtinguisherBody.OnGrabbed.AddListener(ExtinguisherGrabbed);
+
+        var ambient = audio.PlayAudio(audio.ambientSound, true, AmbientSoundPos);
+        ambient.maxDistance = 20f;
+        ambient.minDistance = 5f;
+
 
         player.hintCanvas.SetHintText("照著箭頭引導指示拿取滅火器", true);
 

@@ -66,6 +66,7 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: 8af3cc7228fb4394dbe6ca61afa4bde8, type: 3}
   carDriving: {fileID: 8300000, guid: 016e5717f1f822147a19219f9e697b4d, type: 3}
   carCrash: {fileID: 8300000, guid: a89832d8729c577478f93e0f902ca753, type: 3}
+  ambientSound: {fileID: 8300000, guid: 7a6606a75dbeb6848988ab13d4966ce7, type: 3}
 --- !u!1001 &2515255725932676916
 PrefabInstance:
   m_ObjectHideFlags: 0
