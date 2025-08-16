@@ -13,6 +13,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using Unity.Mathematics;
+using JacDev.Audio;
 
 public class Player : MonoBehaviour
 {
@@ -180,6 +181,7 @@ public class Player : MonoBehaviour
             return;
 
         PullAnimation().Forget();
+        AudioHandler.Singleton.PlaySound(AudioHandler.Singleton.soundList.pickItem);
 
         async UniTask PullAnimation()
         {
