@@ -221,6 +221,13 @@ public class GameHandler : MonoBehaviour
         FileManager<PlayerData>.Load("PlayerData", $"{name}_Data", playerData);
     }
 
+    public bool TryLoadPlayerData(string name, out PlayerData data)
+    {
+        data = new PlayerData(name);
+        FileManager<PlayerData>.Load("PlayerData", $"{name}_Data", data);
+        return data != null;
+    }
+
     public void SetPlayerData(PlayerData d)
     {
         playerData = d;
@@ -234,5 +241,10 @@ public class GameHandler : MonoBehaviour
     public void LeaveGame()
     {
         Application.Quit();
+    }
+
+    public void ReloadGame()
+    {
+        sceneLoader.LoadScene("Intro Scene");
     }
 }

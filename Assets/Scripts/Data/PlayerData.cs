@@ -6,6 +6,7 @@ using System;
 [System.Serializable]
 public class PlayerData    // still in progress
 {
+    [field: SerializeField]
     public string UserId { get; private set; }
 
     [System.Serializable]

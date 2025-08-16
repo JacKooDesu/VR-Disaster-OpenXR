@@ -4,6 +4,7 @@ using UnityEngine;
 using Cysharp.Threading.Tasks;
 using System.Threading.Tasks;
 using DG.Tweening;
+using System;
 
 public class GameIntro : MonoBehaviour
 {
@@ -45,9 +46,14 @@ public class GameIntro : MonoBehaviour
         else
             _userDataInputUi.SetActive(true);
 
-        var userId = await keyboard.OnSubmit.OnInvokeAsync(this.GetCancellationTokenOnDestroy());
-        GameHandler.playerData = new(
-            string.IsNullOrEmpty(userId) ? "anonymous" : userId);
+        GameHandler.playerData = await keyboard.OnSubmit
+            .OnInvokeAsync(this.GetCancellationTokenOnDestroy())
+            .ContinueWith(userId => userId switch
+            {
+                _ when string.IsNullOrEmpty(userId) => new PlayerData("anonymous" + DateTime.Now.ToString("yyyyMMddHHmmss")),
+                _ => GameHandler.Singleton.TryLoadPlayerData(userId, out var data) ? data : data
+            });
+
 
         if (ui is not null)
             ui.TurnOff();
