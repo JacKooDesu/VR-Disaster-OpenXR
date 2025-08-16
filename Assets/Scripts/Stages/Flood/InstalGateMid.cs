@@ -13,6 +13,8 @@ public class InstalGateMid : Stage
 
     public override void OnBegin()
     {
+        JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
+
         foreach (Transform t in objParent)
         {
             var interact = t.GetComponent<GateMid>();
@@ -37,6 +39,9 @@ public class InstalGateMid : Stage
                     t.gameObject.SetActive(false);
                     trigger.enabled = false;
 
+                    var snd = a.PlayAudio(a.gateInstall, false, interact.transform);
+                    snd.transform.SetParent(null);
+
                     targets.RemoveAt(0);
                     if (targets.Count > 0)
                         targets[0].gameObject.SetActive(true);
@@ -45,7 +50,6 @@ public class InstalGateMid : Stage
                 });
         }
 
-        JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
         a.PlaySound(a.instalGateMid);
 
         targets[0].gameObject.SetActive(true);

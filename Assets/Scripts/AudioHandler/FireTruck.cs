@@ -21,6 +21,9 @@ namespace JacDev.Audio
         [Header("Additional Sounds")]
         public AudioClip extinguisher;
         public AudioClip fireSound;
+        public AudioClip carDriving;
+        public AudioClip carCrash;
+        public AudioClip ambientSound;
     }
 }
 

@@ -13,6 +13,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using Unity.Mathematics;
+using JacDev.Audio;
 
 public class Player : MonoBehaviour
 {
@@ -121,8 +122,6 @@ public class Player : MonoBehaviour
 
         // SetupOverlayEffect();
 
-        onTeleportEvent.AddListener(() => Debug.Log(agent.Warp(transform.position)));
-
         // 避免過快載入(下下策)
         await System.Threading.Tasks.Task.Delay(800);
         fadeUtil.FadeIn(.5f);
@@ -182,6 +181,7 @@ public class Player : MonoBehaviour
             return;
 
         PullAnimation().Forget();
+        AudioHandler.Singleton.PlaySound(AudioHandler.Singleton.soundList.pickItem);
 
         async UniTask PullAnimation()
         {

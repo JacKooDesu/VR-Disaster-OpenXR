@@ -30,14 +30,34 @@ public class TurnOffGas : Stage
             });
 
         JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
-        AudioSource boil = a.PlaySound(a.boilWater);
-        GameHandler.Singleton.Counter(5, delegate
-       {
-           boil.volume = .4f;
-           a.PlaySound(a.turnOffGas);
-       }).Forget();
+        AudioSource boil = a.PlayAudioLoop(a.boilWater, new()
+        {
+            ReturnTo = 3.85f,
+            EndAt = a.boilWater.length
+        }, fire.transform);
+        boil.maxDistance = 10;
+        boil.minDistance = 2;
+        boil.transform.SetParent(default);
 
-        onFinishEvent += () => boil.Stop();
+        GameHandler.Singleton.Counter(5, delegate
+        {
+            boil.volume = .4f;
+            a.PlaySound(a.turnOffGas);
+        }).Forget();
+
+        onFinishEvent += () =>
+        {
+            Destroy(boil.gameObject);
+            var gasOff = a.PlayAudio(a.gasOff, false, switchModel);
+            var waterOff = a.PlayAudio(a.boilWaterOff, false, switchModel);
+
+            gasOff.volume = .2f;
+            gasOff.maxDistance = 1f;
+            gasOff.minDistance = .2f;
+            waterOff.volume = .2f;
+            waterOff.maxDistance = 1f;
+            waterOff.minDistance = .2f;
+        };
         onGetToTarget += () =>
         {
             new CoroutineUtility.Timer(3f, hint.TurnOn, null, hint.TurnOff);

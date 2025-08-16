@@ -24,13 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4729362599207972929}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.6350183, y: -1.7334294, z: 2.7683268}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6288306264191775046}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5941456830668158133
 MonoBehaviour:
@@ -51,7 +52,9 @@ MonoBehaviour:
     type: 3}
   soundList: {fileID: 6288306264191775047}
   currentPlayingSound: {fileID: 0}
-  specWaterMeter: {fileID: 8300000, guid: 52ff8a88daa430842a32c1cd252525e0, type: 3}
+  specWaterMeter200: {fileID: 8300000, guid: 7568b0a7ce698104e879a7f0acbdeaba, type: 3}
+  specWaterMeter350: {fileID: 8300000, guid: 36336d2fe90882043ac754e9d60fbaf1, type: 3}
+  specWaterMeter500: {fileID: 8300000, guid: 030e357330e264347962e16e1a8156fb, type: 3}
   plantDown: {fileID: 8300000, guid: 0a27c69c9f5dbde44a45104e6a309297, type: 3}
   instalGateSide: {fileID: 8300000, guid: 3cb1a6e6178b86a49a91fb6850c186e4, type: 3}
   instalGateMid: {fileID: 8300000, guid: e03c13e099c4be54f92e5394ade1c5e0, type: 3}
@@ -64,12 +67,18 @@ MonoBehaviour:
   broadcast1: {fileID: 8300000, guid: b7f584621cdf7534e86068fcc92ce46f, type: 3}
   broadcast2: {fileID: 8300000, guid: d4fb79fdbf6efc14c809241f46066ec5, type: 3}
   boilWater: {fileID: 8300000, guid: 63465711f17000449ad31e894212c093, type: 3}
+  boilWaterOff: {fileID: 8300000, guid: ec7b7636527e3c044acb85b240708eeb, type: 3}
+  gasOff: {fileID: 8300000, guid: 333f043964127a0458686cd305096a7c, type: 3}
   switchSound: {fileID: 8300000, guid: c489066a83b0d5e49a03ddf641df7429, type: 3}
+  gateInstall: {fileID: 8300000, guid: 18a493a33b79250429cf055a3c017cfa, type: 3}
+  gateInstallComplete: {fileID: 8300000, guid: 4d1a4aa5eaa33f647840138e05d52ae9, type: 3}
+  waterTp: {fileID: 8300000, guid: 05a42f18d60ec20439d069f82c5f0f30, type: 3}
 --- !u!1001 &3622089121449473199
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 4140847333847251480}
     m_Modifications:
     - target: {fileID: 7278014804576355817, guid: 78a34abe269868144b3c326910dd0e01,
@@ -133,6 +142,9 @@ PrefabInstance:
       value: SoundList
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a34abe269868144b3c326910dd0e01, type: 3}
 --- !u!4 &6288306264191775046 stripped
 Transform:
