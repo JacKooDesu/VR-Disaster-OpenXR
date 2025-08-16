@@ -41927,26 +41927,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 185190156645814346, guid: db588a78ae988f4419ff97955d3cc01c,
         type: 3}
-      propertyPath: aimTutorial
-      value: 
-      objectReference: {fileID: 8300000, guid: 2ab5ca31216a9664ea9cc9adf2f18028, type: 3}
-    - target: {fileID: 185190156645814346, guid: db588a78ae988f4419ff97955d3cc01c,
-        type: 3}
-      propertyPath: pullTutorial
-      value: 
-      objectReference: {fileID: 8300000, guid: 2a357f7be555bc24d951baa4bf2a3c99, type: 3}
-    - target: {fileID: 185190156645814346, guid: db588a78ae988f4419ff97955d3cc01c,
-        type: 3}
-      propertyPath: pressTutorial
-      value: 
-      objectReference: {fileID: 8300000, guid: fd5a4632bf688684fb7d0fe7682d7105, type: 3}
-    - target: {fileID: 185190156645814346, guid: db588a78ae988f4419ff97955d3cc01c,
-        type: 3}
-      propertyPath: sprayTutorial
-      value: 
-      objectReference: {fileID: 8300000, guid: dbc0cb39441abbe43a9315cb2702fc1b, type: 3}
-    - target: {fileID: 185190156645814346, guid: db588a78ae988f4419ff97955d3cc01c,
-        type: 3}
       propertyPath: extinguisherTutorial
       value: 
       objectReference: {fileID: 8300000, guid: 2a357f7be555bc24d951baa4bf2a3c99, type: 3}

@@ -24,12 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7278014804576355823}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7278014804576355816
 MonoBehaviour:
@@ -57,4 +58,8 @@ MonoBehaviour:
   wrong_v2: {fileID: 8300000, guid: 0ebf8b70e557a09439604238d74aa8a3, type: 3}
   glassBreak: {fileID: 8300000, guid: 78b04781608e13a4fa8fc56fd8181676, type: 3}
   slogan: {fileID: 8300000, guid: ab23ecc234fe6ed40a41ec07f66f0c10, type: 3}
+  pickItem: {fileID: 8300000, guid: 946dc9dbc9aef0c4d85375be68b526bf, type: 3}
+  teleport: {fileID: 8300000, guid: 3527389bed491dd41b848ff79ebcdaf2, type: 3}
+  bagOpen: {fileID: 8300000, guid: a718684d72e0cea4ca3a76ee2469cff2, type: 3}
+  bagClose: {fileID: 8300000, guid: 1f9b0b6b172a2154e98b96d953e60427, type: 3}
   Great: {fileID: 8300000, guid: 6aea61c574b17084ca1e846b92830393, type: 3}
