@@ -11264,7 +11264,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1013073350}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1779271202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e2f4617667341945b5a7756e14b62d0, type: 3}
@@ -11976,7 +11976,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3695887856896194879, guid: d9a2d13f496f3a84b83bd92dcc5ace81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1779271204}
   m_SourcePrefab: {fileID: 100100000, guid: d9a2d13f496f3a84b83bd92dcc5ace81, type: 3}
 --- !u!4 &1013073351 stripped
 Transform:
@@ -12124,6 +12128,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1043117341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1082152740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3695887856896194879, guid: d9a2d13f496f3a84b83bd92dcc5ace81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1197736380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1082152742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4302213855341087213, guid: d9a2d13f496f3a84b83bd92dcc5ace81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1197736380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082152740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2f4617667341945b5a7756e14b62d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1082152743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082152740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52106493088f65a4db9bf21814c2072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tpInteractable: {fileID: 1082152742}
 --- !u!1 &1092171628
 GameObject:
   m_ObjectHideFlags: 0
@@ -13021,7 +13056,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3695887856896194879, guid: d9a2d13f496f3a84b83bd92dcc5ace81,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1082152743}
   m_SourcePrefab: {fileID: 100100000, guid: d9a2d13f496f3a84b83bd92dcc5ace81, type: 3}
 --- !u!1 &1200271249
 GameObject:
@@ -26398,6 +26437,7 @@ GameObject:
   - component: {fileID: 1523463382}
   - component: {fileID: 1523463384}
   - component: {fileID: 1523463385}
+  - component: {fileID: 1523463386}
   m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
@@ -26597,6 +26637,19 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1523463386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523463379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52106493088f65a4db9bf21814c2072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tpInteractable: {fileID: 1523463385}
 --- !u!1 &1523997974
 GameObject:
   m_ObjectHideFlags: 0
@@ -33498,6 +33551,25 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1779271202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3695887856896194879, guid: d9a2d13f496f3a84b83bd92dcc5ace81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1013073350}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1779271204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779271202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52106493088f65a4db9bf21814c2072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tpInteractable: {fileID: 918570980}
 --- !u!1 &1782802293
 GameObject:
   m_ObjectHideFlags: 0

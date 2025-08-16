@@ -121,8 +121,6 @@ public class Player : MonoBehaviour
 
         // SetupOverlayEffect();
 
-        onTeleportEvent.AddListener(() => Debug.Log(agent.Warp(transform.position)));
-
         // 避免過快載入(下下策)
         await System.Threading.Tasks.Task.Delay(800);
         fadeUtil.FadeIn(.5f);

@@ -67517,6 +67517,7 @@ GameObject:
   - component: {fileID: 1922834460}
   - component: {fileID: 1922834459}
   - component: {fileID: 1922834462}
+  - component: {fileID: 1922834463}
   m_Layer: 8
   m_Name: Nav Mesh
   m_TagString: Untagged
@@ -67697,6 +67698,19 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1922834463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922834457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52106493088f65a4db9bf21814c2072d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tpInteractable: {fileID: 1922834462}
 --- !u!1001 &1940387083
 PrefabInstance:
   m_ObjectHideFlags: 0
