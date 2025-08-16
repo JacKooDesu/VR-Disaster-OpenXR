@@ -37,7 +37,9 @@ public class BusCrack : Stage
 
         JacDev.Audio.FireTruck audio = (JacDev.Audio.FireTruck)GameHandler.Singleton.audioHandler;
         AudioSource a = audio.PlayAudio(audio.bgm1, true, GameHandler.Singleton.player.transform);
+        AudioSource drivingSnd = audio.PlayAudio(audio.carDriving, true, GameHandler.Singleton.player.transform);
         a.volume = .2f;
+        drivingSnd.volume = .1f;
 
         new CoroutineUtility.Timer(
             Random.Range(minTime, maxTime),
@@ -45,6 +47,7 @@ public class BusCrack : Stage
             {
                 Crash();
                 Destroy(a.gameObject);
+                Destroy(drivingSnd.gameObject);
             }
         );
     }
@@ -59,6 +62,9 @@ public class BusCrack : Stage
 
         Rigidbody rb = jointer.GetComponent<Rigidbody>();
         rb.AddForce(jointer.forward * 5, ForceMode.Impulse);
+
+        var audioHandler = (GameHandler.Singleton.audioHandler as JacDev.Audio.FireTruck);
+        audioHandler.PlayAudio(audioHandler.carCrash, false, GameHandler.Singleton.player.transform);
 
         new CoroutineUtility.Timer(
             crashTime, () =>

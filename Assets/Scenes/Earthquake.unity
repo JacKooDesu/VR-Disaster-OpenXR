@@ -4877,11 +4877,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774166913999758687, guid: 39e48beb5b1d7064fbe79207ab6711c7,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 774166913999758687, guid: 39e48beb5b1d7064fbe79207ab6711c7,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3608
       objectReference: {fileID: 0}
@@ -28919,11 +28914,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774166913999758687, guid: 39e48beb5b1d7064fbe79207ab6711c7,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 774166913999758687, guid: 39e48beb5b1d7064fbe79207ab6711c7,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.61
       objectReference: {fileID: 0}
@@ -32182,11 +32172,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bookcase-M-02
-      objectReference: {fileID: 0}
-    - target: {fileID: 444992231772387987, guid: 74e85f8d7e3562c489316ee62a35c636,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 444992231772387987, guid: 74e85f8d7e3562c489316ee62a35c636,
         type: 3}
@@ -39351,11 +39336,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 154852823}
     m_Modifications:
-    - target: {fileID: 1270801329717631135, guid: 038b67cc2334be04881cb1b3ead275cc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 1270801329717631135, guid: 038b67cc2334be04881cb1b3ead275cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46890,11 +46870,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5224230721716611946, guid: 48624e4fa08bb04409f96353caa77533,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5224230721716611946, guid: 48624e4fa08bb04409f96353caa77533,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.77
       objectReference: {fileID: 0}
@@ -51043,11 +51018,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5666754289253962048, guid: 557473221b92a2e4e9c07ee1db728917,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666754289253962048, guid: 557473221b92a2e4e9c07ee1db728917,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.451
       objectReference: {fileID: 0}
@@ -51366,11 +51336,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 154852823}
     m_Modifications:
-    - target: {fileID: 2091356445224811040, guid: 8129aba3f8d572b4791f2c773e7af7b4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2091356445224811040, guid: 8129aba3f8d572b4791f2c773e7af7b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75471,11 +75436,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1970858558994068283, guid: 58147e2777ec66a4681e33c64ce800aa,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970858558994068283, guid: 58147e2777ec66a4681e33c64ce800aa,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.58
       objectReference: {fileID: 0}
@@ -75685,11 +75645,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 746124887}
     m_Modifications:
-    - target: {fileID: 5224230721716611946, guid: 48624e4fa08bb04409f96353caa77533,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5224230721716611946, guid: 48624e4fa08bb04409f96353caa77533,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81043,11 +80998,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bookcase-M-01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6432668188901338617, guid: fed31d807d33ce644aceb046ad2eabaa,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6432668188901338617, guid: fed31d807d33ce644aceb046ad2eabaa,
         type: 3}
@@ -100880,11 +100830,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444992231772387987, guid: 74e85f8d7e3562c489316ee62a35c636,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 444992231772387987, guid: 74e85f8d7e3562c489316ee62a35c636,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.7
       objectReference: {fileID: 0}
@@ -101224,11 +101169,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bookcase-M-01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6432668188901338617, guid: fed31d807d33ce644aceb046ad2eabaa,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6432668188901338617, guid: fed31d807d33ce644aceb046ad2eabaa,
         type: 3}
@@ -101790,11 +101730,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 746124887}
     m_Modifications:
-    - target: {fileID: 6229150126379934546, guid: 048181016e725a64aa8746b4d2e7b2f4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6229150126379934546, guid: 048181016e725a64aa8746b4d2e7b2f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -104983,11 +104918,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 154852823}
     m_Modifications:
-    - target: {fileID: 2091356445224811040, guid: 8129aba3f8d572b4791f2c773e7af7b4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 2091356445224811040, guid: 8129aba3f8d572b4791f2c773e7af7b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -123568,11 +123498,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3625232529384404077, guid: 0fa0d1111a2934049b76abd3a29ab770,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625232529384404077, guid: 0fa0d1111a2934049b76abd3a29ab770,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.58
       objectReference: {fileID: 0}
@@ -125017,11 +124942,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1970858558994068283, guid: 58147e2777ec66a4681e33c64ce800aa,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970858558994068283, guid: 58147e2777ec66a4681e33c64ce800aa,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.520002
       objectReference: {fileID: 0}
@@ -125464,11 +125384,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bookcase-S-03 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743170770124880347, guid: 97ad41f31db67124fbd52f71211dd81a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6743170770124880347, guid: 97ad41f31db67124fbd52f71211dd81a,
         type: 3}
@@ -130662,11 +130577,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6743170770124880347, guid: 97ad41f31db67124fbd52f71211dd81a,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743170770124880347, guid: 97ad41f31db67124fbd52f71211dd81a,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.58
       objectReference: {fileID: 0}
@@ -130738,11 +130648,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bookcase-L-04
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666754289253962048, guid: 557473221b92a2e4e9c07ee1db728917,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5666754289253962048, guid: 557473221b92a2e4e9c07ee1db728917,
         type: 3}
@@ -131120,11 +131025,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bookcase-S-01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7079282051757185289, guid: f4ead04f46ed4bb44b2ebe8a30903f80,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7079282051757185289, guid: f4ead04f46ed4bb44b2ebe8a30903f80,
         type: 3}
@@ -160693,11 +160593,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3625232529384404077, guid: 0fa0d1111a2934049b76abd3a29ab770,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625232529384404077, guid: 0fa0d1111a2934049b76abd3a29ab770,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.520002
       objectReference: {fileID: 0}
@@ -161573,11 +161468,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 154852823}
     m_Modifications:
-    - target: {fileID: 1270801329717631135, guid: 038b67cc2334be04881cb1b3ead275cc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1270801329717631135, guid: 038b67cc2334be04881cb1b3ead275cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -167895,11 +167785,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6229150126379934546, guid: 048181016e725a64aa8746b4d2e7b2f4,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6229150126379934546, guid: 048181016e725a64aa8746b4d2e7b2f4,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5392
       objectReference: {fileID: 0}
@@ -170604,11 +170489,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bookcase-S-01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7079282051757185289, guid: f4ead04f46ed4bb44b2ebe8a30903f80,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7079282051757185289, guid: f4ead04f46ed4bb44b2ebe8a30903f80,
         type: 3}
