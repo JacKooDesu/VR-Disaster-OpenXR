@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEditor.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 public partial class SceneMigrator : EditorWindow
 {
@@ -95,6 +96,7 @@ public partial class SceneMigrator : EditorWindow
         where TTo : Component
     {
         public AppendType() : base(_MigrateAction) { }
+        public AppendType(Action<TFrom, TTo> migrateAction) : base(migrateAction) { }
 
         static void _MigrateAction(TFrom oldComponent, TTo newComponent) { }
     }
@@ -103,6 +105,12 @@ public partial class SceneMigrator : EditorWindow
     {
         new SwapType<DefaultGraphicRaycaster, XRGraphicRaycaster>(),
         InteractableMigration(),
+        new AppendType<BaseTeleportationInteractable, TeleportSoundDecorator>(
+            (oldCom, newCom)=>
+            {
+                ReflectAssign(newCom, "_tpInteractable",oldCom);
+            }
+        ),
     };
     static Dictionary<Type, Component[]> _MigrateObjects = new();
     static MigrateType _CurrentMigrateType = null;
