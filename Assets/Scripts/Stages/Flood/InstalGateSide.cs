@@ -22,6 +22,8 @@ public class InstalGateSide : Stage
         targetParent.gameObject.SetActive(true);
         _targets = targetParent.GetComponentsInChildren<NearCollisionFlag>().ToList();
 
+        JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
+
         foreach (Transform t in objParent)
         {
             var interact = t.GetComponent<GateSide>();
@@ -44,6 +46,9 @@ public class InstalGateSide : Stage
                     if (!_targets.Remove(col))
                         return;
 
+                    var snd = a.PlayAudio(a.gateInstallComplete, false, gate.transform);
+                    snd.transform.SetParent(null);
+
                     gate.hasInstalled = true;
                     gate.gameObject.SetActive(false);
                     colTransform.GetComponent<MeshRenderer>().SetMaterials(new() { _sideMat });
@@ -53,7 +58,6 @@ public class InstalGateSide : Stage
             gates[i] = gate;
         }
 
-        JacDev.Audio.Flood a = (JacDev.Audio.Flood)GameHandler.Singleton.audioHandler;
         a.PlaySound(a.instalGateSide);
 
         onGetToTarget += () =>

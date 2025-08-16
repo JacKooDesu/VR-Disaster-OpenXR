@@ -67,7 +67,12 @@ MonoBehaviour:
   broadcast1: {fileID: 8300000, guid: b7f584621cdf7534e86068fcc92ce46f, type: 3}
   broadcast2: {fileID: 8300000, guid: d4fb79fdbf6efc14c809241f46066ec5, type: 3}
   boilWater: {fileID: 8300000, guid: 63465711f17000449ad31e894212c093, type: 3}
+  boilWaterOff: {fileID: 8300000, guid: ec7b7636527e3c044acb85b240708eeb, type: 3}
+  gasOff: {fileID: 8300000, guid: 333f043964127a0458686cd305096a7c, type: 3}
   switchSound: {fileID: 8300000, guid: c489066a83b0d5e49a03ddf641df7429, type: 3}
+  gateInstall: {fileID: 8300000, guid: 18a493a33b79250429cf055a3c017cfa, type: 3}
+  gateInstallComplete: {fileID: 8300000, guid: 4d1a4aa5eaa33f647840138e05d52ae9, type: 3}
+  waterTp: {fileID: 8300000, guid: 05a42f18d60ec20439d069f82c5f0f30, type: 3}
 --- !u!1001 &3622089121449473199
 PrefabInstance:
   m_ObjectHideFlags: 0

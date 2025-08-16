@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 public class Escape : Stage
 {
@@ -21,6 +22,7 @@ public class Escape : Stage
 
         player.SetCanMove(false);
 
+        a.soundList.teleport = a.waterTp;
 
         GameHandler.Singleton.Counter(
             a.waterIn.length,
