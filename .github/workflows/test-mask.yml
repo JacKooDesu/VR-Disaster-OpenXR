@@ -1,0 +1,14 @@
+name: Test Mask
+
+on:
+  workflow_dispatch:
+
+jobs:
+  show-something:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show something
+        env:
+            value1: "::add-mask::Value1"
+            value2: "Value2"
+        run: echo "This is a test mask workflow"
