@@ -21,6 +21,10 @@ namespace JacDev.Audio
         public AudioClip wrong_v2;
         public AudioClip glassBreak;
         public AudioClip slogan;
+        public AudioClip pickItem;
+        public AudioClip teleport;
+        public AudioClip bagOpen;
+        public AudioClip bagClose;
 
         [Header("Audios")]
         public AudioClip Great;

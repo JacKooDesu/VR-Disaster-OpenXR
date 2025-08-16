@@ -93,6 +93,54 @@ namespace JacDev.Audio
             return audioSource;
         }
 
+        public AudioSource PlayAudioLoop(AudioClip audio, LoopSetting loop, Transform target)
+        {
+            if (target.GetComponentInChildren<AudioSource>())
+                if (target.GetComponentInChildren<AudioSource>().clip == audio)
+                    return target.GetComponentInChildren<AudioSource>();
+
+            GameObject temp = Instantiate(speakerPrefab, target);
+            temp.transform.localPosition = Vector3.zero;
+
+            AudioSource audioSource = temp.GetComponent<AudioSource>();
+            audioSource.clip = audio;
+
+            audioSource.Play();
+
+            if (loop.ReturnTo >= 0 &&
+                loop.EndAt > 0 &&
+                loop.EndAt > loop.ReturnTo &&
+                loop.ReturnTo <= audio.length &&
+                loop.EndAt <= audio.length)
+            {
+                Looping().Forget();
+            }
+            else
+            {
+                audioSource.loop = true;
+            }
+
+            return audioSource;
+
+            async UniTask Looping()
+            {
+                var ct = audioSource.GetCancellationTokenOnDestroy();
+                audioSource.Play();
+                await UniTask.WaitForSeconds(loop.EndAt, cancellationToken: ct);
+
+                var duration = loop.EndAt - loop.ReturnTo;
+                while (!ct.IsCancellationRequested &&
+                    audioSource is not null)
+                {
+                    audioSource.Play();
+                    audioSource.time = loop.ReturnTo;
+                    await UniTask.WaitForSeconds(
+                        duration,
+                        cancellationToken: ct);
+                }
+            }
+        }
+
         // 摧毀音源
         async UniTask DestroyAudioSource(float t, GameObject target)
         {
@@ -117,14 +165,18 @@ namespace JacDev.Audio
             }
         }
 
-        public void StopCurrent(){
-            if(currentPlayingSound != null){
+        public void StopCurrent()
+        {
+            if (currentPlayingSound != null)
+            {
                 currentPlayingSound.Stop();
             }
         }
 
-        public void Windup(float f){
-            if(currentPlayingSound != null){
+        public void Windup(float f)
+        {
+            if (currentPlayingSound != null)
+            {
                 currentPlayingSound.pitch = f;
             }
         }
@@ -155,6 +207,12 @@ namespace JacDev.Audio
             }
 
             return null;
+        }
+
+        public struct LoopSetting
+        {
+            public float ReturnTo;
+            public float EndAt;
         }
     }
 }

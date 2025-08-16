@@ -6,7 +6,8 @@ using System;
 [System.Serializable]
 public class PlayerData    // still in progress
 {
-    public string stuID;
+    [field: SerializeField]
+    public string UserId { get; private set; }
 
     [System.Serializable]
     public class MissionData
@@ -43,9 +44,9 @@ public class PlayerData    // still in progress
     public static MissionData current;
 
     //Constructor
-    public PlayerData()
+    public PlayerData(string userId)
     {
-        stuID = DateTime.Now.ToString("MM-dd-yyyy");
+        UserId = userId;
         missionDatas = new List<MissionData>();
     }
 

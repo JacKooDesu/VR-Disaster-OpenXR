@@ -56,11 +56,13 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
-        if (playerData == null)
-            playerData = new PlayerData();
+        playerData ??= new PlayerData("unknown");
 
         if (player == null)
             player = FindAnyObjectByType<Player>();
+
+        if (firstStage is null)
+            return;
 
         var currentScene = SceneLoader.Singleton.GetCurrentSceneName();
         if (currentScene != "MissionSelect" && currentScene != "Result Scene")
@@ -132,7 +134,7 @@ public class GameHandler : MonoBehaviour
     }
 
     // 綁Event在物件上
-    public void BindEvent(GameObject g, EventTriggerType type, UnityAction<BaseEventData> call)
+    public static void BindEvent(GameObject g, EventTriggerType type, UnityAction<BaseEventData> call)
     {
         EventTrigger.Entry entry = new EventTrigger.Entry();
         entry.eventID = type;
@@ -210,7 +212,7 @@ public class GameHandler : MonoBehaviour
 
     public void SavePlayerData()
     {
-        FileManager<PlayerData>.Save($"{playerData.stuID}_Data", playerData, "PlayerData");
+        FileManager<PlayerData>.Save($"{playerData.UserId}_Data", playerData, "PlayerData");
         print("Save");
     }
 
@@ -219,20 +221,16 @@ public class GameHandler : MonoBehaviour
         FileManager<PlayerData>.Load("PlayerData", $"{name}_Data", playerData);
     }
 
+    public bool TryLoadPlayerData(string name, out PlayerData data)
+    {
+        data = new PlayerData(name);
+        FileManager<PlayerData>.Load("PlayerData", $"{name}_Data", data);
+        return data != null;
+    }
+
     public void SetPlayerData(PlayerData d)
     {
         playerData = d;
-    }
-
-    public void SetPlayerName(Text text)
-    {
-        playerData.stuID = text.text;
-    }
-
-    public void SetPlayerName(string text)
-    {
-        playerData.stuID = text;
-        SceneLoader.Singleton.SetName(text);
     }
 
     public Stage GetCurrentStage()
@@ -243,5 +241,10 @@ public class GameHandler : MonoBehaviour
     public void LeaveGame()
     {
         Application.Quit();
+    }
+
+    public void ReloadGame()
+    {
+        sceneLoader.LoadScene("Intro Scene");
     }
 }

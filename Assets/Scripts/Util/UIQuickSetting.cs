@@ -89,7 +89,7 @@ public class UIQuickSetting : MonoBehaviour
         foreach (Button b in tempButtons)
         {
             // print(b.gameObject);
-            GameHandler.Singleton.BindEvent(
+            GameHandler.BindEvent(
                 b.gameObject,
                 EventTriggerType.PointerEnter,
                 delegate
@@ -98,7 +98,7 @@ public class UIQuickSetting : MonoBehaviour
                     //GameHandler.Singleton.BlurCamera(true);
                 });
 
-            GameHandler.Singleton.BindEvent(
+            GameHandler.BindEvent(
                 b.gameObject,
                 EventTriggerType.PointerDown,
                 delegate
@@ -107,7 +107,7 @@ public class UIQuickSetting : MonoBehaviour
                     //GameHandler.Singleton.BlurCamera(false);
                 });
 
-            // GameHandler.Singleton.BindEvent(
+            // GameHandler.BindEvent(
             //     b.gameObject,
             //     EventTriggerType.PointerExit,
             //     delegate { GameHandler.Singleton.BlurCamera(false); }
@@ -116,7 +116,7 @@ public class UIQuickSetting : MonoBehaviour
 
         // if (GetComponent<Button>())
         // {
-        //     GameHandler.Singleton.BindEvent(
+        //     GameHandler.BindEvent(
         //         gameObject,
         //         EventTriggerType.PointerEnter,
         //         delegate
@@ -124,7 +124,7 @@ public class UIQuickSetting : MonoBehaviour
         //             JacDev.Audio.AudioHandler.Singleton.PlaySound(JacDev.Audio.AudioHandler.Singleton.soundList.select);
         //         });
 
-        //     GameHandler.Singleton.BindEvent(
+        //     GameHandler.BindEvent(
         //         gameObject,
         //         EventTriggerType.PointerDown,
         //         delegate

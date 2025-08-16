@@ -22,7 +22,7 @@ public class SelectMission : Stage
     public override void OnBegin()
     {
         #region  Earthquake
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             earthquake,
             EventTriggerType.PointerEnter,
             delegate
@@ -33,7 +33,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             earthquake,
             EventTriggerType.PointerExit,
             delegate
@@ -44,7 +44,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
                earthquake,
                EventTriggerType.PointerDown,
                delegate
@@ -57,7 +57,7 @@ public class SelectMission : Stage
         #endregion
 
         #region FireTruck
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             fireTruck,
             EventTriggerType.PointerEnter,
             delegate
@@ -68,7 +68,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             fireTruck,
             EventTriggerType.PointerExit,
             delegate
@@ -79,7 +79,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
                 fireTruck,
                 EventTriggerType.PointerDown,
                 delegate
@@ -92,7 +92,7 @@ public class SelectMission : Stage
         #endregion
 
         #region Flood
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             flood,
             EventTriggerType.PointerEnter,
             delegate
@@ -103,7 +103,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             flood,
             EventTriggerType.PointerExit,
             delegate
@@ -114,7 +114,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
                 flood,
                 EventTriggerType.PointerDown,
                 delegate
@@ -127,7 +127,7 @@ public class SelectMission : Stage
         #endregion
 
         #region  Leave
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             leave,
             EventTriggerType.PointerEnter,
             delegate
@@ -137,7 +137,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
             leave,
             EventTriggerType.PointerExit,
             delegate
@@ -147,7 +147,7 @@ public class SelectMission : Stage
             }
         );
 
-        GameHandler.Singleton.BindEvent(
+        GameHandler.BindEvent(
                leave,
                EventTriggerType.PointerDown,
                delegate

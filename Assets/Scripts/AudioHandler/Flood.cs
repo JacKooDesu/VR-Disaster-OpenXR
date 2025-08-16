@@ -24,6 +24,13 @@ namespace JacDev.Audio
         public AudioClip broadcast1;
         public AudioClip broadcast2;
         public AudioClip boilWater;
+        public AudioClip boilWaterOff;
+        public AudioClip gasOff;
         public AudioClip switchSound;
+
+        public AudioClip gateInstall;
+        public AudioClip gateInstallComplete;
+
+        public AudioClip waterTp;
     }
 }
