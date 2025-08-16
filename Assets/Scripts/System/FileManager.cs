@@ -8,6 +8,9 @@ public static class FileManager<T>
 {
     public static void Save(string fileName, T target, string dir)
     {
+#if UNITY_EDITOR
+        dir.Insert(0, ".");
+#endif
         var jsonData = JsonUtility.ToJson(target, true);    // 物件序列化json字串
         var filePath = $"{Application.dataPath}/{dir}";     // 取得資料夾路徑
 
@@ -17,6 +20,9 @@ public static class FileManager<T>
 
     public static void Load(string path, string name, T target)
     {
+#if UNITY_EDITOR
+        path.Insert(0, ".");
+#endif
         var filePath = $"{Application.dataPath}/{path}/{name}.sav";
         var deserializeData = (string)(null);   // json 解譯字串
 
