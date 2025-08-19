@@ -5,7 +5,7 @@ using System;
 using UnityEngine.Rendering;
 
 public enum GameViewCaptureMode { RenderCam, MainCam, FullScreen, Desktop }
-public enum GameViewResize { Full, Half, Quarter, OneEighth }
+public enum GameViewResize { Full, Half, Quarter, OneEighth, OneSixteenth }
 public enum GameViewCubemapSample
 {
     High = 2048,
@@ -23,7 +23,6 @@ public class GameViewEncoder : MonoBehaviour
     public Camera MainCam;
     public Camera RenderCam;
 
-    public Vector2 Resolution = new Vector2(512, 512);
     private Vector2 renderResolution = new Vector2(512, 512);
     public bool MatchScreenAspect = true;
 
@@ -171,25 +170,6 @@ public class GameViewEncoder : MonoBehaviour
 
     private void Update()
     {
-        if(Resolution.x != react.sendScreenW)
-        {
-            Resolution.x = react.sendScreenW;
-        }
-        if (Resolution.y != react.sendScreenH)
-        {
-            Resolution.y = react.sendScreenH;
-        }
-
-        if(label != react.pairLabel)
-        {
-            label = react.pairLabel;
-        }
-        Resolution.x = Mathf.RoundToInt(Resolution.x);
-        Resolution.y = Mathf.RoundToInt(Resolution.y);
-        if (Resolution.x <= 1) Resolution.x = 1;
-        if (Resolution.y <= 1) Resolution.y = 1;
-        renderResolution = Resolution;
-
         CaptureModeUpdate();
 
         switch (_CaptureMode)
