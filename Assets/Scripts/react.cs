@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using Cysharp.Threading.Tasks;
 
 public class react : MonoBehaviour
 {
@@ -12,10 +14,26 @@ public class react : MonoBehaviour
     // private int ScreenHeight, ScreenWidth;
     // private int IPShowCheck = 0;
 
+    CancellationTokenSource _checkConnectCt;
+
     void Start()
     {
         FMNetworkManager.instance.OnReceivedStringDataEvent
             .AddListener(Action_ProcessStringData);
+
+        AssignResize(GameViewResize.One_32);
+
+        _checkConnectCt = new();
+        _checkConnectCt.RegisterRaiseCancelOnDestroy(gameObject);
+        ConnectHeartbeat().Forget();
+
+        async UniTask ConnectHeartbeat()
+        {
+            do
+            {
+                SendCheck();
+            } while (!await UniTask.Delay(10000, cancellationToken: _checkConnectCt.Token).SuppressCancellationThrow());
+        }
     }
 
     void OnDestroy()
@@ -26,6 +44,9 @@ public class react : MonoBehaviour
 
     public void Action_ProcessStringData(string _string)
     {
+        // means u r connected, no longer needed heartbeat
+        _checkConnectCt?.Cancel(false);
+
         string[] sData = _string.Split(' ');
         var packetType = sData[0];
 
@@ -38,18 +59,17 @@ public class react : MonoBehaviour
         switch (packetType)
         {
             case "screen1":     // one on one
-                AssignResize(GameViewResize.Quarter);
-                SendCheck();
+                AssignResize(GameViewResize.Half);
                 _encoder.label = 1001;
                 break;
             case "screen2":     // one on multi (multi mode, main)
-                AssignResize(GameViewResize.Quarter);
+                AssignResize(GameViewResize.Half);
                 break;
             case "screen3":     // one on multi (multi mode, all)
-                AssignResize(GameViewResize.OneEighth);
+                AssignResize(GameViewResize.Quarter);
                 break;
             case "screen5":     // one on multi (multi mode, side)
-                AssignResize(GameViewResize.OneSixteenth);
+                AssignResize(GameViewResize.One_32);
                 break;
 
             case "screen4":
