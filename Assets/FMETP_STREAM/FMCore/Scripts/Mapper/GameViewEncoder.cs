@@ -3,9 +3,10 @@ using UnityEngine;
 using System;
 
 using UnityEngine.Rendering;
+using System.Runtime.InteropServices;
 
 public enum GameViewCaptureMode { RenderCam, MainCam, FullScreen, Desktop }
-public enum GameViewResize { Full, Half, Quarter, OneEighth }
+public enum GameViewResize { Full, Half, Quarter, OneEighth, OneSixteenth, One_32 }
 public enum GameViewCubemapSample
 {
     High = 2048,
@@ -23,7 +24,6 @@ public class GameViewEncoder : MonoBehaviour
     public Camera MainCam;
     public Camera RenderCam;
 
-    public Vector2 Resolution = new Vector2(512, 512);
     private Vector2 renderResolution = new Vector2(512, 512);
     public bool MatchScreenAspect = true;
 
@@ -118,6 +118,7 @@ public class GameViewEncoder : MonoBehaviour
     private bool stop = false;
     private byte[] dataByte;
 
+    byte[] _textureBuffer = new byte[0];
     public int dataLength;
 
     void CaptureModeUpdate()
@@ -171,25 +172,6 @@ public class GameViewEncoder : MonoBehaviour
 
     private void Update()
     {
-        if(Resolution.x != react.sendScreenW)
-        {
-            Resolution.x = react.sendScreenW;
-        }
-        if (Resolution.y != react.sendScreenH)
-        {
-            Resolution.y = react.sendScreenH;
-        }
-
-        if(label != react.pairLabel)
-        {
-            label = react.pairLabel;
-        }
-        Resolution.x = Mathf.RoundToInt(Resolution.x);
-        Resolution.y = Mathf.RoundToInt(Resolution.y);
-        if (Resolution.x <= 1) Resolution.x = 1;
-        if (Resolution.y <= 1) Resolution.y = 1;
-        renderResolution = Resolution;
-
         CaptureModeUpdate();
 
         switch (_CaptureMode)
@@ -301,8 +283,8 @@ public class GameViewEncoder : MonoBehaviour
         {
             if (rt.width != sourceDescriptor.width || rt.height != sourceDescriptor.height || rt.sRGB != IsLinear)
             {
-                if (MainCam != null) { if (MainCam.targetTexture == rt) MainCam.targetTexture = null; }
-                if (RenderCam != null) { if (RenderCam.targetTexture == rt) RenderCam.targetTexture = null; }
+                // if (MainCam != null) { if (MainCam.targetTexture == rt) MainCam.targetTexture = null; }
+                // if (RenderCam != null) { if (RenderCam.targetTexture == rt) RenderCam.targetTexture = null; }
                 DestroyImmediate(rt);
                 //may have unsupport graphic format bug on Unity2019/2018, fallback to not using descriptor
                 try { rt = new RenderTexture(sourceDescriptor); }
@@ -358,7 +340,28 @@ public class GameViewEncoder : MonoBehaviour
         {
             AsyncGPUReadbackRequest request = AsyncGPUReadback.Request(rt, 0, TextureFormat.RGB24);
             while (!request.done) yield return null;
-            if (!request.hasError) { StartCoroutine(EncodeBytes(request.GetData<byte>().ToArray())); }
+            if (!request.hasError) 
+            {
+                var span = request.GetData<byte>().AsSpan();
+                if (!span.IsEmpty)
+                {
+                    if (_textureBuffer.Length != span.Length)
+                    {
+#if UNITY_EDITOR
+                        Debug.LogWarning($"Resizing texture buffer from {_textureBuffer.Length} to {span.Length}, may affect performance");
+#endif
+                        Array.Resize(ref _textureBuffer, span.Length);
+                    }
+                    span.CopyTo(_textureBuffer);
+                    StartCoroutine(EncodeBytes(_textureBuffer));
+                }
+                else
+                {
+#if UNITY_EDITOR
+                    Debug.LogWarning("GPU Readback returned no data, encoding skipped!");
+#endif
+                }
+            }
             else { EncodingTexture = false; }
         }
         else { EncodingTexture = false; }
@@ -707,36 +710,51 @@ public class GameViewEncoder : MonoBehaviour
             if (GZipMode) dataByte = dataByte.FMZipBytes();
 
             dataLength = dataByte.Length;
+
+            const int HEADER_SIZE = 18;
             //==================getting byte data==================
+            byte[] SendByte = new byte[chunkSize + HEADER_SIZE];
+
             int _length = dataByte.Length;
             int _offset = 0;
 
-            byte[] _meta_label = BitConverter.GetBytes(label);
-            byte[] _meta_id = BitConverter.GetBytes(dataID);
-            byte[] _meta_length = BitConverter.GetBytes(_length);
+            ZeroAllocateCopy(SendByte, 0, label);
+            ZeroAllocateCopy(SendByte, 4, dataID);
+            ZeroAllocateCopy(SendByte, 8, _length);
+
+            SendByte[16] = (byte)(GZipMode ? 1 : 0);
+            SendByte[17] = (byte)ColorReductionLevel;
 
             int chunks = Mathf.RoundToInt(dataByte.Length / chunkSize);
+            byte[] resultBytes = null;
+
             for (int i = 0; i <= chunks; i++)
             {
-                int SendByteLength = (i == chunks) ? (_length % chunkSize + 18) : (chunkSize + 18);
-                byte[] _meta_offset = BitConverter.GetBytes(_offset);
-                byte[] SendByte = new byte[SendByteLength];
+                ZeroAllocateCopy(SendByte, 12, _offset);
 
-                Buffer.BlockCopy(_meta_label, 0, SendByte, 0, 4);
-                Buffer.BlockCopy(_meta_id, 0, SendByte, 4, 4);
-                Buffer.BlockCopy(_meta_length, 0, SendByte, 8, 4);
+                Buffer.BlockCopy(
+                    dataByte, _offset, 
+                    SendByte, HEADER_SIZE, 
+                    i == chunks ? _length % chunkSize : chunkSize);
 
-                Buffer.BlockCopy(_meta_offset, 0, SendByte, 12, 4);
-                SendByte[16] = (byte)(GZipMode ? 1 : 0);
-                SendByte[17] = (byte)ColorReductionLevel;
-
-                Buffer.BlockCopy(dataByte, _offset, SendByte, 18, SendByte.Length - 18);
-                OnDataByteReadyEvent.Invoke(SendByte);
+                resultBytes = i == chunks ?
+                    SendByte[..((_length % chunkSize) + HEADER_SIZE)] :
+                    SendByte;
+                
+                OnDataByteReadyEvent.Invoke(resultBytes);
                 _offset += chunkSize;
             }
 
             dataID++;
             if (dataID > maxID) dataID = 0;
+
+            void ZeroAllocateCopy<T>(Span<byte> dest, int offset, T target)
+                where T : struct
+            {
+                var mem = MemoryMarshal.CreateSpan<T>(ref target, 1);
+                var span = MemoryMarshal.AsBytes(mem);
+                span.CopyTo(dest.Slice(offset));
+            }
         }
 
         EncodingTexture = false;
