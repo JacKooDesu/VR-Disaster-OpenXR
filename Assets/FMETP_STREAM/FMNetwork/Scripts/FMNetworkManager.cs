@@ -361,9 +361,6 @@ public class FMNetworkManager : MonoBehaviour
         if (NetworkType == FMNetworkType.Server) ServerSettings.ConnectionCount = Server.ConnectionCount;
         if (NetworkType == FMNetworkType.Client) ClientSettings.IsConnected = Client.IsConnected;
 
-        react.localIP = ReadLocalIPAddress;
-        react.isConnected = ClientSettings.IsConnected;
-
         #region Debug Status
         if (DebugStatus)
         {
