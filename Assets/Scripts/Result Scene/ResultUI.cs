@@ -25,24 +25,9 @@ public class ResultUI : MonoBehaviour
     {
         if (PlayerData.current == null)
             return;
-        switch (PlayerData.current.name)
-        {
-            case "Earthquake":
-                InitUI(missionSettings[0]);
-                break;
 
-            case "FireTruck":
-                InitUI(missionSettings[1]);
-                break;
-
-            case "Flood":
-                InitUI(missionSettings[2]);
-                break;
-
-            default:
-                InitUI(missionSettings[0]);
-                break;
-        }
+        InitUI(missionSettings.Find(
+            x => x.name == PlayerData.current.name));
     }
 
     void InitUI(MissionSetting mSetting)

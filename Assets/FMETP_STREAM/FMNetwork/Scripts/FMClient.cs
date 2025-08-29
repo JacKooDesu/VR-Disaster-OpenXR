@@ -141,6 +141,11 @@ public class FMClient : MonoBehaviour
         }
     }
 
+    public void Action_AddCustomPacket(FMPacket packet)
+    {
+        lock (_asyncLock) _appendQueueSendPacket.Enqueue(packet);
+    }
+
     bool stop = false;
     // Start is called before the first frame update
     void Start()
@@ -205,8 +210,8 @@ public class FMClient : MonoBehaviour
                 try
                 {
                     if (ClientListener == null)
-                    {
                         ClientListener = new UdpClient(ClientListenPort);
+                    {
                         ClientListener.Client.ReceiveTimeout = 2000;
                         //ClientListener.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
                         ServerEp = new IPEndPoint(IPAddress.Any, ClientListenPort);
