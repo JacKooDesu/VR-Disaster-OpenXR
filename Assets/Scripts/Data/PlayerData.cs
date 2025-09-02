@@ -6,8 +6,10 @@ using System;
 [System.Serializable]
 public class PlayerData    // still in progress
 {
-    [field: SerializeField]
-    public string UserId { get; private set; }
+    public string UserId => userId;
+    [SerializeField]
+    string userId;
+
 
     [System.Serializable]
     public class MissionData
@@ -46,7 +48,7 @@ public class PlayerData    // still in progress
     //Constructor
     public PlayerData(string userId)
     {
-        UserId = userId;
+        this.userId = userId;
         missionDatas = new List<MissionData>();
     }
 

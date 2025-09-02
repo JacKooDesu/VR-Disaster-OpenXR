@@ -5,6 +5,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
+using System.Text;
 
 public class react : MonoBehaviour
 {
@@ -71,6 +72,10 @@ public class react : MonoBehaviour
             case "screen5":     // one on multi (multi mode, side)
                 AssignResize(GameViewResize.One_32);
                 break;
+            case "export":
+                Debug.Log("Export Request!");
+                GameHandler.Singleton.SavePlayerData();
+                break;
 
             case "screen4":
                 _encoder.label = int.Parse(sData[1]);
@@ -103,5 +108,33 @@ public class react : MonoBehaviour
     {
         string sendString = FMNetworkManager.instance.ReadLocalIPAddress + " " + "CheckScreen";
         FMNetworkManager.instance.SendToServer(sendString);
+    }
+
+    public static void SendHistory(string strData)
+    {
+        var bytesToEncode = Encoding.UTF8.GetBytes(strData);
+        var b64str = Convert.ToBase64String(bytesToEncode);
+
+        string sendString = FMNetworkManager.instance.ReadLocalIPAddress + " " + "PlayHistory" + " " + b64str;
+        FMNetworkManager.instance.Client.Action_AddCustomPacket(Builder());
+
+        FMPacket Builder()
+        {
+            byte[] metaBytes = {
+                2,  // 0 is image, 1 is string
+                1   // send to server only
+            };
+
+            var dataBytes = Encoding.UTF8.GetBytes(strData);
+            var packet = new FMPacket
+            {
+                SendByte = new byte[metaBytes.Length + dataBytes.Length],
+                SendType = FMSendType.Server
+            };
+            Buffer.BlockCopy(metaBytes, 0, packet.SendByte, 0, metaBytes.Length);
+            Buffer.BlockCopy(dataBytes, 0, packet.SendByte, metaBytes.Length, dataBytes.Length);
+
+            return packet;
+        }
     }
 }

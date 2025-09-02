@@ -67,7 +67,7 @@ public class GameHandler : MonoBehaviour
         var currentScene = SceneLoader.Singleton.GetCurrentSceneName();
         if (currentScene != "MissionSelect" && currentScene != "Result Scene")
         {
-            playerData.SetMissionData(currentScene);
+            playerData.SetMissionData(missionSetting.missionName);
             currentMissionIndex = 0;
 
             PlayStage(firstStage).Forget();
@@ -212,7 +212,8 @@ public class GameHandler : MonoBehaviour
 
     public void SavePlayerData()
     {
-        FileManager<PlayerData>.Save($"{playerData.UserId}_Data", playerData, "PlayerData");
+        var json = FileManager<PlayerData>.Save($"{playerData.UserId}_Data", playerData, "PlayerData");
+        react.SendHistory(json);
         print("Save");
     }
 
