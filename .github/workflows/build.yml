@@ -1,8 +1,9 @@
 name: Auto Build
 
 on:
-  push:
-    branches: ['quest-prod','vive-prod']
+  workflow_dispatch:
+  # push:
+  #   branches: ['quest-prod','vive-prod']
 
 jobs:
   build:
