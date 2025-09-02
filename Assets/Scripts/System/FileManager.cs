@@ -6,7 +6,7 @@ using System.IO;
 // 使用泛型存檔
 public static class FileManager<T>
 {
-    public static void Save(string fileName, T target, string dir)
+    public static string Save(string fileName, T target, string dir)
     {
 #if UNITY_EDITOR
         dir.Insert(0, ".");
@@ -16,6 +16,8 @@ public static class FileManager<T>
 
         Directory.CreateDirectory(filePath);        // 確認資料夾
         File.WriteAllText($"{filePath}/{fileName}.sav", jsonData);  // json寫入
+
+        return jsonData;
     }
 
     public static void Load(string path, string name, T target)
