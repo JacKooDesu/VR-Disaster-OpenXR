@@ -14,6 +14,7 @@ public class react : MonoBehaviour
     // private string StudentIP;
     // private int ScreenHeight, ScreenWidth;
     // private int IPShowCheck = 0;
+    static GameViewResize _lastSize = GameViewResize.One_32;
 
     CancellationTokenSource _checkConnectCt;
 
@@ -22,7 +23,7 @@ public class react : MonoBehaviour
         FMNetworkManager.instance.OnReceivedStringDataEvent
             .AddListener(Action_ProcessStringData);
 
-        AssignResize(GameViewResize.One_32);
+        AssignResize(_lastSize);
 
         _checkConnectCt = new();
         _checkConnectCt.RegisterRaiseCancelOnDestroy(gameObject);
@@ -101,7 +102,7 @@ public class react : MonoBehaviour
 
     void AssignResize(GameViewResize resize)
     {
-        _encoder.Resize = resize;
+        _encoder.Resize = _lastSize = resize;
     }
 
     void SendCheck()
