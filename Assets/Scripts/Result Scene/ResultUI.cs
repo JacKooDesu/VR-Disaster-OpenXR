@@ -27,7 +27,7 @@ public class ResultUI : MonoBehaviour
             return;
 
         InitUI(missionSettings.Find(
-            x => x.name == PlayerData.current.name));
+            x => x.missionName == PlayerData.current.name));
     }
 
     void InitUI(MissionSetting mSetting)
