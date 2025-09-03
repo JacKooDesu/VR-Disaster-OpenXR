@@ -59,10 +59,14 @@ public class PlayerData    // still in progress
 
     public MissionData SetMissionData(string name)
     {
-        var mData = missionDatas.Find(m => m.name == name) ?? new()
+        var mData = missionDatas.Find(m => m.name == name);
+        if (mData == null)
         {
-            name = name
-        };
+            missionDatas.Add(mData = new()
+            {
+                name = name
+            });
+        }
 
         current = mData;
 
