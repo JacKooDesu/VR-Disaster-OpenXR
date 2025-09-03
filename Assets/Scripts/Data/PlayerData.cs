@@ -59,16 +59,11 @@ public class PlayerData    // still in progress
 
     public MissionData SetMissionData(string name)
     {
-        var mData = new MissionData();
-        if (missionDatas.FindIndex((m) => m.name == name) != -1)
+        var mData = missionDatas.Find(m => m.name == name) ?? new()
         {
-            mData = missionDatas.Find(m => m.name == name);
-        }
-        else
-        {
-            mData.name = name;
-            missionDatas.Add(mData);
-        }
+            name = name
+        };
+
         current = mData;
 
         mData.stgDatas = new List<MissionData.StgData>();
