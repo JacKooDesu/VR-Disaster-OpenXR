@@ -14,8 +14,15 @@ public static class FileManager<T>
         var jsonData = JsonUtility.ToJson(target, true);    // 物件序列化json字串
         var filePath = $"{Application.dataPath}/{dir}";     // 取得資料夾路徑
 
-        Directory.CreateDirectory(filePath);        // 確認資料夾
-        File.WriteAllText($"{filePath}/{fileName}.sav", jsonData);  // json寫入
+        try
+        {
+            Directory.CreateDirectory(filePath);        // 確認資料夾
+            File.WriteAllText($"{filePath}/{fileName}.sav", jsonData);  // json寫入
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Error saving file: {e.Message}");
+        }
 
         return jsonData;
     }
