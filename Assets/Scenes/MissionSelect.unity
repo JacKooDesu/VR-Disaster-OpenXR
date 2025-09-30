@@ -38761,6 +38761,7 @@ Transform:
   - {fileID: 650163686}
   - {fileID: 959844833}
   - {fileID: 1704239397}
+  - {fileID: 1090941037}
   - {fileID: 1493521830}
   - {fileID: 1553332602}
   m_Father: {fileID: 0}
@@ -51808,7 +51809,7 @@ MonoBehaviour:
   switcher: {fileID: 431950896967593665}
   kit: {fileID: 1704239396}
   plant: {fileID: 1609701821}
-  hoverTest: {fileID: 1493521831}
+  hoverTest: {fileID: 0}
 --- !u!4 &552774008
 Transform:
   m_ObjectHideFlags: 0
@@ -94029,42 +94030,42 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1493521830}
+    m_TransformParent: {fileID: 387158779}
     m_Modifications:
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.6211939
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 0.9117466
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 0.8393396
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -11.265
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.499
+      value: -0.3423798
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.21
+      value: -0.99719936
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.00000039788165
+      value: -0.000000014901161
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
@@ -94079,7 +94080,7 @@ PrefabInstance:
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000026084814
+      value: 0.0000007599592
       objectReference: {fileID: 0}
     - target: {fileID: 3457775691375157315, guid: ef99a44cf98e3ad4badaf9c445fe4dc2,
         type: 3}
@@ -130918,7 +130919,6 @@ GameObject:
   - component: {fileID: 1493521834}
   - component: {fileID: 1493521833}
   - component: {fileID: 1493521832}
-  - component: {fileID: 1493521831}
   - component: {fileID: 1493521836}
   m_Layer: 14
   m_Name: Test Hover
@@ -130942,46 +130942,8 @@ Transform:
   m_Children:
   - {fileID: 1516497103}
   - {fileID: 1655162307}
-  - {fileID: 1090941037}
   m_Father: {fileID: 387158779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1493521831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493521829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db9ba78b022325e4bb15f037b47181de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactableProxy: {fileID: 0}
-  positionReset: 0
-  resetTime: 10
-  canGrab: 0
-  OnInteracted:
-    m_PersistentCalls:
-      m_Calls: []
-  OnGrabbed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFishing:
-    m_PersistentCalls:
-      m_Calls: []
-  onReleaseEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  canHover: 1
-  hoverTime: 4
-  onHoverEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  <GrabMode>k__BackingField: 0
-  interactable: 1
-  interactableOutline: 1
-  debugVelocity: 1
 --- !u!54 &1493521832
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131028,10 +130990,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.71821356
+  m_Height: 2.7652044
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.21821351, y: 0.26192808, z: -7.59486e-15}
 --- !u!23 &1493521834
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -131097,7 +131059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1428e510217596643bc90c8e6c75dac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CanKnock>k__BackingField: 0
+  <CanKnock>k__BackingField: 1
   _knockDirection: {x: 0, y: 0, z: 0}
   _knockThreshold: 0.1
   OnKnocked:
