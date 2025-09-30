@@ -188,5 +188,6 @@ public class Kit : MonoBehaviour
         foreach (var item in items)
             item.gameObject.SetActive(false);
         pack.gameObject.SetActive(false);
+        packObj.gameObject.SetActive(false);
     }
 }

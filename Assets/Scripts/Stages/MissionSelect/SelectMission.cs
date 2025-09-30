@@ -164,7 +164,7 @@ public class SelectMission : Stage
         #region Interact
         BindKit();
         BindPlant();
-        BindHover();
+        // BindHover();
         #endregion
 
         JacDev.Audio.TitleScene a = (JacDev.Audio.TitleScene)GameHandler.Singleton.audioHandler;
