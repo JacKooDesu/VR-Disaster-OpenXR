@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Utils;
@@ -81,9 +81,15 @@ public class Kit : MonoBehaviour
         {
             results.Add(vip.transform);
             if (vip.isCorrect)
+            {
                 correctCount--;
+                correctTemps.Remove(vip);
+            }
             else
+            {
                 wrongCount--;
+                wrongTemps.Remove(vip);
+            }
         }
 
 
